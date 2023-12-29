@@ -1671,8 +1671,18 @@
                     url: _this.thumbnail,
                     name: _this.userForm.value.firstname
                 });
+                _this.updateProfileImage(userData);
                 _this.alertService.success('Profile updated successfully');
             });
+        };
+        ProfileComponent.prototype.updateProfileImage = function (userData) {
+            var existingDataString = localStorage.getItem('user');
+            if (existingDataString) {
+                var existingData = JSON.parse(existingDataString);
+                existingData.additionalinfo = userData.additionalinfo;
+                var updatedDataString = JSON.stringify(existingData);
+                localStorage.setItem('user', updatedDataString);
+            }
         };
         ProfileComponent.prototype.updateStyling = function () {
             var body = {

@@ -43,6 +43,7 @@ export declare class ProfileComponent implements OnInit {
     orgSubs: Subscription;
     orgId: any;
     errors: string[];
+    profileData: any;
     constructor(injector: Injector, authService: AuthService, formBuilder: FormBuilder, httpService: HttpService, profileService: ProfileService, attachmentService: AttachmentsService, _storeservice: DataStoreService, confirmationService: ConfirmationService);
     ngOnInit(): void;
     initializeResetPasswordForm(): void;
@@ -53,6 +54,7 @@ export declare class ProfileComponent implements OnInit {
     getUserInfo(): void;
     handleFileInput(fileValue: any): void;
     updateprofile(): void;
+    updateProfileImage(userData: any): void;
     updateStyling(): void;
     setTheme(event: any): void;
     setFont(event: any): void;

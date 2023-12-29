@@ -1145,8 +1145,18 @@ class ProfileComponent$1 {
                 url: this.thumbnail,
                 name: this.userForm.value.firstname
             });
+            this.updateProfileImage(userData);
             this.alertService.success('Profile updated successfully');
         });
+    }
+    updateProfileImage(userData) {
+        const existingDataString = localStorage.getItem('user');
+        if (existingDataString) {
+            const existingData = JSON.parse(existingDataString);
+            existingData.additionalinfo = userData.additionalinfo;
+            const updatedDataString = JSON.stringify(existingData);
+            localStorage.setItem('user', updatedDataString);
+        }
     }
     updateStyling() {
         const body = {
