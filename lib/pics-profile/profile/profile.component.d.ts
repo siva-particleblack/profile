@@ -54,7 +54,6 @@ export declare class ProfileComponent implements OnInit {
     getUserInfo(): void;
     handleFileInput(fileValue: any): void;
     updateprofile(): void;
-    updateProfileImage(userData: any): void;
     updateStyling(): void;
     setTheme(event: any): void;
     setFont(event: any): void;
@@ -62,7 +61,8 @@ export declare class ProfileComponent implements OnInit {
     changePassword(): void;
     validateImage(file: any): boolean;
     clearForm(): void;
-    removeThumbnail(event: any): void;
+    removeThumbnail(event: Event): void;
+    deleteProfilePicture(): void;
     ngOnDestroy(): void;
     fontSlider(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<ProfileComponent, never>;
