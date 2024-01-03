@@ -707,6 +707,25 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImpo
                 }]
         }], ctorParameters: function () { return [{ type: HttpService }, { type: ThemeService }, { type: LocalService }]; } });
 
+// Inside your npm package (ProfileService)
+class ProfileUpdateService {
+    constructor() {
+        this.profilePictureSubject = new BehaviorSubject('/path/to/default-profile.jpg');
+        this.profilePicture$ = this.profilePictureSubject.asObservable();
+    }
+    updateProfilePicture(newPicturePath) {
+        this.profilePictureSubject.next(newPicturePath);
+    }
+}
+ProfileUpdateService.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: ProfileUpdateService, deps: [], target: i0.ɵɵFactoryTarget.Injectable });
+ProfileUpdateService.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: ProfileUpdateService, providedIn: 'root' });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: ProfileUpdateService, decorators: [{
+            type: Injectable,
+            args: [{
+                    providedIn: 'root',
+                }]
+        }] });
+
 class Store {
     constructor(initialState) {
         this._state$ = new BehaviorSubject(initialState);
@@ -931,25 +950,6 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImpo
                     providedIn: 'root'
                 }]
         }], ctorParameters: function () { return [{ type: i0.Injector }, { type: HttpService }, { type: i1$1.Router }]; } });
-
-// Inside your npm package (ProfileService)
-class ProfileUpdateService {
-    constructor() {
-        this.profilePictureSubject = new BehaviorSubject('/path/to/default-profile.jpg');
-        this.profilePicture$ = this.profilePictureSubject.asObservable();
-    }
-    updateProfilePicture(newPicturePath) {
-        this.profilePictureSubject.next(newPicturePath);
-    }
-}
-ProfileUpdateService.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: ProfileUpdateService, deps: [], target: i0.ɵɵFactoryTarget.Injectable });
-ProfileUpdateService.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: ProfileUpdateService, providedIn: 'root' });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: ProfileUpdateService, decorators: [{
-            type: Injectable,
-            args: [{
-                    providedIn: 'root',
-                }]
-        }] });
 
 class AttachmentsService {
     constructor(http) {
@@ -1573,7 +1573,7 @@ class ProfileSettingsModule {
 }
 ProfileSettingsModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: ProfileSettingsModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
 ProfileSettingsModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: ProfileSettingsModule, declarations: [ProfileComponent], imports: [PicsProfileModule], exports: [ProfileComponent] });
-ProfileSettingsModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: ProfileSettingsModule, providers: [ProfileService, AttachmentsService, HttpClient, HttpService, AlertService, AuthService, ConfirmationService, PermissionStore, DataStoreService], imports: [[
+ProfileSettingsModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: ProfileSettingsModule, providers: [ProfileService, AttachmentsService, HttpClient, HttpService, AlertService, AuthService, ConfirmationService, PermissionStore, DataStoreService, ProfileUpdateService], imports: [[
             PicsProfileModule
         ]] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: ProfileSettingsModule, decorators: [{
@@ -1588,7 +1588,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImpo
                     exports: [
                         ProfileComponent
                     ],
-                    providers: [ProfileService, AttachmentsService, HttpClient, HttpService, AlertService, AuthService, ConfirmationService, PermissionStore, DataStoreService]
+                    providers: [ProfileService, AttachmentsService, HttpClient, HttpService, AlertService, AuthService, ConfirmationService, PermissionStore, DataStoreService, ProfileUpdateService]
                 }]
         }] });
 
@@ -1600,5 +1600,5 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImpo
  * Generated bundle index. Do not edit.
  */
 
-export { ProfileComponent, ProfileService, ProfileSettingsModule };
+export { ProfileComponent, ProfileService, ProfileSettingsModule, ProfileUpdateService };
 //# sourceMappingURL=pics-core-profile.js.map

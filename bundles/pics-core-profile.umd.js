@@ -1189,6 +1189,26 @@
                     }]
             }], ctorParameters: function () { return [{ type: HttpService }, { type: ThemeService }, { type: LocalService }]; } });
 
+    // Inside your npm package (ProfileService)
+    var ProfileUpdateService = /** @class */ (function () {
+        function ProfileUpdateService() {
+            this.profilePictureSubject = new rxjs.BehaviorSubject('/path/to/default-profile.jpg');
+            this.profilePicture$ = this.profilePictureSubject.asObservable();
+        }
+        ProfileUpdateService.prototype.updateProfilePicture = function (newPicturePath) {
+            this.profilePictureSubject.next(newPicturePath);
+        };
+        return ProfileUpdateService;
+    }());
+    ProfileUpdateService.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: ProfileUpdateService, deps: [], target: i0__namespace.ɵɵFactoryTarget.Injectable });
+    ProfileUpdateService.ɵprov = i0__namespace.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: ProfileUpdateService, providedIn: 'root' });
+    i0__namespace.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: ProfileUpdateService, decorators: [{
+                type: i0.Injectable,
+                args: [{
+                        providedIn: 'root',
+                    }]
+            }] });
+
     var Store = /** @class */ (function () {
         function Store(initialState) {
             this._state$ = new rxjs.BehaviorSubject(initialState);
@@ -1446,26 +1466,6 @@
                         providedIn: 'root'
                     }]
             }], ctorParameters: function () { return [{ type: i0__namespace.Injector }, { type: HttpService }, { type: i1__namespace$1.Router }]; } });
-
-    // Inside your npm package (ProfileService)
-    var ProfileUpdateService = /** @class */ (function () {
-        function ProfileUpdateService() {
-            this.profilePictureSubject = new rxjs.BehaviorSubject('/path/to/default-profile.jpg');
-            this.profilePicture$ = this.profilePictureSubject.asObservable();
-        }
-        ProfileUpdateService.prototype.updateProfilePicture = function (newPicturePath) {
-            this.profilePictureSubject.next(newPicturePath);
-        };
-        return ProfileUpdateService;
-    }());
-    ProfileUpdateService.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: ProfileUpdateService, deps: [], target: i0__namespace.ɵɵFactoryTarget.Injectable });
-    ProfileUpdateService.ɵprov = i0__namespace.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: ProfileUpdateService, providedIn: 'root' });
-    i0__namespace.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: ProfileUpdateService, decorators: [{
-                type: i0.Injectable,
-                args: [{
-                        providedIn: 'root',
-                    }]
-            }] });
 
     var AttachmentsService = /** @class */ (function () {
         function AttachmentsService(http) {
@@ -2128,7 +2128,7 @@
     }());
     ProfileSettingsModule.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: ProfileSettingsModule, deps: [], target: i0__namespace.ɵɵFactoryTarget.NgModule });
     ProfileSettingsModule.ɵmod = i0__namespace.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: ProfileSettingsModule, declarations: [ProfileComponent], imports: [PicsProfileModule], exports: [ProfileComponent] });
-    ProfileSettingsModule.ɵinj = i0__namespace.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: ProfileSettingsModule, providers: [ProfileService, AttachmentsService, i1.HttpClient, HttpService, AlertService, AuthService, i8.ConfirmationService, PermissionStore, DataStoreService], imports: [[
+    ProfileSettingsModule.ɵinj = i0__namespace.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: ProfileSettingsModule, providers: [ProfileService, AttachmentsService, i1.HttpClient, HttpService, AlertService, AuthService, i8.ConfirmationService, PermissionStore, DataStoreService, ProfileUpdateService], imports: [[
                 PicsProfileModule
             ]] });
     i0__namespace.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: ProfileSettingsModule, decorators: [{
@@ -2143,7 +2143,7 @@
                         exports: [
                             ProfileComponent
                         ],
-                        providers: [ProfileService, AttachmentsService, i1.HttpClient, HttpService, AlertService, AuthService, i8.ConfirmationService, PermissionStore, DataStoreService]
+                        providers: [ProfileService, AttachmentsService, i1.HttpClient, HttpService, AlertService, AuthService, i8.ConfirmationService, PermissionStore, DataStoreService, ProfileUpdateService]
                     }]
             }] });
 
@@ -2158,6 +2158,7 @@
     exports.ProfileComponent = ProfileComponent;
     exports.ProfileService = ProfileService;
     exports.ProfileSettingsModule = ProfileSettingsModule;
+    exports.ProfileUpdateService = ProfileUpdateService;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
