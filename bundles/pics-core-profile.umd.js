@@ -2128,7 +2128,7 @@
     }());
     ProfileSettingsModule.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: ProfileSettingsModule, deps: [], target: i0__namespace.ɵɵFactoryTarget.NgModule });
     ProfileSettingsModule.ɵmod = i0__namespace.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: ProfileSettingsModule, declarations: [ProfileComponent], imports: [PicsProfileModule], exports: [ProfileComponent] });
-    ProfileSettingsModule.ɵinj = i0__namespace.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: ProfileSettingsModule, providers: [ProfileService, AttachmentsService, i1.HttpClient, HttpService, AlertService, AuthService, i8.ConfirmationService, PermissionStore, DataStoreService, ProfileUpdateService], imports: [[
+    ProfileSettingsModule.ɵinj = i0__namespace.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: ProfileSettingsModule, providers: [ProfileService, AttachmentsService, i1.HttpClient, HttpService, AlertService, AuthService, i8.ConfirmationService, PermissionStore, DataStoreService], imports: [[
                 PicsProfileModule
             ]] });
     i0__namespace.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: ProfileSettingsModule, decorators: [{
@@ -2143,7 +2143,7 @@
                         exports: [
                             ProfileComponent
                         ],
-                        providers: [ProfileService, AttachmentsService, i1.HttpClient, HttpService, AlertService, AuthService, i8.ConfirmationService, PermissionStore, DataStoreService, ProfileUpdateService]
+                        providers: [ProfileService, AttachmentsService, i1.HttpClient, HttpService, AlertService, AuthService, i8.ConfirmationService, PermissionStore, DataStoreService]
                     }]
             }] });
 
