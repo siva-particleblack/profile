@@ -11,12 +11,14 @@ import { LocalService } from '../@core/service/local.service';
 import { AuthService } from '../@core/service/auth.service';
 import { RBACINFO } from '../@core/urls/rbac-url.config';
 import { DataStoreService } from '../@core/service/data-store.service';
+import { ProfileUpdateService } from '../../profile-update.service';
 import * as i0 from "@angular/core";
 export declare class ProfileComponent implements OnInit {
     private authService;
     private formBuilder;
     private httpService;
     private profileService;
+    private profileUpdateService;
     private attachmentService;
     private _storeservice;
     private confirmationService;
@@ -43,8 +45,7 @@ export declare class ProfileComponent implements OnInit {
     orgSubs: Subscription;
     orgId: any;
     errors: string[];
-    profileData: any;
-    constructor(injector: Injector, authService: AuthService, formBuilder: FormBuilder, httpService: HttpService, profileService: ProfileService, attachmentService: AttachmentsService, _storeservice: DataStoreService, confirmationService: ConfirmationService);
+    constructor(injector: Injector, authService: AuthService, formBuilder: FormBuilder, httpService: HttpService, profileService: ProfileService, profileUpdateService: ProfileUpdateService, attachmentService: AttachmentsService, _storeservice: DataStoreService, confirmationService: ConfirmationService);
     ngOnInit(): void;
     initializeResetPasswordForm(): void;
     initializeForm(): void;
