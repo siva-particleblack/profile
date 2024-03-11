@@ -45,7 +45,8 @@ export declare class ProfileComponent implements OnInit {
     orgId: any;
     errors: string[];
     httpService: any;
-    version: any;
+    buildVersion: any;
+    buildTimestamp: any;
     constructor(injector: Injector, authService: AuthService, formBuilder: FormBuilder, profileService: ProfileService, attachmentService: AttachmentsService, _storeservice: DataStoreService, confirmationService: ConfirmationService, profileUpdateService: ProfileUpdateService);
     ngOnInit(): void;
     initializeResetPasswordForm(): void;
