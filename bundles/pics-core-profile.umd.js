@@ -1,8 +1,8 @@
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('rxjs'), require('@angular/common/http'), require('rxjs/add/operator/map'), require('rxjs/internal/observable/throwError'), require('rxjs/operators'), require('@angular/forms'), require('@angular/router'), require('@angular/common'), require('primeng/api'), require('primeng/confirmpopup'), require('primeng/calendar'), require('primeng/inputtext'), require('@ng-bootstrap/ng-bootstrap'), require('primeng/accordion'), require('primeng/avatar'), require('primeng/badge'), require('primeng/button'), require('primeng/card'), require('primeng/checkbox'), require('primeng/confirmdialog'), require('primeng/contextmenu'), require('primeng/dialog'), require('primeng/dropdown'), require('primeng/editor'), require('primeng/fieldset'), require('primeng/fileupload'), require('primeng/inputmask'), require('primeng/inputswitch'), require('primeng/inputtextarea'), require('primeng/knob'), require('primeng/message'), require('primeng/multiselect'), require('primeng/orderlist'), require('primeng/password'), require('primeng/progressspinner'), require('primeng/radiobutton'), require('primeng/ripple'), require('primeng/sidebar'), require('primeng/speeddial'), require('primeng/steps'), require('primeng/table'), require('primeng/tabmenu'), require('primeng/tabview'), require('primeng/toast'), require('primeng/treeselect')) :
-    typeof define === 'function' && define.amd ? define('@pics-core/profile', ['exports', '@angular/core', 'rxjs', '@angular/common/http', 'rxjs/add/operator/map', 'rxjs/internal/observable/throwError', 'rxjs/operators', '@angular/forms', '@angular/router', '@angular/common', 'primeng/api', 'primeng/confirmpopup', 'primeng/calendar', 'primeng/inputtext', '@ng-bootstrap/ng-bootstrap', 'primeng/accordion', 'primeng/avatar', 'primeng/badge', 'primeng/button', 'primeng/card', 'primeng/checkbox', 'primeng/confirmdialog', 'primeng/contextmenu', 'primeng/dialog', 'primeng/dropdown', 'primeng/editor', 'primeng/fieldset', 'primeng/fileupload', 'primeng/inputmask', 'primeng/inputswitch', 'primeng/inputtextarea', 'primeng/knob', 'primeng/message', 'primeng/multiselect', 'primeng/orderlist', 'primeng/password', 'primeng/progressspinner', 'primeng/radiobutton', 'primeng/ripple', 'primeng/sidebar', 'primeng/speeddial', 'primeng/steps', 'primeng/table', 'primeng/tabmenu', 'primeng/tabview', 'primeng/toast', 'primeng/treeselect'], factory) :
-    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory((global["pics-core"] = global["pics-core"] || {}, global["pics-core"].profile = {}), global.ng.core, global.rxjs, global.ng.common.http, global.rxjs["add/operator/map"], global.rxjs["internal/observable/throwError"], global.rxjs.operators, global.ng.forms, global.ng.router, global.ng.common, global.i8, global.i10, global.i11, global.i13, global.ngBootstrap, global.accordion, global.avatar, global.badge, global.button, global.card, global.checkbox, global.confirmdialog, global.contextmenu, global.dialog, global.dropdown, global.editor, global.fieldset, global.fileupload, global.inputmask, global.inputswitch, global.inputtextarea, global.knob, global.message, global.multiselect, global.orderlist, global.password, global.progressspinner, global.radiobutton, global.ripple, global.sidebar, global.speeddial, global.steps, global.table, global.tabmenu, global.tabview, global.toast, global.treeselect));
-})(this, (function (exports, i0, rxjs, i1, map, throwError, operators, i2, i1$1, i12, i8, i10, i11, i13, ngBootstrap, accordion, avatar, badge, button, card, checkbox, confirmdialog, contextmenu, dialog, dropdown, editor, fieldset, fileupload, inputmask, inputswitch, inputtextarea, knob, message, multiselect, orderlist, password, progressspinner, radiobutton, ripple, sidebar, speeddial, steps, table, tabmenu, tabview, toast, treeselect) { 'use strict';
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('rxjs'), require('@angular/forms'), require('@angular/router'), require('rxjs/add/operator/map'), require('primeng/api'), require('@angular/common'), require('primeng/tooltip'), require('primeng/inputtext'), require('@ng-bootstrap/ng-bootstrap'), require('primeng/accordion'), require('primeng/avatar'), require('primeng/badge'), require('primeng/button'), require('primeng/calendar'), require('primeng/card'), require('primeng/checkbox'), require('primeng/confirmdialog'), require('primeng/confirmpopup'), require('primeng/contextmenu'), require('primeng/dialog'), require('primeng/dropdown'), require('primeng/editor'), require('primeng/fieldset'), require('primeng/fileupload'), require('primeng/inputmask'), require('primeng/inputswitch'), require('primeng/inputtextarea'), require('primeng/knob'), require('primeng/message'), require('primeng/multiselect'), require('primeng/orderlist'), require('primeng/password'), require('primeng/progressspinner'), require('primeng/radiobutton'), require('primeng/ripple'), require('primeng/sidebar'), require('primeng/speeddial'), require('primeng/steps'), require('primeng/table'), require('primeng/tabmenu'), require('primeng/tabview'), require('primeng/toast'), require('primeng/treeselect'), require('@angular/common/http')) :
+    typeof define === 'function' && define.amd ? define('@pics-core/profile', ['exports', '@angular/core', 'rxjs', '@angular/forms', '@angular/router', 'rxjs/add/operator/map', 'primeng/api', '@angular/common', 'primeng/tooltip', 'primeng/inputtext', '@ng-bootstrap/ng-bootstrap', 'primeng/accordion', 'primeng/avatar', 'primeng/badge', 'primeng/button', 'primeng/calendar', 'primeng/card', 'primeng/checkbox', 'primeng/confirmdialog', 'primeng/confirmpopup', 'primeng/contextmenu', 'primeng/dialog', 'primeng/dropdown', 'primeng/editor', 'primeng/fieldset', 'primeng/fileupload', 'primeng/inputmask', 'primeng/inputswitch', 'primeng/inputtextarea', 'primeng/knob', 'primeng/message', 'primeng/multiselect', 'primeng/orderlist', 'primeng/password', 'primeng/progressspinner', 'primeng/radiobutton', 'primeng/ripple', 'primeng/sidebar', 'primeng/speeddial', 'primeng/steps', 'primeng/table', 'primeng/tabmenu', 'primeng/tabview', 'primeng/toast', 'primeng/treeselect', '@angular/common/http'], factory) :
+    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory((global["pics-core"] = global["pics-core"] || {}, global["pics-core"].profile = {}), global.ng.core, global.rxjs, global.ng.forms, global.ng.router, global.rxjs["add/operator/map"], global.i6, global.ng.common, global.i10, global.i11, global.ngBootstrap, global.accordion, global.avatar, global.badge, global.button, global.calendar, global.card, global.checkbox, global.confirmdialog, global.confirmpopup, global.contextmenu, global.dialog, global.dropdown, global.editor, global.fieldset, global.fileupload, global.inputmask, global.inputswitch, global.inputtextarea, global.knob, global.message, global.multiselect, global.orderlist, global.password, global.progressspinner, global.radiobutton, global.ripple, global.sidebar, global.speeddial, global.steps, global.table, global.tabmenu, global.tabview, global.toast, global.treeselect, global.ng.common.http));
+})(this, (function (exports, i0, rxjs, i2, i1, map, i6, i9, i10, i11, ngBootstrap, accordion, avatar, badge, button, calendar, card, checkbox, confirmdialog, confirmpopup, contextmenu, dialog, dropdown, editor, fieldset, fileupload, inputmask, inputswitch, inputtextarea, knob, message, multiselect, orderlist, password, progressspinner, radiobutton, ripple, sidebar, speeddial, steps, table, tabmenu, tabview, toast, treeselect, http) { 'use strict';
 
     function _interopNamespace(e) {
         if (e && e.__esModule) return e;
@@ -23,14 +23,12 @@
     }
 
     var i0__namespace = /*#__PURE__*/_interopNamespace(i0);
-    var i1__namespace = /*#__PURE__*/_interopNamespace(i1);
     var i2__namespace = /*#__PURE__*/_interopNamespace(i2);
-    var i1__namespace$1 = /*#__PURE__*/_interopNamespace(i1$1);
-    var i12__namespace = /*#__PURE__*/_interopNamespace(i12);
-    var i8__namespace = /*#__PURE__*/_interopNamespace(i8);
+    var i1__namespace = /*#__PURE__*/_interopNamespace(i1);
+    var i6__namespace = /*#__PURE__*/_interopNamespace(i6);
+    var i9__namespace = /*#__PURE__*/_interopNamespace(i9);
     var i10__namespace = /*#__PURE__*/_interopNamespace(i10);
     var i11__namespace = /*#__PURE__*/_interopNamespace(i11);
-    var i13__namespace = /*#__PURE__*/_interopNamespace(i13);
 
     var themeList = [
         {
@@ -472,110 +470,6 @@
     i0__namespace.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: DataStoreService, decorators: [{
                 type: i0.Injectable
             }], ctorParameters: function () { return []; } });
-
-    var HttpService = /** @class */ (function () {
-        function HttpService(http, _storeservice) {
-            var _this = this;
-            this.http = http;
-            this._storeservice = _storeservice;
-            this.overrideUrl = true;
-            this.baseUrl = '';
-            this.headers = new i1.HttpHeaders()
-                .set('Accept', 'application/json')
-                .set('Content-Type', 'application/json')
-                .set('role', 'role=CP_PUBLIC');
-            this.showSpinner = new rxjs.BehaviorSubject(false);
-            this.outsideShowSpinner = new rxjs.BehaviorSubject(false);
-            this._storeservice.currentStore.subscribe(function (res) {
-                if (res['RBACORG'] && res['RBACORG'] !== '') {
-                    _this.RBACORG = res['RBACORG'];
-                    _this.url = _this.RBACORG['apiHost'] ? _this.RBACORG['apiHost'] : 'http://localhost:3000/api';
-                    _this.tokenKey = _this.RBACORG['tokenKey'];
-                }
-            });
-            this.url1 = '';
-        }
-        HttpService.prototype.get = function (apiRoute) {
-            return this.http.get("" + (this.url + apiRoute), {
-                headers: this.getHttpNewHeaders()
-            });
-        };
-        HttpService.prototype.post = function (apiRoute, body) {
-            return this.http.post("" + (this.url + apiRoute), body, {
-                headers: this.getHttpNewHeaders()
-            });
-        };
-        HttpService.prototype.put = function (apiRoute, body) {
-            return this.http.put("" + (this.url + apiRoute), body, {
-                headers: this.getHttpNewHeaders()
-            });
-        };
-        HttpService.prototype.patch = function (apiRoute, body) {
-            return this.http.patch("" + (this.url + apiRoute), body, {
-                headers: this.getHttpNewHeaders()
-            });
-        };
-        HttpService.prototype.delete = function (apiRoute) {
-            return this.http.delete("" + (this.url + apiRoute), {
-                headers: this.getHttpNewHeaders()
-            });
-        };
-        HttpService.prototype.getHttpHeaders = function () {
-            return new i1.HttpHeaders().set('key', 'value');
-        };
-        HttpService.prototype.getHttpNewHeaders = function () {
-            return this.headers.set('Authorization', "Bearer " + this.getToken());
-        };
-        HttpService.prototype.getAttachmentHttpHeaders = function (contentType) {
-            return new i1.HttpHeaders().set('Content-Type', contentType).set('x-ms-blob-type', 'BlockBlob');
-        };
-        HttpService.prototype.putUpload = function (apiRoute, body, contentType) {
-            return this.http.put("" + (this.url1 + apiRoute), body, { headers: this.getAttachmentHttpHeaders(contentType) });
-        };
-        HttpService.prototype.putupload2 = function (apiRoute, body, contenttype) {
-            return this.http
-                .put("" + (this.url1 + apiRoute), body, {
-                headers: this.getAttachmentHttpHeaders(contenttype),
-                observe: 'response'
-            })
-                .pipe(operators.map(function (data) {
-                return data;
-            }));
-        };
-        /**
-         *
-         * @param apiRoute
-         * This function will download the stream file from the API service.
-         * No HTTP required for this stream. So used Window.location.href to download the file
-         */
-        HttpService.prototype.getFormDownloaded = function (apiRoute) {
-            window.location.href = "" + (this.url + apiRoute);
-        };
-        //common http service(optional)
-        HttpService.prototype.handleError = function (error) {
-            var _a, _b;
-            var errorMessage = '';
-            if (error.error instanceof ErrorEvent) {
-                // Client-side errors
-                errorMessage = "Error: " + error.error.message;
-            }
-            else {
-                // Server-side errors
-                errorMessage = "Error Code: " + error.status + "\nMessage: " + (((_a = error === null || error === void 0 ? void 0 : error.error) === null || _a === void 0 ? void 0 : _a.message) ? (_b = error === null || error === void 0 ? void 0 : error.error) === null || _b === void 0 ? void 0 : _b.message : error.message);
-            }
-            return throwError.throwError(errorMessage);
-        };
-        HttpService.prototype.getToken = function () {
-            var token = this.tokenKey ? this.tokenKey : 'jwt-token';
-            return sessionStorage.getItem(token);
-        };
-        return HttpService;
-    }());
-    HttpService.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: HttpService, deps: [{ token: i1__namespace.HttpClient }, { token: DataStoreService }], target: i0__namespace.ɵɵFactoryTarget.Injectable });
-    HttpService.ɵprov = i0__namespace.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: HttpService });
-    i0__namespace.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: HttpService, decorators: [{
-                type: i0.Injectable
-            }], ctorParameters: function () { return [{ type: i1__namespace.HttpClient }, { type: DataStoreService }]; } });
 
     var ThemeService = /** @class */ (function () {
         function ThemeService() {
@@ -1123,11 +1017,17 @@
             }], ctorParameters: function () { return []; } });
 
     var ProfileService = /** @class */ (function () {
-        function ProfileService(httpService, themeService, localstorage) {
-            this.httpService = httpService;
+        function ProfileService(_storeservice, themeService, localstorage) {
+            var _this = this;
+            this._storeservice = _storeservice;
             this.themeService = themeService;
             this.localstorage = localstorage;
             this.profileImage = new rxjs.Subject();
+            this._storeservice.currentStore.subscribe(function (res) {
+                if (res) {
+                    _this.httpService = res['HTTPSERVICE'];
+                }
+            });
         }
         ProfileService.prototype.setUserPreference = function () {
             var _this = this;
@@ -1180,14 +1080,14 @@
         };
         return ProfileService;
     }());
-    ProfileService.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: ProfileService, deps: [{ token: HttpService }, { token: ThemeService }, { token: LocalService }], target: i0__namespace.ɵɵFactoryTarget.Injectable });
+    ProfileService.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: ProfileService, deps: [{ token: DataStoreService }, { token: ThemeService }, { token: LocalService }], target: i0__namespace.ɵɵFactoryTarget.Injectable });
     ProfileService.ɵprov = i0__namespace.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: ProfileService, providedIn: 'root' });
     i0__namespace.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: ProfileService, decorators: [{
                 type: i0.Injectable,
                 args: [{
                         providedIn: 'root'
                     }]
-            }], ctorParameters: function () { return [{ type: HttpService }, { type: ThemeService }, { type: LocalService }]; } });
+            }], ctorParameters: function () { return [{ type: DataStoreService }, { type: ThemeService }, { type: LocalService }]; } });
 
     // Inside your npm package (ProfileService)
     var ProfileUpdateService = /** @class */ (function () {
@@ -1288,7 +1188,7 @@
             this.keepAfterRouteChange = false;
             // clear alert messages on route change unless 'keepAfterRouteChange' flag is true
             router.events.subscribe(function (event) {
-                if (event instanceof i1$1.NavigationStart) {
+                if (event instanceof i1.NavigationStart) {
                     if (_this.keepAfterRouteChange) {
                         // only keep for a single route change
                         _this.keepAfterRouteChange = false;
@@ -1330,11 +1230,11 @@
         };
         return AlertService;
     }());
-    AlertService.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: AlertService, deps: [{ token: i1__namespace$1.Router }], target: i0__namespace.ɵɵFactoryTarget.Injectable });
+    AlertService.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: AlertService, deps: [{ token: i1__namespace.Router }], target: i0__namespace.ɵɵFactoryTarget.Injectable });
     AlertService.ɵprov = i0__namespace.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: AlertService });
     i0__namespace.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: AlertService, decorators: [{
                 type: i0.Injectable
-            }], ctorParameters: function () { return [{ type: i1__namespace$1.Router }]; } });
+            }], ctorParameters: function () { return [{ type: i1__namespace.Router }]; } });
     var AlertType;
     (function (AlertType) {
         AlertType[AlertType["Success"] = 0] = "Success";
@@ -1438,11 +1338,17 @@
     }());
 
     var AuthService = /** @class */ (function () {
-        function AuthService(injector, httpService, _router) {
-            this.httpService = httpService;
+        function AuthService(injector, _router, _storeservice) {
+            var _this = this;
             this._router = _router;
+            this._storeservice = _storeservice;
             this.orgInfo = new rxjs.BehaviorSubject('');
             this.currentOrgInfo = this.orgInfo.asObservable();
+            this._storeservice.currentStore.subscribe(function (res) {
+                if (res) {
+                    _this.httpService = res['HTTPSERVICE'];
+                }
+            });
             this.alertService = injector.get(AlertService);
         }
         AuthService.prototype.feedOrgInfo = function (data) {
@@ -1458,32 +1364,38 @@
         };
         return AuthService;
     }());
-    AuthService.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: AuthService, deps: [{ token: i0__namespace.Injector }, { token: HttpService }, { token: i1__namespace$1.Router }], target: i0__namespace.ɵɵFactoryTarget.Injectable });
+    AuthService.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: AuthService, deps: [{ token: i0__namespace.Injector }, { token: i1__namespace.Router }, { token: DataStoreService }], target: i0__namespace.ɵɵFactoryTarget.Injectable });
     AuthService.ɵprov = i0__namespace.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: AuthService, providedIn: 'root' });
     i0__namespace.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: AuthService, decorators: [{
                 type: i0.Injectable,
                 args: [{
                         providedIn: 'root'
                     }]
-            }], ctorParameters: function () { return [{ type: i0__namespace.Injector }, { type: HttpService }, { type: i1__namespace$1.Router }]; } });
+            }], ctorParameters: function () { return [{ type: i0__namespace.Injector }, { type: i1__namespace.Router }, { type: DataStoreService }]; } });
 
     var AttachmentsService = /** @class */ (function () {
-        function AttachmentsService(http) {
-            this.http = http;
+        function AttachmentsService(_storeservice) {
+            var _this = this;
+            this._storeservice = _storeservice;
+            this._storeservice.currentStore.subscribe(function (res) {
+                if (res) {
+                    _this.http = res['HTTPSERVICE'];
+                }
+            });
         }
         AttachmentsService.prototype.uploadKey = function (objparams) {
             return this.http.post(AttachmentConfig.EndPoint.Attachments.UploadKey, objparams);
         };
         return AttachmentsService;
     }());
-    AttachmentsService.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: AttachmentsService, deps: [{ token: HttpService }], target: i0__namespace.ɵɵFactoryTarget.Injectable });
+    AttachmentsService.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: AttachmentsService, deps: [{ token: DataStoreService }], target: i0__namespace.ɵɵFactoryTarget.Injectable });
     AttachmentsService.ɵprov = i0__namespace.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: AttachmentsService, providedIn: 'root' });
     i0__namespace.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: AttachmentsService, decorators: [{
                 type: i0.Injectable,
                 args: [{
                         providedIn: 'root'
                     }]
-            }], ctorParameters: function () { return [{ type: HttpService }]; } });
+            }], ctorParameters: function () { return [{ type: DataStoreService }]; } });
 
     var DISPLAY_IN_SECONDS = 8;
     var AlertComponent = /** @class */ (function () {
@@ -1527,7 +1439,7 @@
         return AlertComponent;
     }());
     AlertComponent.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: AlertComponent, deps: [{ token: AlertService }], target: i0__namespace.ɵɵFactoryTarget.Component });
-    AlertComponent.ɵcmp = i0__namespace.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "12.2.17", type: AlertComponent, selector: "app-alert", ngImport: i0__namespace, template: "<div *ngFor=\"let alert of alerts\" class=\"alert-animate {{ cssClass(alert) }} alert-dismissable\">\r\n  {{ alert.message }}\r\n  <a class=\"close\" (click)=\"removeAlert(alert)\">&times;</a>\r\n</div>\r\n", styles: [".alert-animate{position:fixed;top:10px;left:auto;right:10px;z-index:999999;min-width:400px;text-transform:capitalize;margin:0 auto;animation-name:slideInDown;animation-duration:1s;animation-fill-mode:both}.alert-animate .close{padding:3px;border-radius:2px;color:#fff;opacity:1;text-align:center;line-height:17px;font-size:24px}@keyframes slideInDown{0%{transform:translateY(-100%);visibility:visible}to{transform:translateY(0)}}.alert-animate.alert-success{background:#04844b;color:#fff;border-color:#04844b}.alert-danger{background:#b92b28;border-color:#b92b28;color:#fff}.alert-info{color:#fff;background:#0f3164;border-color:#0f3164}\n"], directives: [{ type: i12__namespace.NgForOf, selector: "[ngFor][ngForOf]", inputs: ["ngForOf", "ngForTrackBy", "ngForTemplate"] }] });
+    AlertComponent.ɵcmp = i0__namespace.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "12.2.17", type: AlertComponent, selector: "app-alert", ngImport: i0__namespace, template: "<div *ngFor=\"let alert of alerts\" class=\"alert-animate {{ cssClass(alert) }} alert-dismissable\">\r\n  {{ alert.message }}\r\n  <a class=\"close\" (click)=\"removeAlert(alert)\">&times;</a>\r\n</div>\r\n", styles: [".alert-animate{position:fixed;top:10px;left:auto;right:10px;z-index:999999;min-width:400px;text-transform:capitalize;margin:0 auto;animation-name:slideInDown;animation-duration:1s;animation-fill-mode:both}.alert-animate .close{padding:3px;border-radius:2px;color:#fff;opacity:1;text-align:center;line-height:17px;font-size:24px}@keyframes slideInDown{0%{transform:translateY(-100%);visibility:visible}to{transform:translateY(0)}}.alert-animate.alert-success{background:#04844b;color:#fff;border-color:#04844b}.alert-danger{background:#b92b28;border-color:#b92b28;color:#fff}.alert-info{color:#fff;background:#0f3164;border-color:#0f3164}\n"], directives: [{ type: i9__namespace.NgForOf, selector: "[ngFor][ngForOf]", inputs: ["ngForOf", "ngForTrackBy", "ngForTemplate"] }] });
     i0__namespace.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: AlertComponent, decorators: [{
                 type: i0.Component,
                 args: [{
@@ -1539,16 +1451,16 @@
             }], ctorParameters: function () { return [{ type: AlertService }]; } });
 
     var ProfileComponent$1 = /** @class */ (function () {
-        function ProfileComponent(injector, authService, formBuilder, httpService, profileService, profileUpdateService, attachmentService, _storeservice, confirmationService) {
+        function ProfileComponent(injector, authService, formBuilder, profileService, attachmentService, _storeservice, confirmationService, profileUpdateService) {
             this.authService = authService;
             this.formBuilder = formBuilder;
-            this.httpService = httpService;
             this.profileService = profileService;
-            this.profileUpdateService = profileUpdateService;
             this.attachmentService = attachmentService;
             this._storeservice = _storeservice;
             this.confirmationService = confirmationService;
+            this.profileUpdateService = profileUpdateService;
             this.isValid = false;
+            this.currentDate = new Date();
             this.themes = [];
             this.fontSetList = [];
             this.RBACORG = new RBACINFO();
@@ -1572,10 +1484,12 @@
                     console.log(_this.RBACORG, 'RBACORG Profile');
                     _this.environment = _this.RBACORG['environment'];
                     _this.orgId = parseInt(_this.RBACORG['orgID']);
+                    _this.httpService = res['HTTPSERVICE'];
                     if (_this.environment) {
                         _this.getUserInfo();
                         _this.fontSlider();
                     }
+                    _this.version = _this.environment.version;
                 }
             });
         };
@@ -1604,8 +1518,8 @@
                 middlename: [''],
                 lastname: ['', i2.Validators.required],
                 username: ['', i2.Validators.required],
-                dob: [''],
-                email: ['', [i2.Validators.required, i2.Validators.pattern(AppConstants.regexEmail)]]
+                // dob: [''],
+                email: ['', [i2.Validators.required, i2.Validators.pattern(AppConstants.regexEmail)]],
             });
         };
         Object.defineProperty(ProfileComponent.prototype, "resetFormcontrols", {
@@ -1638,7 +1552,7 @@
                     middlename: patchValuedata.middlename,
                     lastname: patchValuedata.lastname,
                     username: patchValuedata.username,
-                    dob: new Date(patchValuedata.dob),
+                    // dob: new Date(patchValuedata.dob),
                     email: patchValuedata.email
                 });
             });
@@ -1650,7 +1564,7 @@
             this.uploadedFile = fileValue.target.files[0].name;
             this.imageData = {
                 contentType: fileValue.target.files[0].type,
-                fileName: "user-profileimage/" + this.userid + "/" + this.uploadedFile
+                fileName: "user-profileimage/" + this.userid + "/" + this.uploadedFile.replaceAll(' ', '')
             };
             if (this.validateImage(fileValue.target.files)) {
                 this.attachmentService.uploadKey(this.imageData).subscribe(function (res) {
@@ -1658,7 +1572,7 @@
                     var uploadAttachment = document.getElementById('file');
                     var uploadAttachmentDetails = uploadAttachment.files[0];
                     _this.httpService.putUpload(_this.urlPath, uploadAttachmentDetails, uploadAttachmentDetails.type).subscribe(function (_resp) {
-                        _this.alertService.success('Uploaded Successfully!');
+                        _this.alertService.success('Profile Image uploaded successfully.');
                         var reader = new FileReader();
                         reader.onload = function () {
                             _this.thumbnail = reader.result;
@@ -1680,7 +1594,7 @@
         ProfileComponent.prototype.updateprofile = function () {
             var _this = this;
             var userData = this.userForm.getRawValue();
-            userData.dob = new i12.DatePipe('en-US').transform(userData.dob, 'YYYY-MM-dd');
+            // userData.dob = new DatePipe('en-US').transform(userData.dob, 'YYYY-MM-dd');
             if (this.uploadedFile) {
                 userData.additionalinfo = {
                     photo: this.imageData,
@@ -1702,6 +1616,7 @@
                 mappedid: this.userid,
                 config: JSON.stringify({ theme: this.selectedTheme, font: this.selectedFont })
             };
+            this.alertService.success('Theme changes saved successfully.');
             this.profileService.saveUserPreference(body).subscribe(function () {
                 // This is intentional
             });
@@ -1750,14 +1665,28 @@
             this.userForm.controls['lastname'].reset();
             this.thumbnail = '';
         };
-        ProfileComponent.prototype.removeThumbnail = function (event) {
-            event.stopPropagation();
-            $('#DeleteProfilePic').modal('show');
+        ProfileComponent.prototype.onClickRemove = function () {
+            $('#Deleteuser').modal('show');
         };
-        ProfileComponent.prototype.deleteProfilePicture = function () {
+        ProfileComponent.prototype.cancel = function () {
+            // this.userForm.reset();
+            this.userForm.enable();
+        };
+        ProfileComponent.prototype.removeThumbnail = function () {
+            // this.confirmationService.confirm({
+            //   target: event.target as EventTarget,
+            //   message: 'Are you sure you want to proceed?',
+            //   icon: 'pi pi-exclamation-triangle',
+            //   accept: () => {
+            this.cancel();
             this.thumbnail = '';
-            this.alertService.success('Profile picture removed successfully.');
-            $('#DeleteProfilePic').modal('hide');
+            this.alertService.success('Profile image deleted successfully.');
+            $('#Deleteuser').modal('hide');
+            //   },
+            //   reject: () => {
+            //       // reject message
+            //   }
+            // });
         };
         ProfileComponent.prototype.ngOnDestroy = function () {
             if (this.socketSubscription) {
@@ -1777,8 +1706,8 @@
         };
         return ProfileComponent;
     }());
-    ProfileComponent$1.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: ProfileComponent$1, deps: [{ token: i0__namespace.Injector }, { token: AuthService }, { token: i2__namespace.FormBuilder }, { token: HttpService }, { token: ProfileService }, { token: ProfileUpdateService }, { token: AttachmentsService }, { token: DataStoreService }, { token: i8__namespace.ConfirmationService }], target: i0__namespace.ɵɵFactoryTarget.Component });
-    ProfileComponent$1.ɵcmp = i0__namespace.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "12.2.17", type: ProfileComponent$1, selector: "core-profile", ngImport: i0__namespace, template: "<app-alert></app-alert>\r\n<div class=\"card w-100 profile\">\r\n  <div class=\"container-group h-100\" [formGroup]=\"userForm\">\r\n    <div class=\"left-container\">\r\n      <div class=\"nav flex-column nav-pills py-4 px-3\" id=\"v-pills-tab\" role=\"tablist\" aria-orientation=\"vertical\">\r\n        <a class=\"nav-link d-flex align-items-center mb-3 active\" id=\"v-pills-home-tab\" data-toggle=\"pill\"\r\n          href=\"#v-pills-home\" role=\"tab\" aria-controls=\"v-pills-home\" aria-selected=\"true\">\r\n          <span class=\"material-icon material-symbols-outlined mr-2\">person</span>\r\n          Edit Profile\r\n        </a>\r\n        <!-- <a class=\"nav-link d-flex align-items-center mb-3\" id=\"v-pills-profile-tab\" data-toggle=\"pill\"\r\n          href=\"#v-pills-profile\" role=\"tab\" aria-controls=\"v-pills-profile\" aria-selected=\"false\">\r\n          <span class=\"material-icon material-symbols-outlined mr-2\">lock_open</span>\r\n          Change Password\r\n        </a> -->\r\n        <a class=\"nav-link d-flex align-items-center\" id=\"v-theme-a\" data-toggle=\"pill\" href=\"#theme_tab\" role=\"tab\"\r\n          aria-controls=\"theme_tab\" aria-selected=\"false\">\r\n          <span class=\"material-icon material-symbols-outlined mr-2\">palette</span>\r\n          Theme\r\n        </a>\r\n      </div>\r\n    </div>\r\n    <div class=\"right-container\">\r\n      <div class=\"tab-content py-4 px-4\" id=\"v-pills-tabContent\">\r\n        <!-- Edit Profile Tab -->\r\n        <div class=\"tab-pane fade show active\" id=\"v-pills-home\" role=\"tabpanel\" aria-labelledby=\"v-pills-home-tab\">\r\n          <div class=\"strip_head toggleleft mb-3\">\r\n            <span class=\"report_head font-weight-bold\">Edit Profile</span>\r\n          </div>\r\n          <div class=\"p-fluid p-formgrid pic-upload-group row justify-content-md-center\">\r\n            <div class=\"p-field col-xl-4 col-lg-6 col-sm-4 col-md-12 col-12 text-center\">\r\n              <figure class=\"mt-2 mb-2 pic-upload justify-content-md-center\">\r\n                <img width=\"64\" class=\"rounded-circle border\" [src]=\"thumbnail || 'assets/images/user-empty.png'\"\r\n                  alt=\"upload\" />\r\n                <label for=\"file\" role=\"button\"\r\n                  class=\"material-icon material-symbols-outlined p-1 rounded-circle bg-primary text-white file-upload-btn\">edit</label>\r\n                <input type=\"file\" id=\"file\" aria-hidden=\"true\" style=\"visibility: hidden; display: none\"\r\n                  (change)=\"handleFileInput($event)\" />\r\n              </figure>\r\n              <button class=\"btn btn-primary\" *ngIf=\"thumbnail\" (click)=\"removeThumbnail($event)\">Remove</button>\r\n              <p><small>Image size max 50KB</small></p>\r\n            </div>\r\n          </div>\r\n          <p-confirmPopup></p-confirmPopup>\r\n          <div class=\"p-fluid p-formgrid row\">\r\n            <div class=\"p-field col-xl-4 col-lg-6 col-sm-4 col-md-12 col-12\">\r\n              <label for=\"fname\" class=\"referral-form-labels\">\r\n                First Name\r\n                <span class=\"requiredfield text-danger\">*</span>\r\n              </label>\r\n              <input id=\"fname\" type=\"text\" formControlName=\"firstname\" placeholder=\"Enter First Name\"\r\n                aria-describedby=\"fname\" pInputText />\r\n            </div>\r\n            <div class=\"p-field col-xl-4 col-lg-6 col-sm-4 col-md-12 col-12\">\r\n              <label for=\"mname\" class=\"referral-form-labels\">Middle Name </label>\r\n              <input id=\"mname\" type=\"text\" placeholder=\"Enter Middle Name\" formControlName=\"middlename\"\r\n                aria-describedby=\"mname\" pInputText />\r\n            </div>\r\n            <div class=\"p-field col-xl-4 col-lg-6 col-sm-4 col-md-12 col-12\">\r\n              <label for=\"lName\" class=\"referral-form-labels\">\r\n                Last Name\r\n                <span class=\"requiredfield text-danger\">*</span>\r\n              </label>\r\n              <input id=\"lName\" type=\"text\" placeholder=\"Enter Last Name\" formControlName=\"lastname\" pInputText\r\n                aria-describedby=\"lName\" />\r\n            </div>\r\n          </div>\r\n          <div class=\"p-fluid p-formgrid row\">\r\n            <div class=\"p-field col-xl-4 col-lg-6 col-sm-4 col-md-12 col-12\">\r\n              <label for=\"userName\" class=\"referral-form-labels\">\r\n                User Name\r\n                <span class=\"requiredfield text-danger\">*</span>\r\n              </label>\r\n              <input id=\"userName\" type=\"text\" readonly=\"true\" placeholder=\"Enter User Name\" formControlName=\"username\"\r\n                aria-describedby=\"userName\" pInputText />\r\n            </div>\r\n            <div class=\"p-field col-xl-4 col-lg-6 col-sm-4 col-md-12 col-12\">\r\n              <label for=\"dateformat\" class=\"referral-form-labels\">\r\n                DOB\r\n                <!-- <span class=\"requiredfield text-danger\">*</span> -->\r\n              </label>\r\n              <p-calendar placeholder=\"Select Date Of Birth\" formControlName=\"dob\" dateFormat=\"yy-mm-dd\"\r\n                 [showOnFocus]=\"false\" inputId=\"dateformat\">\r\n              </p-calendar>\r\n            </div>\r\n            <div class=\"p-field col-xl-4 col-lg-6 col-sm-4 col-md-12 col-12\">\r\n              <label for=\"usersEmailid\" class=\"referral-form-labels\">\r\n                Email ID\r\n                <span class=\"requiredfield text-danger\">*</span>\r\n              </label>\r\n              <input id=\"usersEmailid\" placeholder=\"Enter Email ID\" formControlName=\"email\" type=\"text\" pInputText\r\n                readonly />\r\n            </div>\r\n          </div>\r\n          <div class=\"p-fluid p-formgrid row\">\r\n            <div class=\"p-field col-lg-4 col-sm-4 col-md-12 col-12\"></div>\r\n            <div class=\"p-field col-lg-4 col-sm-4 col-md-12 col-12\"></div>\r\n            <div class=\"p-field col-lg-4 col-sm-4 col-md-12 col-12 mb-0\">\r\n              <button class=\"pull-right mr-2 mb-2 btn btn-primary btncommon\" (click)=\"updateprofile()\">\r\n                Save Changes\r\n              </button>\r\n              <button class=\"pull-right mb-2 mr-2 btn bg-white text-primary btncancel\" (click)=\"clearForm()\">\r\n                Clear\r\n              </button>\r\n            </div>\r\n          </div>\r\n        </div>\r\n        <!-- Tab End -->\r\n\r\n        <!-- Change Password Tab -->\r\n        <!-- <div class=\"tab-pane fade\" id=\"v-pills-profile\" role=\"tabpanel\" aria-labelledby=\"v-pills-profile-tab\">\r\n          <div class=\"strip_head toggleleft mb-4\">\r\n            <span class=\"report_head font-weight-bold\">Change Password</span>\r\n          </div>\r\n          <div [formGroup]=\"resetPasswordForm\" class=\"reset-password-div\">\r\n            <div class=\"p-fluid p-formgrid row\">\r\n              <div class=\"p-field col-xl-4 col-lg-12 col-sm-4 col-md-12 col-12 mb-3\">\r\n                <label for=\"mailid\" aria-describedby=\"mailid\">Email <span class=\"requiredfield\">*</span></label>\r\n                <input type=\"text\" readonly=\"true\" id=\"mailid\" class=\"form-control\" formControlName=\"mailid\"\r\n                  pInputText />\r\n              </div>\r\n            </div>\r\n            <div class=\"p-fluid p-formgrid row\">\r\n              <div class=\"p-field col-xl-4 col-lg-6 col-sm-4 col-md-12 col-12 mb-3\">\r\n                <label for=\"cpassword\" aria-describedby=\"cpassword\">Current Password <span\r\n                    class=\"requiredfield\">*</span></label>\r\n                <p-password appBlockcutcopypaste class=\"position-relative\" inputId=\"cpassword\"\r\n                  formControlName=\"currentpassword\" [toggleMask]=\"true\" [feedback]=\"false\">\r\n                </p-password>\r\n                <small *ngIf=\"\r\n                    resetFormcontrols['currentpassword'].hasError('required') &&\r\n                    resetFormcontrols['currentpassword'].touched\r\n                  \" class=\"p-error block\">\r\n                  Required\r\n                </small>\r\n              </div>\r\n\r\n              <div class=\"p-field col-xl-4 col-lg-6 col-sm-4 col-md-12 col-12 mb-3 position-relative\">\r\n                <label for=\"npassword\" aria-describedby=\"npassword\">New Password <span\r\n                    class=\"requiredfield\">*</span></label>\r\n                <p-password class=\"position-relative\" appBlockcutcopypaste inputId=\"npassword\"\r\n                  formControlName=\"newpassword\" [toggleMask]=\"true\" [feedback]=\"false\">\r\n                </p-password>\r\n                <div class=\"autosuggest\" *ngIf=\"isValid\">\r\n                  <div *ngIf=\"\r\n                      resetFormcontrols['newpassword'].hasError('required') && resetFormcontrols['newpassword'].touched\r\n                    \" class=\"p-error d-flex align-items-center mb-2\">\r\n                    <em class=\"pi pi-times-circle mr-1\"></em>\r\n                    <small>Required</small>\r\n                  </div>\r\n                  <div class=\"p-error d-flex align-items-center mb-2\"\r\n                    *ngIf=\"resetFormcontrols['newpassword'].hasError('hasNumber')\">\r\n                    <em class=\"pi pi-times-circle mr-1\"></em>\r\n                    <small>{{ errors[0] }}</small>\r\n                  </div>\r\n                  <div class=\"p-error d-flex align-items-center mb-2\"\r\n                    *ngIf=\"resetFormcontrols['newpassword'].hasError('hasCapitalCase')\">\r\n                    <em class=\"pi pi-times-circle mr-1\"></em>\r\n                    <small>{{ errors[2] }}</small>\r\n                  </div>\r\n                  <div class=\"p-error d-flex align-items-center mb-2\"\r\n                    *ngIf=\"resetFormcontrols['newpassword'].hasError('hasSmallCase')\">\r\n                    <em class=\"pi pi-times-circle mr-1\"></em>\r\n                    <small>{{ errors[3] }}</small>\r\n                  </div>\r\n                  <small class=\"p-error d-flex align-items-center mb-2\"\r\n                    *ngIf=\"resetFormcontrols['newpassword'].hasError('hasSpecialCharacters')\">\r\n                    <em class=\"pi pi-times-circle mr-1\"></em>\r\n                    {{ errors[1] }}\r\n                  </small>\r\n                  <div class=\"p-error d-flex align-items-center mb-2\"\r\n                    *ngIf=\"resetFormcontrols['newpassword'].hasError('minlength')\">\r\n                    <em class=\"pi pi-times-circle mr-1\"></em>\r\n                    <small>{{ errors[4] }}</small>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n\r\n              <div class=\"p-field col-xl-4 col-lg-6 col-sm-4 col-md-12 col-12 mb-2\">\r\n                <label for=\"cnfpassword\" aria-describedby=\"cnfpassword\">Confirm Password <span\r\n                    class=\"requiredfield\">*</span></label>\r\n                <p-password appBlockcutcopypaste class=\"position-relative\" inputId=\"cnfpassword\"\r\n                  formControlName=\"conformpassword\" [toggleMask]=\"true\" [feedback]=\"false\">\r\n                </p-password>\r\n                <div *ngIf=\"\r\n                    resetFormcontrols['conformpassword'].hasError('required') &&\r\n                    resetFormcontrols['conformpassword'].touched\r\n                  \" class=\"p-error block\">\r\n                  <small>Required</small>\r\n                </div>\r\n                <div class=\"p-error block\" *ngIf=\"\r\n                    resetFormcontrols['conformpassword'].hasError('NoPassswordMatch') &&\r\n                    resetFormcontrols['conformpassword'].touched\r\n                  \">\r\n                  <small>Password Does not match</small>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <div class=\"row\">\r\n            <div class=\"col-md-12 mt-2 text-right\">\r\n              <p-button label=\"Save Changes\" styleClass=\"px-3 py-1\" (click)=\"changePassword()\"\r\n                [disabled]=\"resetPasswordForm.invalid\"></p-button>\r\n            </div>\r\n          </div>\r\n        </div> -->\r\n        <!-- Tab End -->\r\n\r\n        <!-- Theme Customizer Tab -->\r\n        <div class=\"tab-pane fade\" id=\"theme_tab\" role=\"tabpanel\" aria-labelledby=\"v-theme-a\">\r\n          <div class=\"strip_head toggleleft mb-4\">\r\n            <span class=\"report_head font-weight-bold\">Theme Customizer</span>\r\n          </div>\r\n          <div class=\"customizer customizer-styling pt-3\">\r\n            <!-- Skin -->\r\n            <div class=\"customizer-styling-skin skin mb-4\">\r\n              <h6 class=\"font-weight-bold mb-2\">Skin</h6>\r\n              <div class=\"d-flex justify-content-start align-items-center\">\r\n                <div *ngFor=\"let theme of themes\" class=\"custom-control custom-radio mr-4\">\r\n                  <figure [ngClass]=\"selectedTheme === theme.key ? 'active' : ''\">\r\n                    <label role=\"link\" class=\"mb-0 theme-select\" for=\"theme_{{ theme.key }}\">\r\n                      <img src=\"{{ theme.image }}\" class=\"img-fluid\" alt=\"{{ theme.name }}\" />\r\n                    </label>\r\n                    <figcaption>\r\n                      <input type=\"radio\" id=\"theme_{{ theme.key }}\" name=\"{{ theme.name }}\"\r\n                        class=\"custom-control-input layout-name\" [value]=\"theme.key\" [(ngModel)]=\"selectedTheme\"\r\n                        [ngModelOptions]=\"{ standalone: true }\" (click)=\"setTheme(theme.key)\" />\r\n                      <label class=\"custom-control-label mt-2\" for=\"theme_{{ theme.key }}\">{{ theme.name }}</label>\r\n                    </figcaption>\r\n                  </figure>\r\n                </div>\r\n              </div>\r\n            </div>\r\n\r\n            <!-- <div class=\"customizer-styling-skin d-none mb-3\">\r\n              <h6 class=\"font-weight-bold mb-2\">Font</h6>\r\n              <div class=\"d-flex justify-content-start align-items-center\">\r\n                <div *ngFor=\"let fontSet of fontSetList\" class=\"custom-control custom-radio mr-4\">\r\n                  <figure [ngClass]=\"selectedFont === fontSet.key ? 'active' : ''\">\r\n                    <label for=\"font_{{ fontSet.key }}\" class=\"font-box mb-0 theme-select\"> Aa </label>\r\n                    <figcaption>\r\n                      <input type=\"radio\" id=\"font_{{ fontSet.key }}\" name=\"{{ fontSet.name }}\"\r\n                        class=\"custom-control-input layout-name\" [value]=\"fontSet.key\" [(ngModel)]=\"selectedFont\"\r\n                        [ngModelOptions]=\"{ standalone: true }\" (click)=\"setFont(fontSet.key)\" />\r\n                      <label class=\"custom-control-label mt-2\" for=\"font_{{ fontSet.key }}\">{{ fontSet.name }}</label>\r\n                    </figcaption>\r\n                  </figure>\r\n                </div>\r\n              </div>\r\n            </div> -->\r\n\r\n            <div class=\"customizer-styling-skin mb-3\">\r\n              <h6 class=\"font-weight-bold mb-2\">Font Size (<span id=\"rs-bullet\" class=\"rs-label\">{{selectedFont}}</span>)</h6>\r\n              <div class=\"d-flex justify-content-start align-items-center col-lg-4 col-md-4 col-12 p-0\">\r\n                <div class=\"custom-control custom-radio w-100 mr-4\">\r\n                  <div class=\"range-slider\">\r\n                    <input id=\"rs-range-line\" class=\"rs-range\" type=\"range\" #ref value=\"{{selectedFont}}\" min=\"13\" max=\"20\"   [ngModelOptions]=\"{ standalone: true }\" [(ngModel)]=\"selectedFont\" (change)=\"setRangeFont(ref.value)\">\r\n                  </div>\r\n                  <div class=\"box-minmax\">\r\n                    <span>13</span><span>20</span>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n            </div>\r\n\r\n          </div>\r\n          <button class=\"pull-right mr-2 mb-2 btn btn-primary btncommon\" (click)=\"updateStyling()\">Save Changes</button>\r\n        </div>\r\n        <!-- Tab End -->\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<div class=\"modal\" id=\"DeleteProfilePic\" tabindex=\"-1\" role=\"dialog\">\r\n  <div class=\"modal-dialog\" role=\"document\">\r\n    <div class=\"modal-content\">\r\n      <div class=\"modal-header\">\r\n        <h5 class=\"modal-title\">Remove Profile Picture</h5>\r\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\r\n          <span aria-hidden=\"true\">&times;</span>\r\n        </button>\r\n      </div>\r\n      <div class=\"modal-body\">\r\n        Are you sure you want to remove the profile picture?\r\n        <div class=\"clearfix\"></div>\r\n        <div class=\"mt-2\">\r\n          <button class=\"pull-right mb-2 btn btn-primary btncommon delete\" data-dismiss=\"modal\"\r\n            (click)=\"deleteProfilePicture()\">\r\n            Remove\r\n          </button>\r\n          <button class=\"pull-right mb-2 mr-2 btn bg-white text-primary btncancel\" data-dismiss=\"modal\">\r\n            Cancel\r\n          </button>\r\n        </div>\r\n        <div class=\"clearfix\"></div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n", styles: ["@charset \"UTF-8\";.profile .pic-upload{position:relative;display:inline-flex}.profile .pic-upload .file-upload-btn{margin-bottom:0;position:absolute;bottom:5px;right:0px;font-size:var(--font-15)}.profile .right-container p{color:var(--text-dark)}.profile .autosuggest{position:absolute;top:24px;left:15px;right:15px;bottom:auto;transform:translateY(38px);will-change:transform;min-width:10rem;padding:.5rem;margin:.125rem 0 0;font-size:1rem;color:var(--text-dark);text-align:left;list-style:none;background-color:var(--bg-light);background-clip:padding-box;border:1px solid rgba(0,0,0,.15);border-radius:.25rem;z-index:9;max-height:200px;overflow:auto}.profile .autosuggest li{cursor:pointer;font-size:13px;line-height:35px;border-bottom:solid 1px var(--table-border)}.profile .autosuggest li:hover{color:var(--text-dark)}.profile .autosuggest li:last-child{border-bottom:none}.profile .nav-pills .nav-link{position:relative;color:#767676;background-color:transparent}.profile .nav-pills .nav-link.active{background-color:transparent;color:var(--primary);font-weight:600}.profile .nav-pills .nav-link.active :before{content:\"chevron_right\";font-family:\"Material Icons\";position:absolute;right:0;left:auto}@media screen and (min-width: 1180px){.profile{height:calc(100vh - 100px)}}@media screen and (min-width: 768px){.profile .container-group{display:flex}.profile .container-group .left-container{border-right:1px solid var(--table-border);height:100%;width:280px}.profile .container-group .right-container{height:100%;width:calc(100% - 280px)}.profile .nav-pills .nav-link.active :before{display:block}}@media screen and (max-width: 767px){.container-group .left-container{width:100%}.container-group .left-container .nav-pills{border-bottom:1px solid var(--table-border)}.container-group .right-container{width:100%}.container-group .right-container .tab-pane .strip_head{text-align:center}.container-group .nav-pills .nav-link.active :before{display:none}}.customizer .custom-checkbox.custom-control,.customizer .custom-radio.custom-control{padding-left:0}.customizer .custom-checkbox.custom-control .theme-select,.customizer .custom-radio.custom-control .theme-select{border:2px solid #ddd;border-radius:7px}.customizer .custom-checkbox.custom-control .active .theme-select,.customizer .custom-radio.custom-control .active .theme-select{border-color:var(--primary)}.customizer .custom-checkbox .custom-control-input:checked~.custom-control-label:before,.customizer .custom-radio .custom-control-input:checked~.custom-control-label:before{content:\"\\f00c\";font-family:\"FontAwesome\",sans-serif;color:var(--hover-text);background-color:var(--btn);border-color:var(--btn);font-size:10px;display:flex;align-items:center;padding:2px}.customizer .custom-checkbox label,.customizer .custom-radio label{cursor:pointer}.customizer .custom-checkbox .font-box,.customizer .custom-radio .font-box{display:flex;justify-content:center;align-items:center;width:150px;height:120px;color:var(--text-dark)}.customizer .custom-checkbox .custom-control-label,.customizer .custom-radio .custom-control-label{position:relative;vertical-align:middle;font-size:var(--base-font-size);line-height:normal;color:var(--text-dark);cursor:pointer;padding-left:25px}.customizer .custom-checkbox .custom-control-label:after,.customizer .custom-radio .custom-control-label:after{border-color:var(--btn)}.customizer .custom-checkbox .custom-control-label:before,.customizer .custom-checkbox .custom-control-label:after,.customizer .custom-radio .custom-control-label:before,.customizer .custom-radio .custom-control-label:after{background-image:none;width:16px;height:16px;left:0;box-shadow:none;top:0}.customizer hr{border-color:var(--table-border)}.customizer .customizer-header{background:var(--background-color);color:var(--text-dark)}.customizer .customizer-header .customizer-close{position:absolute;right:.6rem;top:.6rem;padding:7px;width:auto;z-index:10;color:var(--text-dark);cursor:pointer}.customizer .customizer-header .customizer-close .material-icon{font-size:1.5rem}.customizer .customizer-header .customizer-close:hover{color:var(--btn)}.customizer h4{font-size:var(--font-15);font-weight:600;color:var(--text-dark)}.customizer h6{font-size:var(--font-14);color:var(--text-dark)}.customizer p{font-size:var(--base-font-size);font-weight:400;color:var(--text-dark)}.customizer .customizer-toggle{background:var(--btn);color:var(--hover-text);box-shadow:-3px 0 8px #22292f1a;border-top-left-radius:6px;border-bottom-left-radius:6px;position:absolute;top:50%;width:38px;height:38px;left:-39px;text-align:center;line-height:40px;border-left:1px solid var(--checkbox-border);cursor:pointer}.customizer .customizer-toggle .fa-cog{font-size:var(--font-15)}.customizer .customizer-toggle:hover{text-decoration:none}.customizer .customizer-styling-skin.skin .custom-control .custom-control-label{position:relative;padding-left:25px}.customizer .custom-control:first-child .font-box{font-size:var(--font-21);font-weight:400}.customizer .custom-control:last-child .font-box{font-size:var(--font-26);font-weight:600}.box-minmax{margin-top:15px;width:100%;display:flex;justify-content:space-between;font-size:14px;color:var(--label-text)}.box-minmax span:first-child{margin-left:4px}.rs-range{margin-top:29px;width:100%;appearance:none;-webkit-appearance:none}.rs-range:focus{outline:none;border:none!important}.rs-range::-webkit-slider-runnable-track{width:100%;height:1px;cursor:pointer;box-shadow:none;background:var(--text-dark);border-radius:0;border:0px solid #010101}.rs-range::-moz-range-track{width:100%;height:1px;cursor:pointer;box-shadow:none;background:var(--btn);border-radius:0;border:0px solid #010101}.rs-range::-webkit-slider-thumb{box-shadow:none;border:0px solid var(--table-border);box-shadow:0 10px 10px #00000040;height:30px;width:20px;border-radius:22px;background:var(--btn);cursor:pointer;appearance:none;-webkit-appearance:none;margin-top:-15px}.rs-range::-moz-range-thumb{box-shadow:none;border:0px solid var(--table-border);box-shadow:0 10px 10px #00000040;height:42px;width:22px;border-radius:22px;background:var(--btn);cursor:pointer;appearance:none;-webkit-appearance:none;margin-top:-20px}.rs-range::-moz-focus-outer{border:0}.rs-label{text-align:center;font-weight:bold;color:var(--label-text);line-height:normal;font-size:14px}.rs-label:after{content:\"px\";font-size:14px;letter-spacing:.07em}\n"], components: [{ type: AlertComponent, selector: "app-alert" }, { type: i10__namespace.ConfirmPopup, selector: "p-confirmPopup", inputs: ["key", "defaultFocus", "showTransitionOptions", "hideTransitionOptions", "autoZIndex", "baseZIndex", "style", "styleClass", "visible"] }, { type: i11__namespace.Calendar, selector: "p-calendar", inputs: ["style", "styleClass", "inputStyle", "inputId", "name", "inputStyleClass", "placeholder", "ariaLabelledBy", "iconAriaLabel", "disabled", "dateFormat", "multipleSeparator", "rangeSeparator", "inline", "showOtherMonths", "selectOtherMonths", "showIcon", "icon", "appendTo", "readonlyInput", "shortYearCutoff", "monthNavigator", "yearNavigator", "hourFormat", "timeOnly", "stepHour", "stepMinute", "stepSecond", "showSeconds", "required", "showOnFocus", "showWeek", "showClear", "dataType", "selectionMode", "maxDateCount", "showButtonBar", "todayButtonStyleClass", "clearButtonStyleClass", "autoZIndex", "baseZIndex", "panelStyleClass", "panelStyle", "keepInvalid", "hideOnDateTimeSelect", "touchUI", "timeSeparator", "focusTrap", "showTransitionOptions", "hideTransitionOptions", "tabindex", "view", "defaultDate", "minDate", "maxDate", "disabledDates", "disabledDays", "yearRange", "showTime", "responsiveOptions", "numberOfMonths", "firstDayOfWeek", "locale"], outputs: ["onFocus", "onBlur", "onClose", "onSelect", "onClear", "onInput", "onTodayClick", "onClearClick", "onMonthChange", "onYearChange", "onClickOutside", "onShow"] }], directives: [{ type: i2__namespace.NgControlStatusGroup, selector: "[formGroupName],[formArrayName],[ngModelGroup],[formGroup],form:not([ngNoForm]),[ngForm]" }, { type: i2__namespace.FormGroupDirective, selector: "[formGroup]", inputs: ["formGroup"], outputs: ["ngSubmit"], exportAs: ["ngForm"] }, { type: i12__namespace.NgIf, selector: "[ngIf]", inputs: ["ngIf", "ngIfThen", "ngIfElse"] }, { type: i2__namespace.DefaultValueAccessor, selector: "input:not([type=checkbox])[formControlName],textarea[formControlName],input:not([type=checkbox])[formControl],textarea[formControl],input:not([type=checkbox])[ngModel],textarea[ngModel],[ngDefaultControl]" }, { type: i2__namespace.NgControlStatus, selector: "[formControlName],[ngModel],[formControl]" }, { type: i2__namespace.FormControlName, selector: "[formControlName]", inputs: ["disabled", "formControlName", "ngModel"], outputs: ["ngModelChange"] }, { type: i13__namespace.InputText, selector: "[pInputText]" }, { type: i12__namespace.NgForOf, selector: "[ngFor][ngForOf]", inputs: ["ngForOf", "ngForTrackBy", "ngForTemplate"] }, { type: i12__namespace.NgClass, selector: "[ngClass]", inputs: ["class", "ngClass"] }, { type: i2__namespace.RadioControlValueAccessor, selector: "input[type=radio][formControlName],input[type=radio][formControl],input[type=radio][ngModel]", inputs: ["name", "formControlName", "value"] }, { type: i2__namespace.NgModel, selector: "[ngModel]:not([formControlName]):not([formControl])", inputs: ["name", "disabled", "ngModel", "ngModelOptions"], outputs: ["ngModelChange"], exportAs: ["ngModel"] }, { type: i2__namespace.RangeValueAccessor, selector: "input[type=range][formControlName],input[type=range][formControl],input[type=range][ngModel]" }] });
+    ProfileComponent$1.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: ProfileComponent$1, deps: [{ token: i0__namespace.Injector }, { token: AuthService }, { token: i2__namespace.FormBuilder }, { token: ProfileService }, { token: AttachmentsService }, { token: DataStoreService }, { token: i6__namespace.ConfirmationService }, { token: ProfileUpdateService }], target: i0__namespace.ɵɵFactoryTarget.Component });
+    ProfileComponent$1.ɵcmp = i0__namespace.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "12.2.17", type: ProfileComponent$1, selector: "core-profile", ngImport: i0__namespace, template: "<app-alert></app-alert>\r\n<div class=\"card w-100 profile\">\r\n  <div class=\"container-group h-100\" [formGroup]=\"userForm\">\r\n    <div class=\"left-container\">\r\n      <div class=\"nav flex-column nav-pills py-4 px-3\" id=\"v-pills-tab\" role=\"tablist\" aria-orientation=\"vertical\">\r\n        <a class=\"nav-link d-flex align-items-center mb-3 active\" id=\"v-pills-home-tab\" data-toggle=\"pill\"\r\n          href=\"#v-pills-home\" role=\"tab\" aria-controls=\"v-pills-home\" aria-selected=\"true\">\r\n          <span class=\"material-icon material-symbols-outlined mr-2\">person</span>\r\n          Edit Profile\r\n        </a>\r\n        <!-- <a class=\"nav-link d-flex align-items-center mb-3\" id=\"v-pills-profile-tab\" data-toggle=\"pill\"\r\n          href=\"#v-pills-profile\" role=\"tab\" aria-controls=\"v-pills-profile\" aria-selected=\"false\">\r\n          <span class=\"material-icon material-symbols-outlined mr-2\">lock_open</span>\r\n          Change Password\r\n        </a> -->\r\n        <a class=\"nav-link d-flex align-items-center\" id=\"v-theme-a\" data-toggle=\"pill\" href=\"#theme_tab\" role=\"tab\"\r\n          aria-controls=\"theme_tab\" aria-selected=\"false\">\r\n          <span class=\"material-icon material-symbols-outlined mr-2\">palette</span>\r\n          Theme\r\n        </a>\r\n      </div>\r\n      <div class=\"buildV\">Version : {{version}}</div>\r\n    </div>\r\n    <div class=\"right-container\">\r\n      <div class=\"tab-content py-4 px-4\" id=\"v-pills-tabContent\">\r\n        <!-- Edit Profile Tab -->\r\n        <div class=\"tab-pane fade show active\" id=\"v-pills-home\" role=\"tabpanel\" aria-labelledby=\"v-pills-home-tab\">\r\n          <div class=\"strip_head toggleleft mb-3\">\r\n            <span class=\"report_head font-weight-bold\">Edit Profile</span>\r\n          </div>\r\n          <div class=\"p-fluid p-formgrid pic-upload-group row justify-content-md-center\">\r\n            <div class=\"p-field col-xl-4 col-lg-6 col-sm-4 col-md-12 col-12 text-center\">\r\n              <figure class=\"mt-2 mb-2 pic-upload justify-content-md-center\">\r\n                <img width=\"64\" class=\"rounded-circle border\" [src]=\"thumbnail || 'assets/images/user-empty.png'\"\r\n                  alt=\"upload\" />\r\n                <input type=\"file\" id=\"file\" aria-hidden=\"true\" style=\"visibility: hidden; display: none\"\r\n                  (change)=\"handleFileInput($event)\" />\r\n                  <div class=\"mt-1\">\r\n                    <label\r\n                      for=\"file\"\r\n                      role=\"button\"\r\n                      class=\"material-icon material-symbols-outlined text-primary action-btn\"\r\n                      >edit</label\r\n                    >\r\n                    <span\r\n                      role=\"button\"\r\n                      class=\"material-icon material-symbols-outlined text-danger action-btn\"\r\n                      *ngIf=\"thumbnail\"\r\n                      (click)=\"onClickRemove()\">\r\n                      delete\r\n                    </span>\r\n                    <span\r\n                      class=\"material-icon material-symbols-outlined text-muted action-btn\"\r\n                      pTooltip=\"Image size max 50KB\">\r\n                      Info\r\n                    </span>\r\n                  </div>\r\n              </figure>\r\n              \r\n            </div>\r\n          </div>\r\n          <!-- <p-confirmPopup></p-confirmPopup> -->\r\n          <div class=\"p-fluid p-formgrid row\">\r\n            <div class=\"p-field col-xl-4 col-lg-6 col-sm-4 col-md-12 col-12\">\r\n              <label for=\"fname\" class=\"referral-form-labels\">\r\n                First Name\r\n                <span class=\"requiredfield text-danger\">*</span>\r\n              </label>\r\n              <input id=\"fname\" type=\"text\" formControlName=\"firstname\" placeholder=\"Enter First Name\"\r\n                aria-describedby=\"fname\" pInputText />\r\n            </div>\r\n            <div class=\"p-field col-xl-4 col-lg-6 col-sm-4 col-md-12 col-12\">\r\n              <label for=\"mname\" class=\"referral-form-labels\">Middle Name </label>\r\n              <input id=\"mname\" type=\"text\" placeholder=\"Enter Middle Name\" formControlName=\"middlename\"\r\n                aria-describedby=\"mname\" pInputText />\r\n            </div>\r\n            <div class=\"p-field col-xl-4 col-lg-6 col-sm-4 col-md-12 col-12\">\r\n              <label for=\"lName\" class=\"referral-form-labels\">\r\n                Last Name\r\n                <span class=\"requiredfield text-danger\">*</span>\r\n              </label>\r\n              <input id=\"lName\" type=\"text\" placeholder=\"Enter Last Name\" formControlName=\"lastname\" pInputText\r\n                aria-describedby=\"lName\" />\r\n            </div>\r\n          </div>\r\n          <div class=\"p-fluid p-formgrid row\">\r\n            <div class=\"p-field col-xl-4 col-lg-6 col-sm-4 col-md-12 col-12\">\r\n              <label for=\"userName\" class=\"referral-form-labels\">\r\n                User Name\r\n                <span class=\"requiredfield text-danger\">*</span>\r\n              </label>\r\n              <input id=\"userName\" type=\"text\" readonly=\"true\" placeholder=\"Enter User Name\" formControlName=\"username\"\r\n                aria-describedby=\"userName\" pInputText />\r\n            </div>\r\n            <!-- <div class=\"p-field col-xl-4 col-lg-6 col-sm-4 col-md-12 col-12\"> -->\r\n              <!-- <label for=\"dateformat\" class=\"referral-form-labels\">\r\n                DOB -->\r\n                <!-- <span class=\"requiredfield text-danger\">*</span> -->\r\n              <!-- </label>\r\n              <p-calendar\r\n              formControlName=\"dob\"\r\n              placeholder=\"Select Date Of Birth\"\r\n              dateFormat=\"yy-mm-dd\"\r\n              [maxDate]=\"currentDate\"\r\n              fieldKey=\"SETTINGS_USR_DOB\"\r\n              inputId=\"dateformat\"></p-calendar> -->\r\n            <!-- </div> -->\r\n            <div class=\"p-field col-xl-4 col-lg-6 col-sm-4 col-md-12 col-12\">\r\n              <label for=\"usersEmailid\" class=\"referral-form-labels\">\r\n                Email ID\r\n                <span class=\"requiredfield text-danger\">*</span>\r\n              </label>\r\n              <input id=\"usersEmailid\" placeholder=\"Enter Email ID\" formControlName=\"email\" type=\"text\" pInputText\r\n                readonly />\r\n            </div>\r\n          </div>\r\n          <div class=\"p-fluid p-formgrid row\">\r\n            <div class=\"p-field col-lg-4 col-sm-4 col-md-12 col-12\"></div>\r\n            <div class=\"p-field col-lg-4 col-sm-4 col-md-12 col-12\"></div>\r\n            <div class=\"p-field col-lg-4 col-sm-4 col-md-12 col-12 mb-0\">\r\n              <button class=\"pull-right mr-2 mb-2 btn btn-primary btncommon\" (click)=\"updateprofile()\">\r\n                Save Changes\r\n              </button>\r\n              <button class=\"pull-right mb-2 mr-2 btn bg-white text-primary btncancel\" (click)=\"clearForm()\">\r\n                Clear\r\n              </button>\r\n            </div>\r\n          </div>\r\n        </div>\r\n        <!-- Tab End -->\r\n\r\n        <!-- Change Password Tab -->\r\n        <!-- <div class=\"tab-pane fade\" id=\"v-pills-profile\" role=\"tabpanel\" aria-labelledby=\"v-pills-profile-tab\">\r\n          <div class=\"strip_head toggleleft mb-4\">\r\n            <span class=\"report_head font-weight-bold\">Change Password</span>\r\n          </div>\r\n          <div [formGroup]=\"resetPasswordForm\" class=\"reset-password-div\">\r\n            <div class=\"p-fluid p-formgrid row\">\r\n              <div class=\"p-field col-xl-4 col-lg-12 col-sm-4 col-md-12 col-12 mb-3\">\r\n                <label for=\"mailid\" aria-describedby=\"mailid\">Email <span class=\"requiredfield\">*</span></label>\r\n                <input type=\"text\" readonly=\"true\" id=\"mailid\" class=\"form-control\" formControlName=\"mailid\"\r\n                  pInputText />\r\n              </div>\r\n            </div>\r\n            <div class=\"p-fluid p-formgrid row\">\r\n              <div class=\"p-field col-xl-4 col-lg-6 col-sm-4 col-md-12 col-12 mb-3\">\r\n                <label for=\"cpassword\" aria-describedby=\"cpassword\">Current Password <span\r\n                    class=\"requiredfield\">*</span></label>\r\n                <p-password appBlockcutcopypaste class=\"position-relative\" inputId=\"cpassword\"\r\n                  formControlName=\"currentpassword\" [toggleMask]=\"true\" [feedback]=\"false\">\r\n                </p-password>\r\n                <small *ngIf=\"\r\n                    resetFormcontrols['currentpassword'].hasError('required') &&\r\n                    resetFormcontrols['currentpassword'].touched\r\n                  \" class=\"p-error block\">\r\n                  Required\r\n                </small>\r\n              </div>\r\n\r\n              <div class=\"p-field col-xl-4 col-lg-6 col-sm-4 col-md-12 col-12 mb-3 position-relative\">\r\n                <label for=\"npassword\" aria-describedby=\"npassword\">New Password <span\r\n                    class=\"requiredfield\">*</span></label>\r\n                <p-password class=\"position-relative\" appBlockcutcopypaste inputId=\"npassword\"\r\n                  formControlName=\"newpassword\" [toggleMask]=\"true\" [feedback]=\"false\">\r\n                </p-password>\r\n                <div class=\"autosuggest\" *ngIf=\"isValid\">\r\n                  <div *ngIf=\"\r\n                      resetFormcontrols['newpassword'].hasError('required') && resetFormcontrols['newpassword'].touched\r\n                    \" class=\"p-error d-flex align-items-center mb-2\">\r\n                    <em class=\"pi pi-times-circle mr-1\"></em>\r\n                    <small>Required</small>\r\n                  </div>\r\n                  <div class=\"p-error d-flex align-items-center mb-2\"\r\n                    *ngIf=\"resetFormcontrols['newpassword'].hasError('hasNumber')\">\r\n                    <em class=\"pi pi-times-circle mr-1\"></em>\r\n                    <small>{{ errors[0] }}</small>\r\n                  </div>\r\n                  <div class=\"p-error d-flex align-items-center mb-2\"\r\n                    *ngIf=\"resetFormcontrols['newpassword'].hasError('hasCapitalCase')\">\r\n                    <em class=\"pi pi-times-circle mr-1\"></em>\r\n                    <small>{{ errors[2] }}</small>\r\n                  </div>\r\n                  <div class=\"p-error d-flex align-items-center mb-2\"\r\n                    *ngIf=\"resetFormcontrols['newpassword'].hasError('hasSmallCase')\">\r\n                    <em class=\"pi pi-times-circle mr-1\"></em>\r\n                    <small>{{ errors[3] }}</small>\r\n                  </div>\r\n                  <small class=\"p-error d-flex align-items-center mb-2\"\r\n                    *ngIf=\"resetFormcontrols['newpassword'].hasError('hasSpecialCharacters')\">\r\n                    <em class=\"pi pi-times-circle mr-1\"></em>\r\n                    {{ errors[1] }}\r\n                  </small>\r\n                  <div class=\"p-error d-flex align-items-center mb-2\"\r\n                    *ngIf=\"resetFormcontrols['newpassword'].hasError('minlength')\">\r\n                    <em class=\"pi pi-times-circle mr-1\"></em>\r\n                    <small>{{ errors[4] }}</small>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n\r\n              <div class=\"p-field col-xl-4 col-lg-6 col-sm-4 col-md-12 col-12 mb-2\">\r\n                <label for=\"cnfpassword\" aria-describedby=\"cnfpassword\">Confirm Password <span\r\n                    class=\"requiredfield\">*</span></label>\r\n                <p-password appBlockcutcopypaste class=\"position-relative\" inputId=\"cnfpassword\"\r\n                  formControlName=\"conformpassword\" [toggleMask]=\"true\" [feedback]=\"false\">\r\n                </p-password>\r\n                <div *ngIf=\"\r\n                    resetFormcontrols['conformpassword'].hasError('required') &&\r\n                    resetFormcontrols['conformpassword'].touched\r\n                  \" class=\"p-error block\">\r\n                  <small>Required</small>\r\n                </div>\r\n                <div class=\"p-error block\" *ngIf=\"\r\n                    resetFormcontrols['conformpassword'].hasError('NoPassswordMatch') &&\r\n                    resetFormcontrols['conformpassword'].touched\r\n                  \">\r\n                  <small>Password Does not match</small>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <div class=\"row\">\r\n            <div class=\"col-md-12 mt-2 text-right\">\r\n              <p-button label=\"Save Changes\" styleClass=\"px-3 py-1\" (click)=\"changePassword()\"\r\n                [disabled]=\"resetPasswordForm.invalid\"></p-button>\r\n            </div>\r\n          </div>\r\n        </div> -->\r\n        <!-- Tab End -->\r\n\r\n        <!-- Theme Customizer Tab -->\r\n        <div class=\"tab-pane fade\" id=\"theme_tab\" role=\"tabpanel\" aria-labelledby=\"v-theme-a\">\r\n          <div class=\"strip_head toggleleft mb-4\">\r\n            <span class=\"report_head font-weight-bold\">Theme Customizer</span>\r\n          </div>\r\n          <div class=\"customizer customizer-styling pt-3\">\r\n            <!-- Skin -->\r\n            <div class=\"customizer-styling-skin skin mb-4\">\r\n              <h6 class=\"font-weight-bold mb-2\">Skin</h6>\r\n              <div class=\"d-flex justify-content-start align-items-center\">\r\n                <div *ngFor=\"let theme of themes\" class=\"custom-control custom-radio mr-4\">\r\n                  <figure [ngClass]=\"selectedTheme === theme.key ? 'active' : ''\">\r\n                    <label role=\"link\" class=\"mb-0 theme-select\" for=\"theme_{{ theme.key }}\">\r\n                      <img src=\"{{ theme.image }}\" class=\"img-fluid\" alt=\"{{ theme.name }}\" />\r\n                    </label>\r\n                    <figcaption>\r\n                      <input type=\"radio\" id=\"theme_{{ theme.key }}\" name=\"{{ theme.name }}\"\r\n                        class=\"custom-control-input layout-name\" [value]=\"theme.key\" [(ngModel)]=\"selectedTheme\"\r\n                        [ngModelOptions]=\"{ standalone: true }\" (click)=\"setTheme(theme.key)\" />\r\n                      <label class=\"custom-control-label mt-2\" for=\"theme_{{ theme.key }}\">{{ theme.name }}</label>\r\n                    </figcaption>\r\n                  </figure>\r\n                </div>\r\n              </div>\r\n            </div>\r\n\r\n            <!-- <div class=\"customizer-styling-skin d-none mb-3\">\r\n              <h6 class=\"font-weight-bold mb-2\">Font</h6>\r\n              <div class=\"d-flex justify-content-start align-items-center\">\r\n                <div *ngFor=\"let fontSet of fontSetList\" class=\"custom-control custom-radio mr-4\">\r\n                  <figure [ngClass]=\"selectedFont === fontSet.key ? 'active' : ''\">\r\n                    <label for=\"font_{{ fontSet.key }}\" class=\"font-box mb-0 theme-select\"> Aa </label>\r\n                    <figcaption>\r\n                      <input type=\"radio\" id=\"font_{{ fontSet.key }}\" name=\"{{ fontSet.name }}\"\r\n                        class=\"custom-control-input layout-name\" [value]=\"fontSet.key\" [(ngModel)]=\"selectedFont\"\r\n                        [ngModelOptions]=\"{ standalone: true }\" (click)=\"setFont(fontSet.key)\" />\r\n                      <label class=\"custom-control-label mt-2\" for=\"font_{{ fontSet.key }}\">{{ fontSet.name }}</label>\r\n                    </figcaption>\r\n                  </figure>\r\n                </div>\r\n              </div>\r\n            </div> -->\r\n\r\n            <div class=\"customizer-styling-skin mb-3\">\r\n              <h6 class=\"font-weight-bold mb-2\">Font Size (<span id=\"rs-bullet\" class=\"rs-label\">{{selectedFont}}</span>)</h6>\r\n              <div class=\"d-flex justify-content-start align-items-center col-lg-4 col-md-4 col-12 p-0\">\r\n                <div class=\"custom-control custom-radio w-100 mr-4\">\r\n                  <div class=\"range-slider\">\r\n                    <input id=\"rs-range-line\" class=\"rs-range\" type=\"range\" #ref value=\"{{selectedFont}}\" min=\"13\" max=\"20\"   [ngModelOptions]=\"{ standalone: true }\" [(ngModel)]=\"selectedFont\" (change)=\"setRangeFont(ref.value)\">\r\n                  </div>\r\n                  <div class=\"box-minmax\">\r\n                    <span>13</span><span>20</span>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n            </div>\r\n\r\n          </div>\r\n          <button class=\"pull-right mr-2 mb-2 btn btn-primary btncommon\" (click)=\"updateStyling()\">Save Changes</button>\r\n        </div>\r\n        \r\n        <!-- Tab End -->\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<div class=\"modal\" id=\"Deleteuser\" tabindex=\"-1\" role=\"dialog\">\r\n  <div class=\"modal-dialog\" role=\"document\">\r\n    <div class=\"modal-content\">\r\n      <div class=\"modal-header\">\r\n        <h5 class=\"modal-title\">Delete Profile Image</h5>\r\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\r\n          <span aria-hidden=\"true\">&times;</span>\r\n        </button>\r\n      </div>\r\n      <div class=\"modal-body\">\r\n        Are you sure you want to delete the Profile Image?\r\n        <div class=\"clearfix\"></div>\r\n        <div class=\"mt-2\">\r\n          <button class=\"pull-right mb-2 btn btn-primary btncommon delete\" data-dismiss=\"modal\" (click)=\"removeThumbnail()\">\r\n            Delete\r\n          </button>\r\n          <button class=\"pull-right mb-2 mr-2 btn bg-white text-primary btncancel\" data-dismiss=\"modal\">Cancel</button>\r\n        </div>\r\n        <div class=\"clearfix\"></div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>", styles: ["@charset \"UTF-8\";.profile .pic-upload{position:relative;display:inline-flex;flex-direction:column;align-items:center}.profile .pic-upload .action-btn{margin-bottom:0;width:25px;height:25px;margin-right:5px;line-height:normal;text-align:center;display:inline-block;vertical-align:middle;font-size:var(--font-24)}.profile .right-container p{color:var(--text-dark)}.profile .autosuggest{position:absolute;top:24px;left:15px;right:15px;bottom:auto;transform:translateY(38px);will-change:transform;min-width:10rem;padding:.5rem;margin:.125rem 0 0;font-size:1rem;color:var(--text-dark);text-align:left;list-style:none;background-color:var(--bg-light);background-clip:padding-box;border:1px solid rgba(0,0,0,.15);border-radius:.25rem;z-index:9;max-height:200px;overflow:auto}.profile .autosuggest li{cursor:pointer;font-size:13px;line-height:35px;border-bottom:solid 1px var(--table-border)}.profile .autosuggest li:hover{color:var(--text-dark)}.profile .autosuggest li:last-child{border-bottom:none}.profile .nav-pills .nav-link{position:relative;color:#767676;background-color:transparent}.profile .nav-pills .nav-link.active{background-color:transparent;color:var(--primary);font-weight:600}.profile .nav-pills .nav-link.active :before{content:\"chevron_right\";font-family:\"Material Icons\";position:absolute;right:0;left:auto}@media screen and (min-width: 1180px){.profile{height:calc(100vh - 100px)}}@media screen and (min-width: 768px){.profile .container-group{display:flex}.profile .container-group .left-container{border-right:1px solid var(--table-border);height:100%;width:280px}.profile .container-group .right-container{height:100%;width:calc(100% - 280px)}.profile .nav-pills .nav-link.active :before{display:block}}@media screen and (max-width: 767px){.container-group .left-container{width:100%}.container-group .left-container .nav-pills{border-bottom:1px solid var(--table-border)}.container-group .right-container{width:100%}.container-group .right-container .tab-pane .strip_head{text-align:center}.container-group .nav-pills .nav-link.active :before{display:none}}.customizer .custom-checkbox.custom-control,.customizer .custom-radio.custom-control{padding-left:0}.customizer .custom-checkbox.custom-control .theme-select,.customizer .custom-radio.custom-control .theme-select{border:2px solid #ddd;border-radius:7px}.customizer .custom-checkbox.custom-control .active .theme-select,.customizer .custom-radio.custom-control .active .theme-select{border-color:var(--primary)}.customizer .custom-checkbox .custom-control-input:checked~.custom-control-label:before,.customizer .custom-radio .custom-control-input:checked~.custom-control-label:before{content:\"\\f00c\";font-family:\"FontAwesome\",sans-serif;color:var(--hover-text);background-color:var(--btn);border-color:var(--btn);font-size:10px;display:flex;align-items:center;padding:2px}.customizer .custom-checkbox label,.customizer .custom-radio label{cursor:pointer}.customizer .custom-checkbox .font-box,.customizer .custom-radio .font-box{display:flex;justify-content:center;align-items:center;width:150px;height:120px;color:var(--text-dark)}.customizer .custom-checkbox .custom-control-label,.customizer .custom-radio .custom-control-label{position:relative;vertical-align:middle;font-size:var(--base-font-size);line-height:normal;color:var(--text-dark);cursor:pointer;padding-left:25px}.customizer .custom-checkbox .custom-control-label:after,.customizer .custom-radio .custom-control-label:after{border-color:var(--btn)}.customizer .custom-checkbox .custom-control-label:before,.customizer .custom-checkbox .custom-control-label:after,.customizer .custom-radio .custom-control-label:before,.customizer .custom-radio .custom-control-label:after{background-image:none;width:16px;height:16px;left:0;box-shadow:none;top:0}.customizer hr{border-color:var(--table-border)}.customizer .customizer-header{background:var(--background-color);color:var(--text-dark)}.customizer .customizer-header .customizer-close{position:absolute;right:.6rem;top:.6rem;padding:7px;width:auto;z-index:10;color:var(--text-dark);cursor:pointer}.customizer .customizer-header .customizer-close .material-icon{font-size:1.5rem}.customizer .customizer-header .customizer-close:hover{color:var(--btn)}.customizer h4{font-size:var(--font-15);font-weight:600;color:var(--text-dark)}.customizer h6{font-size:var(--font-14);color:var(--text-dark)}.customizer p{font-size:var(--base-font-size);font-weight:400;color:var(--text-dark)}.customizer .customizer-toggle{background:var(--btn);color:var(--hover-text);box-shadow:-3px 0 8px #22292f1a;border-top-left-radius:6px;border-bottom-left-radius:6px;position:absolute;top:50%;width:38px;height:38px;left:-39px;text-align:center;line-height:40px;border-left:1px solid var(--checkbox-border);cursor:pointer}.customizer .customizer-toggle .fa-cog{font-size:var(--font-15)}.customizer .customizer-toggle:hover{text-decoration:none}.customizer .customizer-styling-skin.skin .custom-control .custom-control-label{position:relative;padding-left:25px}.customizer .custom-control:first-child .font-box{font-size:var(--font-21);font-weight:400}.customizer .custom-control:last-child .font-box{font-size:var(--font-26);font-weight:600}.box-minmax{margin-top:15px;width:100%;display:flex;justify-content:space-between;font-size:14px;color:var(--label-text)}.box-minmax span:first-child{margin-left:4px}.rs-range{margin-top:29px;width:100%;appearance:none;-webkit-appearance:none}.rs-range:focus{outline:none;border:none!important}.rs-range::-webkit-slider-runnable-track{width:100%;height:1px;cursor:pointer;box-shadow:none;background:var(--text-dark);border-radius:0;border:0px solid #010101}.rs-range::-moz-range-track{width:100%;height:1px;cursor:pointer;box-shadow:none;background:var(--btn);border-radius:0;border:0px solid #010101}.rs-range::-webkit-slider-thumb{box-shadow:none;border:0px solid var(--table-border);box-shadow:0 10px 10px #00000040;height:30px;width:20px;border-radius:22px;background:var(--btn);cursor:pointer;appearance:none;-webkit-appearance:none;margin-top:-15px}.rs-range::-moz-range-thumb{box-shadow:none;border:0px solid var(--table-border);box-shadow:0 10px 10px #00000040;height:42px;width:22px;border-radius:22px;background:var(--btn);cursor:pointer;appearance:none;-webkit-appearance:none;margin-top:-20px}.rs-range::-moz-focus-outer{border:0}.rs-label{text-align:center;font-weight:bold;color:var(--label-text);line-height:normal;font-size:14px}.rs-label:after{content:\"px\";font-size:14px;letter-spacing:.07em}.buildV{font-weight:300;font-size:12px;left:20px;bottom:20px;position:absolute}\n"], components: [{ type: AlertComponent, selector: "app-alert" }], directives: [{ type: i2__namespace.NgControlStatusGroup, selector: "[formGroupName],[formArrayName],[ngModelGroup],[formGroup],form:not([ngNoForm]),[ngForm]" }, { type: i2__namespace.FormGroupDirective, selector: "[formGroup]", inputs: ["formGroup"], outputs: ["ngSubmit"], exportAs: ["ngForm"] }, { type: i9__namespace.NgIf, selector: "[ngIf]", inputs: ["ngIf", "ngIfThen", "ngIfElse"] }, { type: i10__namespace.Tooltip, selector: "[pTooltip]", inputs: ["tooltipPosition", "tooltipEvent", "appendTo", "positionStyle", "tooltipStyleClass", "tooltipZIndex", "escape", "showDelay", "hideDelay", "life", "positionTop", "positionLeft", "pTooltip", "tooltipDisabled", "tooltipOptions"] }, { type: i2__namespace.DefaultValueAccessor, selector: "input:not([type=checkbox])[formControlName],textarea[formControlName],input:not([type=checkbox])[formControl],textarea[formControl],input:not([type=checkbox])[ngModel],textarea[ngModel],[ngDefaultControl]" }, { type: i2__namespace.NgControlStatus, selector: "[formControlName],[ngModel],[formControl]" }, { type: i2__namespace.FormControlName, selector: "[formControlName]", inputs: ["disabled", "formControlName", "ngModel"], outputs: ["ngModelChange"] }, { type: i11__namespace.InputText, selector: "[pInputText]" }, { type: i9__namespace.NgForOf, selector: "[ngFor][ngForOf]", inputs: ["ngForOf", "ngForTrackBy", "ngForTemplate"] }, { type: i9__namespace.NgClass, selector: "[ngClass]", inputs: ["class", "ngClass"] }, { type: i2__namespace.RadioControlValueAccessor, selector: "input[type=radio][formControlName],input[type=radio][formControl],input[type=radio][ngModel]", inputs: ["name", "formControlName", "value"] }, { type: i2__namespace.NgModel, selector: "[ngModel]:not([formControlName]):not([formControl])", inputs: ["name", "disabled", "ngModel", "ngModelOptions"], outputs: ["ngModelChange"], exportAs: ["ngModel"] }, { type: i2__namespace.RangeValueAccessor, selector: "input[type=range][formControlName],input[type=range][formControl],input[type=range][ngModel]" }] });
     i0__namespace.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: ProfileComponent$1, decorators: [{
                 type: i0.Component,
                 args: [{
@@ -1786,7 +1715,7 @@
                         templateUrl: './profile.component.html',
                         styleUrls: ['./profile.component.scss']
                     }]
-            }], ctorParameters: function () { return [{ type: i0__namespace.Injector }, { type: AuthService }, { type: i2__namespace.FormBuilder }, { type: HttpService }, { type: ProfileService }, { type: ProfileUpdateService }, { type: AttachmentsService }, { type: DataStoreService }, { type: i8__namespace.ConfirmationService }]; } });
+            }], ctorParameters: function () { return [{ type: i0__namespace.Injector }, { type: AuthService }, { type: i2__namespace.FormBuilder }, { type: ProfileService }, { type: AttachmentsService }, { type: DataStoreService }, { type: i6__namespace.ConfirmationService }, { type: ProfileUpdateService }]; } });
 
     var ProfileComponent = /** @class */ (function () {
         function ProfileComponent(permissionStore, _storeservice) {
@@ -1801,6 +1730,7 @@
                 _this.PERMISSION = val.PERMISSION;
                 _this._storeservice.setData('RBACORG', _this.RBACORG);
                 _this.permissionStore.setStore(_this.PERMISSION);
+                _this._storeservice.setData('HTTPSERVICE', val.httpService);
             });
         };
         return ProfileComponent;
@@ -1944,13 +1874,13 @@
         return DirectivesModule;
     }());
     DirectivesModule.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: DirectivesModule, deps: [], target: i0__namespace.ɵɵFactoryTarget.NgModule });
-    DirectivesModule.ɵmod = i0__namespace.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: DirectivesModule, declarations: [PermissionDirective, ShowFieldDirective], imports: [i12.CommonModule], exports: [PermissionDirective, ShowFieldDirective] });
-    DirectivesModule.ɵinj = i0__namespace.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: DirectivesModule, imports: [[i12.CommonModule]] });
+    DirectivesModule.ɵmod = i0__namespace.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: DirectivesModule, declarations: [PermissionDirective, ShowFieldDirective], imports: [i9.CommonModule], exports: [PermissionDirective, ShowFieldDirective] });
+    DirectivesModule.ɵinj = i0__namespace.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: DirectivesModule, imports: [[i9.CommonModule]] });
     i0__namespace.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: DirectivesModule, decorators: [{
                 type: i0.NgModule,
                 args: [{
                         declarations: [PermissionDirective, ShowFieldDirective],
-                        imports: [i12.CommonModule],
+                        imports: [i9.CommonModule],
                         exports: [PermissionDirective, ShowFieldDirective]
                     }]
             }] });
@@ -1961,12 +1891,12 @@
         return AlertModule;
     }());
     AlertModule.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: AlertModule, deps: [], target: i0__namespace.ɵɵFactoryTarget.NgModule });
-    AlertModule.ɵmod = i0__namespace.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: AlertModule, declarations: [AlertComponent], imports: [i12.CommonModule], exports: [AlertComponent] });
-    AlertModule.ɵinj = i0__namespace.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: AlertModule, imports: [[i12.CommonModule]] });
+    AlertModule.ɵmod = i0__namespace.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: AlertModule, declarations: [AlertComponent], imports: [i9.CommonModule], exports: [AlertComponent] });
+    AlertModule.ɵinj = i0__namespace.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: AlertModule, imports: [[i9.CommonModule]] });
     i0__namespace.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: AlertModule, decorators: [{
                 type: i0.NgModule,
                 args: [{
-                        imports: [i12.CommonModule],
+                        imports: [i9.CommonModule],
                         declarations: [AlertComponent],
                         exports: [AlertComponent]
                     }]
@@ -1978,14 +1908,13 @@
         return PicsProfileModule;
     }());
     PicsProfileModule.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: PicsProfileModule, deps: [], target: i0__namespace.ɵɵFactoryTarget.NgModule });
-    PicsProfileModule.ɵmod = i0__namespace.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: PicsProfileModule, declarations: [ProfileComponent$1], imports: [i12.CommonModule,
+    PicsProfileModule.ɵmod = i0__namespace.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: PicsProfileModule, declarations: [ProfileComponent$1], imports: [i9.CommonModule,
             i2.FormsModule,
             i2.ReactiveFormsModule,
             ngBootstrap.NgbModule,
             tabmenu.TabMenuModule,
             tabview.TabViewModule,
             treeselect.TreeSelectModule,
-            i1.HttpClientModule,
             checkbox.CheckboxModule,
             dropdown.DropdownModule,
             card.CardModule,
@@ -1993,8 +1922,8 @@
             accordion.AccordionModule,
             message.MessageModule,
             table.TableModule,
-            i13.InputTextModule,
-            i11.CalendarModule,
+            i11.InputTextModule,
+            calendar.CalendarModule,
             editor.EditorModule,
             fieldset.FieldsetModule,
             button.ButtonModule,
@@ -2017,18 +1946,17 @@
             knob.KnobModule,
             sidebar.SidebarModule,
             contextmenu.ContextMenuModule,
-            i10.ConfirmPopupModule,
+            confirmpopup.ConfirmPopupModule,
             DirectivesModule,
             AlertModule], exports: [ProfileComponent$1] });
     PicsProfileModule.ɵinj = i0__namespace.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: PicsProfileModule, imports: [[
-                i12.CommonModule,
+                i9.CommonModule,
                 i2.FormsModule,
                 i2.ReactiveFormsModule,
                 ngBootstrap.NgbModule,
                 tabmenu.TabMenuModule,
                 tabview.TabViewModule,
                 treeselect.TreeSelectModule,
-                i1.HttpClientModule,
                 checkbox.CheckboxModule,
                 dropdown.DropdownModule,
                 card.CardModule,
@@ -2036,8 +1964,8 @@
                 accordion.AccordionModule,
                 message.MessageModule,
                 table.TableModule,
-                i13.InputTextModule,
-                i11.CalendarModule,
+                i11.InputTextModule,
+                calendar.CalendarModule,
                 editor.EditorModule,
                 fieldset.FieldsetModule,
                 button.ButtonModule,
@@ -2060,7 +1988,7 @@
                 knob.KnobModule,
                 sidebar.SidebarModule,
                 contextmenu.ContextMenuModule,
-                i10.ConfirmPopupModule,
+                confirmpopup.ConfirmPopupModule,
                 DirectivesModule,
                 AlertModule
             ]] });
@@ -2071,14 +1999,13 @@
                             ProfileComponent$1
                         ],
                         imports: [
-                            i12.CommonModule,
+                            i9.CommonModule,
                             i2.FormsModule,
                             i2.ReactiveFormsModule,
                             ngBootstrap.NgbModule,
                             tabmenu.TabMenuModule,
                             tabview.TabViewModule,
                             treeselect.TreeSelectModule,
-                            i1.HttpClientModule,
                             checkbox.CheckboxModule,
                             dropdown.DropdownModule,
                             card.CardModule,
@@ -2086,8 +2013,8 @@
                             accordion.AccordionModule,
                             message.MessageModule,
                             table.TableModule,
-                            i13.InputTextModule,
-                            i11.CalendarModule,
+                            i11.InputTextModule,
+                            calendar.CalendarModule,
                             editor.EditorModule,
                             fieldset.FieldsetModule,
                             button.ButtonModule,
@@ -2110,7 +2037,7 @@
                             knob.KnobModule,
                             sidebar.SidebarModule,
                             contextmenu.ContextMenuModule,
-                            i10.ConfirmPopupModule,
+                            confirmpopup.ConfirmPopupModule,
                             DirectivesModule,
                             AlertModule
                         ],
@@ -2128,7 +2055,7 @@
     }());
     ProfileSettingsModule.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: ProfileSettingsModule, deps: [], target: i0__namespace.ɵɵFactoryTarget.NgModule });
     ProfileSettingsModule.ɵmod = i0__namespace.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: ProfileSettingsModule, declarations: [ProfileComponent], imports: [PicsProfileModule], exports: [ProfileComponent] });
-    ProfileSettingsModule.ɵinj = i0__namespace.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: ProfileSettingsModule, providers: [ProfileService, AttachmentsService, i1.HttpClient, HttpService, AlertService, AuthService, i8.ConfirmationService, PermissionStore, DataStoreService, ProfileUpdateService], imports: [[
+    ProfileSettingsModule.ɵinj = i0__namespace.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: ProfileSettingsModule, providers: [ProfileService, ProfileUpdateService, AttachmentsService, http.HttpClient, AlertService, AuthService, i6.ConfirmationService, PermissionStore, DataStoreService], imports: [[
                 PicsProfileModule
             ]] });
     i0__namespace.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: ProfileSettingsModule, decorators: [{
@@ -2143,7 +2070,7 @@
                         exports: [
                             ProfileComponent
                         ],
-                        providers: [ProfileService, AttachmentsService, i1.HttpClient, HttpService, AlertService, AuthService, i8.ConfirmationService, PermissionStore, DataStoreService, ProfileUpdateService]
+                        providers: [ProfileService, ProfileUpdateService, AttachmentsService, http.HttpClient, AlertService, AuthService, i6.ConfirmationService, PermissionStore, DataStoreService]
                     }]
             }] });
 
