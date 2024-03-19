@@ -1622,9 +1622,9 @@
             });
         };
         ProfileComponent.prototype.getUserTheme = function () {
-            // this.profileService.getUserPreference(this.userid).subscribe((res: any) => {
-            //   console.log(res);
-            // })
+            this.profileService.getUserPreference(this.userid).subscribe(function (res) {
+                console.log(res);
+            });
         };
         ProfileComponent.prototype.setTheme = function (event) {
             this.profileService.setTheme(event);
