@@ -1092,10 +1092,11 @@ class ProfileComponent$1 {
         });
     }
     getUserTheme() {
-        const id = parseInt(this.userid);
-        this.profileService.getUserPreference(id).subscribe((res) => {
-            console.log(res);
-        });
+        // const id = parseInt(this.userid);
+        // this.profileService.getUserPreference(id).subscribe((res: any) => {
+        //   console.log(res);
+        // });
+        this.getUserInfo();
     }
     setTheme(event) {
         this.profileService.setTheme(event);

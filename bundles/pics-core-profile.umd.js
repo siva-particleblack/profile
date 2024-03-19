@@ -1622,10 +1622,11 @@
             });
         };
         ProfileComponent.prototype.getUserTheme = function () {
-            var id = parseInt(this.userid);
-            this.profileService.getUserPreference(id).subscribe(function (res) {
-                console.log(res);
-            });
+            // const id = parseInt(this.userid);
+            // this.profileService.getUserPreference(id).subscribe((res: any) => {
+            //   console.log(res);
+            // });
+            this.getUserInfo();
         };
         ProfileComponent.prototype.setTheme = function (event) {
             this.profileService.setTheme(event);
