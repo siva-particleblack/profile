@@ -1092,7 +1092,8 @@ class ProfileComponent$1 {
         });
     }
     getUserTheme() {
-        this.profileService.getUserPreference(this.userid).subscribe((res) => {
+        const id = parseInt(this.userid);
+        this.profileService.getUserPreference(id).subscribe((res) => {
             console.log(res);
         });
     }
