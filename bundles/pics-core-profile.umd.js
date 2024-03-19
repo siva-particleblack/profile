@@ -1469,7 +1469,7 @@
             this.alertService = injector.get(AlertService);
             this.themeService = injector.get(ThemeService);
             this.userid = sessionStorage.getItem('id');
-            this.getUserTheme();
+            this.profileService.setUserPreference();
             this.selectedTheme = this.localstorage.getItem('SELECTED_THEME') || 'default';
             this.selectedFont = this.localstorage.getItem('SELECTED_FONT') || '13';
             this.themes = themeList;
@@ -1621,13 +1621,13 @@
                 // This is intentional
             });
         };
-        ProfileComponent.prototype.getUserTheme = function () {
-            // const id = parseInt(this.userid);
-            // this.profileService.getUserPreference(id).subscribe((res: any) => {
-            //   console.log(res);
-            // });
-            this.getUserInfo();
-        };
+        // getUserTheme() {
+        //   // const id = parseInt(this.userid);
+        //   // this.profileService.getUserPreference(id).subscribe((res: any) => {
+        //   //   console.log(res);
+        //   // });
+        //   this.getUserInfo()
+        // }
         ProfileComponent.prototype.setTheme = function (event) {
             this.profileService.setTheme(event);
         };

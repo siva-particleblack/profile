@@ -947,7 +947,7 @@ class ProfileComponent$1 {
         this.alertService = injector.get(AlertService);
         this.themeService = injector.get(ThemeService);
         this.userid = sessionStorage.getItem('id');
-        this.getUserTheme();
+        this.profileService.setUserPreference();
         this.selectedTheme = this.localstorage.getItem('SELECTED_THEME') || 'default';
         this.selectedFont = this.localstorage.getItem('SELECTED_FONT') || '13';
         this.themes = themeList;
@@ -1091,13 +1091,13 @@ class ProfileComponent$1 {
             // This is intentional
         });
     }
-    getUserTheme() {
-        // const id = parseInt(this.userid);
-        // this.profileService.getUserPreference(id).subscribe((res: any) => {
-        //   console.log(res);
-        // });
-        this.getUserInfo();
-    }
+    // getUserTheme() {
+    //   // const id = parseInt(this.userid);
+    //   // this.profileService.getUserPreference(id).subscribe((res: any) => {
+    //   //   console.log(res);
+    //   // });
+    //   this.getUserInfo()
+    // }
     setTheme(event) {
         this.profileService.setTheme(event);
     }
