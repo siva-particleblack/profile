@@ -1092,9 +1092,9 @@ class ProfileComponent$1 {
         });
     }
     getUserTheme() {
-        this.profileService.getUserPreference(this.userid).subscribe((res) => {
-            console.log(res);
-        });
+        // this.profileService.getUserPreference(this.userid).subscribe((res: any) => {
+        //   console.log(res);
+        // })
     }
     setTheme(event) {
         this.profileService.setTheme(event);
