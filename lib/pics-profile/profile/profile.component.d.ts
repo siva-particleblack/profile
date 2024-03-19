@@ -56,6 +56,7 @@ export declare class ProfileComponent implements OnInit {
     handleFileInput(fileValue: any): void;
     updateprofile(): void;
     updateStyling(): void;
+    getUserTheme(): void;
     setTheme(event: any): void;
     setFont(event: any): void;
     setRangeFont(modal: any): void;

@@ -1469,6 +1469,7 @@
             this.alertService = injector.get(AlertService);
             this.themeService = injector.get(ThemeService);
             this.userid = sessionStorage.getItem('id');
+            this.getUserTheme();
             this.selectedTheme = this.localstorage.getItem('SELECTED_THEME') || 'default';
             this.selectedFont = this.localstorage.getItem('SELECTED_FONT') || '13';
             this.themes = themeList;
@@ -1618,6 +1619,11 @@
             this.alertService.success('Theme changes saved successfully.');
             this.profileService.saveUserPreference(body).subscribe(function () {
                 // This is intentional
+            });
+        };
+        ProfileComponent.prototype.getUserTheme = function () {
+            this.profileService.getUserPreference(this.userid).subscribe(function (res) {
+                console.log(res);
             });
         };
         ProfileComponent.prototype.setTheme = function (event) {
