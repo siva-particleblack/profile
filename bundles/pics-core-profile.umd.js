@@ -1468,11 +1468,11 @@
             this.localstorage = injector.get(LocalService);
             this.alertService = injector.get(AlertService);
             this.themeService = injector.get(ThemeService);
-            this.themes = themeList;
-            this.fontSetList = fontSetList;
             this.userid = sessionStorage.getItem('id');
             this.selectedTheme = this.localstorage.getItem('SELECTED_THEME') || 'default';
             this.selectedFont = this.localstorage.getItem('SELECTED_FONT') || '13';
+            this.themes = themeList;
+            this.fontSetList = fontSetList;
             this.initializeResetPasswordForm();
             this.initializeForm();
         }
