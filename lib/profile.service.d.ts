@@ -2,16 +2,14 @@ import { Observable, Subject } from 'rxjs';
 import { ThemeService } from './pics-profile/@core/service/theme.service';
 import { LocalService } from './pics-profile/@core/service/local.service';
 import { DataStoreService } from './pics-profile/@core/service/data-store.service';
-import { HttpService } from './pics-profile/@core/service/http.service';
 import * as i0 from "@angular/core";
 export declare class ProfileService {
     private _storeservice;
     private themeService;
     private localstorage;
-    private httpServiceExternal;
     profileImage: Subject<any>;
     httpService: any;
-    constructor(_storeservice: DataStoreService, themeService: ThemeService, localstorage: LocalService, httpServiceExternal: HttpService);
+    constructor(_storeservice: DataStoreService, themeService: ThemeService, localstorage: LocalService);
     setUserPreference(): void;
     setTheme(event: any): void;
     setFont(event: any): void;

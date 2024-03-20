@@ -1,8 +1,8 @@
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('rxjs'), require('@angular/common/http'), require('rxjs/add/operator/map'), require('rxjs/internal/observable/throwError'), require('rxjs/operators'), require('@angular/forms'), require('@angular/router'), require('primeng/api'), require('@angular/common'), require('primeng/tooltip'), require('primeng/inputtext'), require('@ng-bootstrap/ng-bootstrap'), require('primeng/accordion'), require('primeng/avatar'), require('primeng/badge'), require('primeng/button'), require('primeng/calendar'), require('primeng/card'), require('primeng/checkbox'), require('primeng/confirmdialog'), require('primeng/confirmpopup'), require('primeng/contextmenu'), require('primeng/dialog'), require('primeng/dropdown'), require('primeng/editor'), require('primeng/fieldset'), require('primeng/fileupload'), require('primeng/inputmask'), require('primeng/inputswitch'), require('primeng/inputtextarea'), require('primeng/knob'), require('primeng/message'), require('primeng/multiselect'), require('primeng/orderlist'), require('primeng/password'), require('primeng/progressspinner'), require('primeng/radiobutton'), require('primeng/ripple'), require('primeng/sidebar'), require('primeng/speeddial'), require('primeng/steps'), require('primeng/table'), require('primeng/tabmenu'), require('primeng/tabview'), require('primeng/toast'), require('primeng/treeselect')) :
-    typeof define === 'function' && define.amd ? define('@pics-core/profile', ['exports', '@angular/core', 'rxjs', '@angular/common/http', 'rxjs/add/operator/map', 'rxjs/internal/observable/throwError', 'rxjs/operators', '@angular/forms', '@angular/router', 'primeng/api', '@angular/common', 'primeng/tooltip', 'primeng/inputtext', '@ng-bootstrap/ng-bootstrap', 'primeng/accordion', 'primeng/avatar', 'primeng/badge', 'primeng/button', 'primeng/calendar', 'primeng/card', 'primeng/checkbox', 'primeng/confirmdialog', 'primeng/confirmpopup', 'primeng/contextmenu', 'primeng/dialog', 'primeng/dropdown', 'primeng/editor', 'primeng/fieldset', 'primeng/fileupload', 'primeng/inputmask', 'primeng/inputswitch', 'primeng/inputtextarea', 'primeng/knob', 'primeng/message', 'primeng/multiselect', 'primeng/orderlist', 'primeng/password', 'primeng/progressspinner', 'primeng/radiobutton', 'primeng/ripple', 'primeng/sidebar', 'primeng/speeddial', 'primeng/steps', 'primeng/table', 'primeng/tabmenu', 'primeng/tabview', 'primeng/toast', 'primeng/treeselect'], factory) :
-    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory((global["pics-core"] = global["pics-core"] || {}, global["pics-core"].profile = {}), global.ng.core, global.rxjs, global.ng.common.http, global.rxjs["add/operator/map"], global.rxjs["internal/observable/throwError"], global.rxjs.operators, global.ng.forms, global.ng.router, global.i6, global.ng.common, global.i10, global.i11, global.ngBootstrap, global.accordion, global.avatar, global.badge, global.button, global.calendar, global.card, global.checkbox, global.confirmdialog, global.confirmpopup, global.contextmenu, global.dialog, global.dropdown, global.editor, global.fieldset, global.fileupload, global.inputmask, global.inputswitch, global.inputtextarea, global.knob, global.message, global.multiselect, global.orderlist, global.password, global.progressspinner, global.radiobutton, global.ripple, global.sidebar, global.speeddial, global.steps, global.table, global.tabmenu, global.tabview, global.toast, global.treeselect));
-})(this, (function (exports, i0, rxjs, i1, map, throwError, operators, i2, i1$1, i6, i9, i10, i11, ngBootstrap, accordion, avatar, badge, button, calendar, card, checkbox, confirmdialog, confirmpopup, contextmenu, dialog, dropdown, editor, fieldset, fileupload, inputmask, inputswitch, inputtextarea, knob, message, multiselect, orderlist, password, progressspinner, radiobutton, ripple, sidebar, speeddial, steps, table, tabmenu, tabview, toast, treeselect) { 'use strict';
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('rxjs'), require('@angular/forms'), require('@angular/router'), require('rxjs/add/operator/map'), require('primeng/api'), require('@angular/common'), require('primeng/tooltip'), require('primeng/inputtext'), require('@ng-bootstrap/ng-bootstrap'), require('primeng/accordion'), require('primeng/avatar'), require('primeng/badge'), require('primeng/button'), require('primeng/calendar'), require('primeng/card'), require('primeng/checkbox'), require('primeng/confirmdialog'), require('primeng/confirmpopup'), require('primeng/contextmenu'), require('primeng/dialog'), require('primeng/dropdown'), require('primeng/editor'), require('primeng/fieldset'), require('primeng/fileupload'), require('primeng/inputmask'), require('primeng/inputswitch'), require('primeng/inputtextarea'), require('primeng/knob'), require('primeng/message'), require('primeng/multiselect'), require('primeng/orderlist'), require('primeng/password'), require('primeng/progressspinner'), require('primeng/radiobutton'), require('primeng/ripple'), require('primeng/sidebar'), require('primeng/speeddial'), require('primeng/steps'), require('primeng/table'), require('primeng/tabmenu'), require('primeng/tabview'), require('primeng/toast'), require('primeng/treeselect'), require('@angular/common/http')) :
+    typeof define === 'function' && define.amd ? define('@pics-core/profile', ['exports', '@angular/core', 'rxjs', '@angular/forms', '@angular/router', 'rxjs/add/operator/map', 'primeng/api', '@angular/common', 'primeng/tooltip', 'primeng/inputtext', '@ng-bootstrap/ng-bootstrap', 'primeng/accordion', 'primeng/avatar', 'primeng/badge', 'primeng/button', 'primeng/calendar', 'primeng/card', 'primeng/checkbox', 'primeng/confirmdialog', 'primeng/confirmpopup', 'primeng/contextmenu', 'primeng/dialog', 'primeng/dropdown', 'primeng/editor', 'primeng/fieldset', 'primeng/fileupload', 'primeng/inputmask', 'primeng/inputswitch', 'primeng/inputtextarea', 'primeng/knob', 'primeng/message', 'primeng/multiselect', 'primeng/orderlist', 'primeng/password', 'primeng/progressspinner', 'primeng/radiobutton', 'primeng/ripple', 'primeng/sidebar', 'primeng/speeddial', 'primeng/steps', 'primeng/table', 'primeng/tabmenu', 'primeng/tabview', 'primeng/toast', 'primeng/treeselect', '@angular/common/http'], factory) :
+    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory((global["pics-core"] = global["pics-core"] || {}, global["pics-core"].profile = {}), global.ng.core, global.rxjs, global.ng.forms, global.ng.router, global.rxjs["add/operator/map"], global.i6, global.ng.common, global.i10, global.i11, global.ngBootstrap, global.accordion, global.avatar, global.badge, global.button, global.calendar, global.card, global.checkbox, global.confirmdialog, global.confirmpopup, global.contextmenu, global.dialog, global.dropdown, global.editor, global.fieldset, global.fileupload, global.inputmask, global.inputswitch, global.inputtextarea, global.knob, global.message, global.multiselect, global.orderlist, global.password, global.progressspinner, global.radiobutton, global.ripple, global.sidebar, global.speeddial, global.steps, global.table, global.tabmenu, global.tabview, global.toast, global.treeselect, global.ng.common.http));
+})(this, (function (exports, i0, rxjs, i2, i1, map, i6, i9, i10, i11, ngBootstrap, accordion, avatar, badge, button, calendar, card, checkbox, confirmdialog, confirmpopup, contextmenu, dialog, dropdown, editor, fieldset, fileupload, inputmask, inputswitch, inputtextarea, knob, message, multiselect, orderlist, password, progressspinner, radiobutton, ripple, sidebar, speeddial, steps, table, tabmenu, tabview, toast, treeselect, http) { 'use strict';
 
     function _interopNamespace(e) {
         if (e && e.__esModule) return e;
@@ -23,9 +23,8 @@
     }
 
     var i0__namespace = /*#__PURE__*/_interopNamespace(i0);
-    var i1__namespace = /*#__PURE__*/_interopNamespace(i1);
     var i2__namespace = /*#__PURE__*/_interopNamespace(i2);
-    var i1__namespace$1 = /*#__PURE__*/_interopNamespace(i1$1);
+    var i1__namespace = /*#__PURE__*/_interopNamespace(i1);
     var i6__namespace = /*#__PURE__*/_interopNamespace(i6);
     var i9__namespace = /*#__PURE__*/_interopNamespace(i9);
     var i10__namespace = /*#__PURE__*/_interopNamespace(i10);
@@ -1017,117 +1016,12 @@
                     }]
             }], ctorParameters: function () { return []; } });
 
-    var HttpService = /** @class */ (function () {
-        function HttpService(http, _storeservice) {
-            var _this = this;
-            this.http = http;
-            this._storeservice = _storeservice;
-            this.overrideUrl = true;
-            this.baseUrl = '';
-            this.headers = new i1.HttpHeaders()
-                .set('Accept', 'application/json')
-                .set('Content-Type', 'application/json')
-                .set('role', 'role=CP_PUBLIC');
-            this.showSpinner = new rxjs.BehaviorSubject(false);
-            this.outsideShowSpinner = new rxjs.BehaviorSubject(false);
-            this._storeservice.currentStore.subscribe(function (res) {
-                if (res['RBACORG'] && res['RBACORG'] !== '') {
-                    _this.RBACORG = res['RBACORG'];
-                    _this.url = _this.RBACORG['apiHost'] ? _this.RBACORG['apiHost'] : 'http://localhost:3000/api';
-                    _this.tokenKey = _this.RBACORG['tokenKey'];
-                }
-            });
-            this.url1 = '';
-        }
-        HttpService.prototype.get = function (apiRoute) {
-            return this.http.get("" + (this.url + apiRoute), {
-                headers: this.getHttpNewHeaders()
-            });
-        };
-        HttpService.prototype.post = function (apiRoute, body) {
-            return this.http.post("" + (this.url + apiRoute), body, {
-                headers: this.getHttpNewHeaders()
-            });
-        };
-        HttpService.prototype.put = function (apiRoute, body) {
-            return this.http.put("" + (this.url + apiRoute), body, {
-                headers: this.getHttpNewHeaders()
-            });
-        };
-        HttpService.prototype.patch = function (apiRoute, body) {
-            return this.http.patch("" + (this.url + apiRoute), body, {
-                headers: this.getHttpNewHeaders()
-            });
-        };
-        HttpService.prototype.delete = function (apiRoute) {
-            return this.http.delete("" + (this.url + apiRoute), {
-                headers: this.getHttpNewHeaders()
-            });
-        };
-        HttpService.prototype.getHttpHeaders = function () {
-            return new i1.HttpHeaders().set('key', 'value');
-        };
-        HttpService.prototype.getHttpNewHeaders = function () {
-            return this.headers.set('Authorization', "Bearer " + this.getToken());
-        };
-        HttpService.prototype.getAttachmentHttpHeaders = function (contentType) {
-            return new i1.HttpHeaders().set('Content-Type', contentType).set('x-ms-blob-type', 'BlockBlob');
-        };
-        HttpService.prototype.putUpload = function (apiRoute, body, contentType) {
-            return this.http.put("" + (this.url1 + apiRoute), body, { headers: this.getAttachmentHttpHeaders(contentType) });
-        };
-        HttpService.prototype.putupload2 = function (apiRoute, body, contenttype) {
-            return this.http
-                .put("" + (this.url1 + apiRoute), body, {
-                headers: this.getAttachmentHttpHeaders(contenttype),
-                observe: 'response'
-            })
-                .pipe(operators.map(function (data) {
-                return data;
-            }));
-        };
-        /**
-         *
-         * @param apiRoute
-         * This function will download the stream file from the API service.
-         * No HTTP required for this stream. So used Window.location.href to download the file
-         */
-        HttpService.prototype.getFormDownloaded = function (apiRoute) {
-            window.location.href = "" + (this.url + apiRoute);
-        };
-        //common http service(optional)
-        HttpService.prototype.handleError = function (error) {
-            var _a, _b;
-            var errorMessage = '';
-            if (error.error instanceof ErrorEvent) {
-                // Client-side errors
-                errorMessage = "Error: " + error.error.message;
-            }
-            else {
-                // Server-side errors
-                errorMessage = "Error Code: " + error.status + "\nMessage: " + (((_a = error === null || error === void 0 ? void 0 : error.error) === null || _a === void 0 ? void 0 : _a.message) ? (_b = error === null || error === void 0 ? void 0 : error.error) === null || _b === void 0 ? void 0 : _b.message : error.message);
-            }
-            return throwError.throwError(errorMessage);
-        };
-        HttpService.prototype.getToken = function () {
-            var token = this.tokenKey ? this.tokenKey : 'jwt-token';
-            return sessionStorage.getItem(token);
-        };
-        return HttpService;
-    }());
-    HttpService.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: HttpService, deps: [{ token: i1__namespace.HttpClient }, { token: DataStoreService }], target: i0__namespace.ɵɵFactoryTarget.Injectable });
-    HttpService.ɵprov = i0__namespace.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: HttpService });
-    i0__namespace.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: HttpService, decorators: [{
-                type: i0.Injectable
-            }], ctorParameters: function () { return [{ type: i1__namespace.HttpClient }, { type: DataStoreService }]; } });
-
     var ProfileService = /** @class */ (function () {
-        function ProfileService(_storeservice, themeService, localstorage, httpServiceExternal) {
+        function ProfileService(_storeservice, themeService, localstorage) {
             var _this = this;
             this._storeservice = _storeservice;
             this.themeService = themeService;
             this.localstorage = localstorage;
-            this.httpServiceExternal = httpServiceExternal;
             this.profileImage = new rxjs.Subject();
             this._storeservice.currentStore.subscribe(function (res) {
                 if (res) {
@@ -1186,14 +1080,14 @@
         };
         return ProfileService;
     }());
-    ProfileService.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: ProfileService, deps: [{ token: DataStoreService }, { token: ThemeService }, { token: LocalService }, { token: HttpService }], target: i0__namespace.ɵɵFactoryTarget.Injectable });
+    ProfileService.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: ProfileService, deps: [{ token: DataStoreService }, { token: ThemeService }, { token: LocalService }], target: i0__namespace.ɵɵFactoryTarget.Injectable });
     ProfileService.ɵprov = i0__namespace.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: ProfileService, providedIn: 'root' });
     i0__namespace.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: ProfileService, decorators: [{
                 type: i0.Injectable,
                 args: [{
                         providedIn: 'root'
                     }]
-            }], ctorParameters: function () { return [{ type: DataStoreService }, { type: ThemeService }, { type: LocalService }, { type: HttpService }]; } });
+            }], ctorParameters: function () { return [{ type: DataStoreService }, { type: ThemeService }, { type: LocalService }]; } });
 
     // Inside your npm package (ProfileService)
     var ProfileUpdateService = /** @class */ (function () {
@@ -1294,7 +1188,7 @@
             this.keepAfterRouteChange = false;
             // clear alert messages on route change unless 'keepAfterRouteChange' flag is true
             router.events.subscribe(function (event) {
-                if (event instanceof i1$1.NavigationStart) {
+                if (event instanceof i1.NavigationStart) {
                     if (_this.keepAfterRouteChange) {
                         // only keep for a single route change
                         _this.keepAfterRouteChange = false;
@@ -1336,11 +1230,11 @@
         };
         return AlertService;
     }());
-    AlertService.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: AlertService, deps: [{ token: i1__namespace$1.Router }], target: i0__namespace.ɵɵFactoryTarget.Injectable });
+    AlertService.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: AlertService, deps: [{ token: i1__namespace.Router }], target: i0__namespace.ɵɵFactoryTarget.Injectable });
     AlertService.ɵprov = i0__namespace.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: AlertService });
     i0__namespace.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: AlertService, decorators: [{
                 type: i0.Injectable
-            }], ctorParameters: function () { return [{ type: i1__namespace$1.Router }]; } });
+            }], ctorParameters: function () { return [{ type: i1__namespace.Router }]; } });
     var AlertType;
     (function (AlertType) {
         AlertType[AlertType["Success"] = 0] = "Success";
@@ -1470,14 +1364,14 @@
         };
         return AuthService;
     }());
-    AuthService.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: AuthService, deps: [{ token: i0__namespace.Injector }, { token: i1__namespace$1.Router }, { token: DataStoreService }], target: i0__namespace.ɵɵFactoryTarget.Injectable });
+    AuthService.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: AuthService, deps: [{ token: i0__namespace.Injector }, { token: i1__namespace.Router }, { token: DataStoreService }], target: i0__namespace.ɵɵFactoryTarget.Injectable });
     AuthService.ɵprov = i0__namespace.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: AuthService, providedIn: 'root' });
     i0__namespace.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: AuthService, decorators: [{
                 type: i0.Injectable,
                 args: [{
                         providedIn: 'root'
                     }]
-            }], ctorParameters: function () { return [{ type: i0__namespace.Injector }, { type: i1__namespace$1.Router }, { type: DataStoreService }]; } });
+            }], ctorParameters: function () { return [{ type: i0__namespace.Injector }, { type: i1__namespace.Router }, { type: DataStoreService }]; } });
 
     var AttachmentsService = /** @class */ (function () {
         function AttachmentsService(_storeservice) {
@@ -2166,7 +2060,7 @@
     }());
     ProfileSettingsModule.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: ProfileSettingsModule, deps: [], target: i0__namespace.ɵɵFactoryTarget.NgModule });
     ProfileSettingsModule.ɵmod = i0__namespace.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: ProfileSettingsModule, declarations: [ProfileComponent], imports: [PicsProfileModule], exports: [ProfileComponent] });
-    ProfileSettingsModule.ɵinj = i0__namespace.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: ProfileSettingsModule, providers: [ProfileService, ProfileUpdateService, AttachmentsService, i1.HttpClient, AlertService, AuthService, i6.ConfirmationService, PermissionStore, DataStoreService], imports: [[
+    ProfileSettingsModule.ɵinj = i0__namespace.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: ProfileSettingsModule, providers: [ProfileService, ProfileUpdateService, AttachmentsService, http.HttpClient, AlertService, AuthService, i6.ConfirmationService, PermissionStore, DataStoreService], imports: [[
                 PicsProfileModule
             ]] });
     i0__namespace.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: ProfileSettingsModule, decorators: [{
@@ -2181,7 +2075,7 @@
                         exports: [
                             ProfileComponent
                         ],
-                        providers: [ProfileService, ProfileUpdateService, AttachmentsService, i1.HttpClient, AlertService, AuthService, i6.ConfirmationService, PermissionStore, DataStoreService]
+                        providers: [ProfileService, ProfileUpdateService, AttachmentsService, http.HttpClient, AlertService, AuthService, i6.ConfirmationService, PermissionStore, DataStoreService]
                     }]
             }] });
 
