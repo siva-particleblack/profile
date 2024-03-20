@@ -11,6 +11,7 @@ import { AuthService } from '../@core/service/auth.service';
 import { RBACINFO } from '../@core/urls/rbac-url.config';
 import { DataStoreService } from '../@core/service/data-store.service';
 import { ProfileUpdateService } from '../../profile-update.service';
+import { Router } from '@angular/router';
 import * as i0 from "@angular/core";
 export declare class ProfileComponent implements OnInit {
     private authService;
@@ -20,6 +21,7 @@ export declare class ProfileComponent implements OnInit {
     private _storeservice;
     private confirmationService;
     private profileUpdateService;
+    private router;
     userForm: FormGroup;
     userid: any;
     thumbnail: string;
@@ -45,7 +47,8 @@ export declare class ProfileComponent implements OnInit {
     orgId: any;
     errors: string[];
     httpService: any;
-    constructor(injector: Injector, authService: AuthService, formBuilder: FormBuilder, profileService: ProfileService, attachmentService: AttachmentsService, _storeservice: DataStoreService, confirmationService: ConfirmationService, profileUpdateService: ProfileUpdateService);
+    constructor(injector: Injector, authService: AuthService, formBuilder: FormBuilder, profileService: ProfileService, attachmentService: AttachmentsService, _storeservice: DataStoreService, confirmationService: ConfirmationService, profileUpdateService: ProfileUpdateService, router: Router);
+    unloadNotification($event: any): void;
     ngOnInit(): void;
     initializeResetPasswordForm(): void;
     initializeForm(): void;
