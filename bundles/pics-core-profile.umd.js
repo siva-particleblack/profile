@@ -1622,8 +1622,12 @@
             });
         };
         ProfileComponent.prototype.getUserTheme = function () {
+            var _this = this;
             this.profileService.getUserPreference(this.userid).subscribe(function (res) {
-                console.log(res);
+                var data = res.data;
+                var config = JSON.parse(data === null || data === void 0 ? void 0 : data.config);
+                _this.selectedTheme = (config === null || config === void 0 ? void 0 : config.theme) || 'default';
+                _this.selectedFont = (config === null || config === void 0 ? void 0 : config.font) || '13';
             });
         };
         ProfileComponent.prototype.setTheme = function (event) {
