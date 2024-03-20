@@ -1,11 +1,15 @@
 import * as i0 from '@angular/core';
 import { Injectable, Component, Input, Directive, NgModule, NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BehaviorSubject, Subject, of } from 'rxjs';
+import * as i1 from '@angular/common/http';
+import { HttpHeaders, HttpClient } from '@angular/common/http';
+import 'rxjs/add/operator/map';
+import { throwError } from 'rxjs/internal/observable/throwError';
+import { map } from 'rxjs/operators';
 import * as i2 from '@angular/forms';
 import { Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import * as i1 from '@angular/router';
+import * as i1$1 from '@angular/router';
 import { NavigationStart } from '@angular/router';
-import 'rxjs/add/operator/map';
 import * as i6 from 'primeng/api';
 import { ConfirmationService } from 'primeng/api';
 import * as i9 from '@angular/common';
@@ -48,7 +52,6 @@ import { TabMenuModule } from 'primeng/tabmenu';
 import { TabViewModule } from 'primeng/tabview';
 import { ToastModule } from 'primeng/toast';
 import { TreeSelectModule } from 'primeng/treeselect';
-import { HttpClient } from '@angular/common/http';
 
 const themeList = [
     {
@@ -536,11 +539,114 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImpo
                 }]
         }], ctorParameters: function () { return []; } });
 
+class HttpService {
+    constructor(http, _storeservice) {
+        this.http = http;
+        this._storeservice = _storeservice;
+        this.overrideUrl = true;
+        this.baseUrl = '';
+        this.headers = new HttpHeaders()
+            .set('Accept', 'application/json')
+            .set('Content-Type', 'application/json')
+            .set('role', 'role=CP_PUBLIC');
+        this.showSpinner = new BehaviorSubject(false);
+        this.outsideShowSpinner = new BehaviorSubject(false);
+        this._storeservice.currentStore.subscribe((res) => {
+            if (res['RBACORG'] && res['RBACORG'] !== '') {
+                this.RBACORG = res['RBACORG'];
+                this.url = this.RBACORG['apiHost'] ? this.RBACORG['apiHost'] : 'http://localhost:3000/api';
+                this.tokenKey = this.RBACORG['tokenKey'];
+            }
+        });
+        this.url1 = '';
+    }
+    get(apiRoute) {
+        return this.http.get(`${this.url + apiRoute}`, {
+            headers: this.getHttpNewHeaders()
+        });
+    }
+    post(apiRoute, body) {
+        return this.http.post(`${this.url + apiRoute}`, body, {
+            headers: this.getHttpNewHeaders()
+        });
+    }
+    put(apiRoute, body) {
+        return this.http.put(`${this.url + apiRoute}`, body, {
+            headers: this.getHttpNewHeaders()
+        });
+    }
+    patch(apiRoute, body) {
+        return this.http.patch(`${this.url + apiRoute}`, body, {
+            headers: this.getHttpNewHeaders()
+        });
+    }
+    delete(apiRoute) {
+        return this.http.delete(`${this.url + apiRoute}`, {
+            headers: this.getHttpNewHeaders()
+        });
+    }
+    getHttpHeaders() {
+        return new HttpHeaders().set('key', 'value');
+    }
+    getHttpNewHeaders() {
+        return this.headers.set('Authorization', `Bearer ${this.getToken()}`);
+    }
+    getAttachmentHttpHeaders(contentType) {
+        return new HttpHeaders().set('Content-Type', contentType).set('x-ms-blob-type', 'BlockBlob');
+    }
+    putUpload(apiRoute, body, contentType) {
+        return this.http.put(`${this.url1 + apiRoute}`, body, { headers: this.getAttachmentHttpHeaders(contentType) });
+    }
+    putupload2(apiRoute, body, contenttype) {
+        return this.http
+            .put(`${this.url1 + apiRoute}`, body, {
+            headers: this.getAttachmentHttpHeaders(contenttype),
+            observe: 'response'
+        })
+            .pipe(map(data => {
+            return data;
+        }));
+    }
+    /**
+     *
+     * @param apiRoute
+     * This function will download the stream file from the API service.
+     * No HTTP required for this stream. So used Window.location.href to download the file
+     */
+    getFormDownloaded(apiRoute) {
+        window.location.href = `${this.url + apiRoute}`;
+    }
+    //common http service(optional)
+    handleError(error) {
+        var _a, _b;
+        let errorMessage = '';
+        if (error.error instanceof ErrorEvent) {
+            // Client-side errors
+            errorMessage = `Error: ${error.error.message}`;
+        }
+        else {
+            // Server-side errors
+            errorMessage = `Error Code: ${error.status}\nMessage: ${((_a = error === null || error === void 0 ? void 0 : error.error) === null || _a === void 0 ? void 0 : _a.message) ? (_b = error === null || error === void 0 ? void 0 : error.error) === null || _b === void 0 ? void 0 : _b.message : error.message}`;
+        }
+        return throwError(errorMessage);
+    }
+    getToken() {
+        const token = this.tokenKey ? this.tokenKey : 'jwt-token';
+        return sessionStorage.getItem(token);
+    }
+}
+HttpService.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: HttpService, deps: [{ token: i1.HttpClient }, { token: DataStoreService }], target: i0.ɵɵFactoryTarget.Injectable });
+HttpService.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: HttpService });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: HttpService, decorators: [{
+            type: Injectable
+        }], ctorParameters: function () { return [{ type: i1.HttpClient }, { type: DataStoreService }]; } });
+
 class ProfileService {
-    constructor(_storeservice, themeService, localstorage) {
+    constructor(_storeservice, themeService, localstorage, httpServiceExternal) {
         this._storeservice = _storeservice;
         this.themeService = themeService;
         this.localstorage = localstorage;
+        this.httpServiceExternal = httpServiceExternal;
         this.profileImage = new Subject();
         this._storeservice.currentStore.subscribe((res) => {
             if (res) {
@@ -597,14 +703,14 @@ class ProfileService {
         return this.httpService.post(UserConfig.EndPoint.User.saveUserConfig, data);
     }
 }
-ProfileService.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: ProfileService, deps: [{ token: DataStoreService }, { token: ThemeService }, { token: LocalService }], target: i0.ɵɵFactoryTarget.Injectable });
+ProfileService.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: ProfileService, deps: [{ token: DataStoreService }, { token: ThemeService }, { token: LocalService }, { token: HttpService }], target: i0.ɵɵFactoryTarget.Injectable });
 ProfileService.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: ProfileService, providedIn: 'root' });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: ProfileService, decorators: [{
             type: Injectable,
             args: [{
                     providedIn: 'root'
                 }]
-        }], ctorParameters: function () { return [{ type: DataStoreService }, { type: ThemeService }, { type: LocalService }]; } });
+        }], ctorParameters: function () { return [{ type: DataStoreService }, { type: ThemeService }, { type: LocalService }, { type: HttpService }]; } });
 
 // Inside your npm package (ProfileService)
 class ProfileUpdateService {
@@ -727,11 +833,11 @@ class AlertService {
         this.subject.next({});
     }
 }
-AlertService.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: AlertService, deps: [{ token: i1.Router }], target: i0.ɵɵFactoryTarget.Injectable });
+AlertService.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: AlertService, deps: [{ token: i1$1.Router }], target: i0.ɵɵFactoryTarget.Injectable });
 AlertService.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: AlertService });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: AlertService, decorators: [{
             type: Injectable
-        }], ctorParameters: function () { return [{ type: i1.Router }]; } });
+        }], ctorParameters: function () { return [{ type: i1$1.Router }]; } });
 var AlertType;
 (function (AlertType) {
     AlertType[AlertType["Success"] = 0] = "Success";
@@ -846,14 +952,14 @@ class AuthService {
         return this.httpService.post(AuthURL.EndPoints.auth.user.resetPassword, data);
     }
 }
-AuthService.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: AuthService, deps: [{ token: i0.Injector }, { token: i1.Router }, { token: DataStoreService }], target: i0.ɵɵFactoryTarget.Injectable });
+AuthService.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: AuthService, deps: [{ token: i0.Injector }, { token: i1$1.Router }, { token: DataStoreService }], target: i0.ɵɵFactoryTarget.Injectable });
 AuthService.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: AuthService, providedIn: 'root' });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: AuthService, decorators: [{
             type: Injectable,
             args: [{
                     providedIn: 'root'
                 }]
-        }], ctorParameters: function () { return [{ type: i0.Injector }, { type: i1.Router }, { type: DataStoreService }]; } });
+        }], ctorParameters: function () { return [{ type: i0.Injector }, { type: i1$1.Router }, { type: DataStoreService }]; } });
 
 class AttachmentsService {
     constructor(_storeservice) {
@@ -947,7 +1053,6 @@ class ProfileComponent$1 {
         this.alertService = injector.get(AlertService);
         this.themeService = injector.get(ThemeService);
         this.userid = sessionStorage.getItem('id');
-        this.profileService.setUserPreference();
         this.selectedTheme = this.localstorage.getItem('SELECTED_THEME') || 'default';
         this.selectedFont = this.localstorage.getItem('SELECTED_FONT') || '13';
         this.themes = themeList;
@@ -966,6 +1071,7 @@ class ProfileComponent$1 {
                 if (this.environment) {
                     this.getUserInfo();
                     this.fontSlider();
+                    this.getUserTheme();
                 }
             }
         });
@@ -1091,13 +1197,11 @@ class ProfileComponent$1 {
             // This is intentional
         });
     }
-    // getUserTheme() {
-    //   // const id = parseInt(this.userid);
-    //   // this.profileService.getUserPreference(id).subscribe((res: any) => {
-    //   //   console.log(res);
-    //   // });
-    //   this.getUserInfo()
-    // }
+    getUserTheme() {
+        this.profileService.getUserPreference(this.userid).subscribe((res) => {
+            console.log(res);
+        });
+    }
     setTheme(event) {
         this.profileService.setTheme(event);
     }
