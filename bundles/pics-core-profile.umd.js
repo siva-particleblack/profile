@@ -1400,17 +1400,19 @@
     var NavigationAlertService = /** @class */ (function () {
         function NavigationAlertService(router) {
             this.router = router;
+            this.showAlertSubject = new rxjs.Subject();
             this.init();
         }
         NavigationAlertService.prototype.init = function () {
             var _this = this;
             this.router.events.subscribe(function (event) {
                 if (event instanceof i1.NavigationStart) {
-                    if (!confirm('Are you sure you want to navigate away?')) {
-                        _this.router.navigate([_this.router.url]); // Navigate back to the current page if the user cancels navigation
-                    }
+                    _this.showAlertSubject.next(true);
                 }
             });
+        };
+        NavigationAlertService.prototype.getShowAlertSubject = function () {
+            return this.showAlertSubject;
         };
         return NavigationAlertService;
     }());
@@ -1512,6 +1514,12 @@
         };
         ProfileComponent.prototype.ngOnInit = function () {
             var _this = this;
+            this.showAlert = false;
+            this.navigationAlertService.getShowAlertSubject().subscribe(function (showAlert) {
+                if (showAlert && _this.showAlert) {
+                    alert('Are you sure you want to navigate away?');
+                }
+            });
             this.orgSubs = this._storeservice.currentStore.subscribe(function (res) {
                 if (res['RBACORG'] && res['RBACORG'] !== '') {
                     _this.RBACORG = res['RBACORG'];
@@ -1654,6 +1662,7 @@
             this.profileService.saveUserPreference(body).subscribe(function () {
                 // This is intentional
             });
+            this.showAlert = false;
         };
         ProfileComponent.prototype.getUserTheme = function () {
             var _this = this;
@@ -1666,12 +1675,15 @@
         };
         ProfileComponent.prototype.setTheme = function (event) {
             this.profileService.setTheme(event);
+            this.showAlert = true;
         };
         ProfileComponent.prototype.setFont = function (event) {
             this.profileService.setFont(event);
+            this.showAlert = true;
         };
         ProfileComponent.prototype.setRangeFont = function (modal) {
             this.profileService.setRangeFont(modal);
+            this.showAlert = true;
         };
         ProfileComponent.prototype.changePassword = function () {
             var _this = this;

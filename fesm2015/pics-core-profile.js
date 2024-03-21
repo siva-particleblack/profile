@@ -880,16 +880,18 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImpo
 class NavigationAlertService {
     constructor(router) {
         this.router = router;
+        this.showAlertSubject = new Subject();
         this.init();
     }
     init() {
         this.router.events.subscribe(event => {
             if (event instanceof NavigationStart) {
-                if (!confirm('Are you sure you want to navigate away?')) {
-                    this.router.navigate([this.router.url]); // Navigate back to the current page if the user cancels navigation
-                }
+                this.showAlertSubject.next(true);
             }
         });
+    }
+    getShowAlertSubject() {
+        return this.showAlertSubject;
     }
 }
 NavigationAlertService.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: NavigationAlertService, deps: [{ token: i1.Router }], target: i0.ɵɵFactoryTarget.Injectable });
@@ -987,6 +989,12 @@ class ProfileComponent$1 {
         }
     }
     ngOnInit() {
+        this.showAlert = false;
+        this.navigationAlertService.getShowAlertSubject().subscribe(showAlert => {
+            if (showAlert && this.showAlert) {
+                alert('Are you sure you want to navigate away?');
+            }
+        });
         this.orgSubs = this._storeservice.currentStore.subscribe((res) => {
             if (res['RBACORG'] && res['RBACORG'] !== '') {
                 this.RBACORG = res['RBACORG'];
@@ -1122,6 +1130,7 @@ class ProfileComponent$1 {
         this.profileService.saveUserPreference(body).subscribe(() => {
             // This is intentional
         });
+        this.showAlert = false;
     }
     getUserTheme() {
         this.profileService.getUserPreference(this.userid).subscribe((res) => {
@@ -1133,12 +1142,15 @@ class ProfileComponent$1 {
     }
     setTheme(event) {
         this.profileService.setTheme(event);
+        this.showAlert = true;
     }
     setFont(event) {
         this.profileService.setFont(event);
+        this.showAlert = true;
     }
     setRangeFont(modal) {
         this.profileService.setRangeFont(modal);
+        this.showAlert = true;
     }
     changePassword() {
         const obj = {

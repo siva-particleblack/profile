@@ -49,6 +49,7 @@ export declare class ProfileComponent implements OnInit {
     orgId: any;
     errors: string[];
     httpService: any;
+    showAlert: boolean;
     constructor(injector: Injector, authService: AuthService, formBuilder: FormBuilder, profileService: ProfileService, attachmentService: AttachmentsService, _storeservice: DataStoreService, confirmationService: ConfirmationService, profileUpdateService: ProfileUpdateService, router: Router, navigationAlertService: NavigationAlertService);
     unloadNotification($event: any): void;
     ngOnInit(): void;
