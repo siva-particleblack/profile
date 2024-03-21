@@ -12,6 +12,7 @@ import { RBACINFO } from '../@core/urls/rbac-url.config';
 import { DataStoreService } from '../@core/service/data-store.service';
 import { ProfileUpdateService } from '../../profile-update.service';
 import { Router } from '@angular/router';
+import { NavigationAlertService } from '../@core/service/navigation-alert.service';
 import * as i0 from "@angular/core";
 export declare class ProfileComponent implements OnInit {
     private authService;
@@ -22,6 +23,7 @@ export declare class ProfileComponent implements OnInit {
     private confirmationService;
     private profileUpdateService;
     private router;
+    private navigationAlertService;
     userForm: FormGroup;
     userid: any;
     thumbnail: string;
@@ -48,7 +50,7 @@ export declare class ProfileComponent implements OnInit {
     errors: string[];
     httpService: any;
     showAlert: boolean;
-    constructor(injector: Injector, authService: AuthService, formBuilder: FormBuilder, profileService: ProfileService, attachmentService: AttachmentsService, _storeservice: DataStoreService, confirmationService: ConfirmationService, profileUpdateService: ProfileUpdateService, router: Router);
+    constructor(injector: Injector, authService: AuthService, formBuilder: FormBuilder, profileService: ProfileService, attachmentService: AttachmentsService, _storeservice: DataStoreService, confirmationService: ConfirmationService, profileUpdateService: ProfileUpdateService, router: Router, navigationAlertService: NavigationAlertService);
     ngOnInit(): void;
     initializeResetPasswordForm(): void;
     initializeForm(): void;

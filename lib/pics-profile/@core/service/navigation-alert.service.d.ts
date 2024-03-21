@@ -6,7 +6,7 @@ export declare class NavigationAlertService {
     private navigationSubject;
     constructor(router: Router);
     private init;
-    getNavigationSubject(): Subject<boolean>;
+    getNavigationSubject(key: boolean): Subject<boolean>;
     static ɵfac: i0.ɵɵFactoryDeclaration<NavigationAlertService, never>;
     static ɵprov: i0.ɵɵInjectableDeclaration<NavigationAlertService>;
 }
