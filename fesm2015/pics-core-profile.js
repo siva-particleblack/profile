@@ -6,6 +6,7 @@ import { Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import * as i1 from '@angular/router';
 import { NavigationStart } from '@angular/router';
 import 'rxjs/add/operator/map';
+import { filter } from 'rxjs/operators';
 import * as i6 from 'primeng/api';
 import { ConfirmationService } from 'primeng/api';
 import * as i11 from '@angular/common';
@@ -880,18 +881,17 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImpo
 class NavigationAlertService {
     constructor(router) {
         this.router = router;
-        this.navigationSubject = new Subject();
-        this.init();
+        this.showAlertSubject = new Subject();
     }
-    init() {
-        this.router.events.subscribe(event => {
-            if (event instanceof NavigationStart) {
-                const confirmNavigation = this.navigationSubject.next(confirm('Are you sure you want to navigate away?'));
-            }
-        });
+    // Method to trigger the alert message based on the flag value
+    showAlert(flag) {
+        if (flag) {
+            this.showAlertSubject.next(true);
+        }
     }
-    getNavigationSubject(key) {
-        return this.navigationSubject;
+    // Method to get the subject for subscribing to the alert event
+    getShowAlertSubject() {
+        return this.showAlertSubject.asObservable();
     }
 }
 NavigationAlertService.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: NavigationAlertService, deps: [{ token: i1.Router }], target: i0.ɵɵFactoryTarget.Injectable });
@@ -984,13 +984,15 @@ class ProfileComponent$1 {
     }
     ngOnInit() {
         this.showAlert = false;
-        this.navigationAlertService.getNavigationSubject(this.showAlert).subscribe(confirmNavigation => {
-            if (confirmNavigation) {
-                // User confirmed navigation, proceed with navigation logic
-                // For example, navigate to another page
-            }
-            else {
-                // User canceled navigation, handle accordingly
+        this.router.events.pipe(filter(event => event instanceof NavigationStart)).subscribe((event) => {
+            if (event.url === '/page/profile') { // Replace '/your-page' with the actual path of your page
+                this.navigationAlertService.getShowAlertSubject().subscribe(showAlert => {
+                    if (showAlert) {
+                        if (!confirm('Are you sure you want to navigate away?')) {
+                            this.router.navigateByUrl(event.url); // Stay on the current page if user cancels navigation
+                        }
+                    }
+                });
             }
         });
         this.orgSubs = this._storeservice.currentStore.subscribe((res) => {
@@ -1129,6 +1131,7 @@ class ProfileComponent$1 {
             // This is intentional
         });
         this.showAlert = false;
+        this.navigationAlertService.showAlert(this.showAlert);
     }
     getUserTheme() {
         this.profileService.getUserPreference(this.userid).subscribe((res) => {
@@ -1141,14 +1144,17 @@ class ProfileComponent$1 {
     setTheme(event) {
         this.profileService.setTheme(event);
         this.showAlert = true;
+        this.navigationAlertService.showAlert(this.showAlert);
     }
     setFont(event) {
         this.profileService.setFont(event);
         this.showAlert = true;
+        this.navigationAlertService.showAlert(this.showAlert);
     }
     setRangeFont(modal) {
         this.profileService.setRangeFont(modal);
         this.showAlert = true;
+        this.navigationAlertService.showAlert(this.showAlert);
     }
     changePassword() {
         const obj = {

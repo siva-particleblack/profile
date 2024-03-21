@@ -1,8 +1,8 @@
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('rxjs'), require('@angular/forms'), require('@angular/router'), require('rxjs/add/operator/map'), require('primeng/api'), require('@angular/common'), require('primeng/tooltip'), require('primeng/inputtext'), require('@ng-bootstrap/ng-bootstrap'), require('primeng/accordion'), require('primeng/avatar'), require('primeng/badge'), require('primeng/button'), require('primeng/calendar'), require('primeng/card'), require('primeng/checkbox'), require('primeng/confirmdialog'), require('primeng/confirmpopup'), require('primeng/contextmenu'), require('primeng/dialog'), require('primeng/dropdown'), require('primeng/editor'), require('primeng/fieldset'), require('primeng/fileupload'), require('primeng/inputmask'), require('primeng/inputswitch'), require('primeng/inputtextarea'), require('primeng/knob'), require('primeng/message'), require('primeng/multiselect'), require('primeng/orderlist'), require('primeng/password'), require('primeng/progressspinner'), require('primeng/radiobutton'), require('primeng/ripple'), require('primeng/sidebar'), require('primeng/speeddial'), require('primeng/steps'), require('primeng/table'), require('primeng/tabmenu'), require('primeng/tabview'), require('primeng/toast'), require('primeng/treeselect'), require('@angular/common/http')) :
-    typeof define === 'function' && define.amd ? define('@pics-core/profile', ['exports', '@angular/core', 'rxjs', '@angular/forms', '@angular/router', 'rxjs/add/operator/map', 'primeng/api', '@angular/common', 'primeng/tooltip', 'primeng/inputtext', '@ng-bootstrap/ng-bootstrap', 'primeng/accordion', 'primeng/avatar', 'primeng/badge', 'primeng/button', 'primeng/calendar', 'primeng/card', 'primeng/checkbox', 'primeng/confirmdialog', 'primeng/confirmpopup', 'primeng/contextmenu', 'primeng/dialog', 'primeng/dropdown', 'primeng/editor', 'primeng/fieldset', 'primeng/fileupload', 'primeng/inputmask', 'primeng/inputswitch', 'primeng/inputtextarea', 'primeng/knob', 'primeng/message', 'primeng/multiselect', 'primeng/orderlist', 'primeng/password', 'primeng/progressspinner', 'primeng/radiobutton', 'primeng/ripple', 'primeng/sidebar', 'primeng/speeddial', 'primeng/steps', 'primeng/table', 'primeng/tabmenu', 'primeng/tabview', 'primeng/toast', 'primeng/treeselect', '@angular/common/http'], factory) :
-    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory((global["pics-core"] = global["pics-core"] || {}, global["pics-core"].profile = {}), global.ng.core, global.rxjs, global.ng.forms, global.ng.router, global.rxjs["add/operator/map"], global.i6, global.ng.common, global.i12, global.i13, global.ngBootstrap, global.accordion, global.avatar, global.badge, global.button, global.calendar, global.card, global.checkbox, global.confirmdialog, global.confirmpopup, global.contextmenu, global.dialog, global.dropdown, global.editor, global.fieldset, global.fileupload, global.inputmask, global.inputswitch, global.inputtextarea, global.knob, global.message, global.multiselect, global.orderlist, global.password, global.progressspinner, global.radiobutton, global.ripple, global.sidebar, global.speeddial, global.steps, global.table, global.tabmenu, global.tabview, global.toast, global.treeselect, global.ng.common.http));
-})(this, (function (exports, i0, rxjs, i2, i1, map, i6, i11, i12, i13, ngBootstrap, accordion, avatar, badge, button, calendar, card, checkbox, confirmdialog, confirmpopup, contextmenu, dialog, dropdown, editor, fieldset, fileupload, inputmask, inputswitch, inputtextarea, knob, message, multiselect, orderlist, password, progressspinner, radiobutton, ripple, sidebar, speeddial, steps, table, tabmenu, tabview, toast, treeselect, http) { 'use strict';
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('rxjs'), require('@angular/forms'), require('@angular/router'), require('rxjs/add/operator/map'), require('rxjs/operators'), require('primeng/api'), require('@angular/common'), require('primeng/tooltip'), require('primeng/inputtext'), require('@ng-bootstrap/ng-bootstrap'), require('primeng/accordion'), require('primeng/avatar'), require('primeng/badge'), require('primeng/button'), require('primeng/calendar'), require('primeng/card'), require('primeng/checkbox'), require('primeng/confirmdialog'), require('primeng/confirmpopup'), require('primeng/contextmenu'), require('primeng/dialog'), require('primeng/dropdown'), require('primeng/editor'), require('primeng/fieldset'), require('primeng/fileupload'), require('primeng/inputmask'), require('primeng/inputswitch'), require('primeng/inputtextarea'), require('primeng/knob'), require('primeng/message'), require('primeng/multiselect'), require('primeng/orderlist'), require('primeng/password'), require('primeng/progressspinner'), require('primeng/radiobutton'), require('primeng/ripple'), require('primeng/sidebar'), require('primeng/speeddial'), require('primeng/steps'), require('primeng/table'), require('primeng/tabmenu'), require('primeng/tabview'), require('primeng/toast'), require('primeng/treeselect'), require('@angular/common/http')) :
+    typeof define === 'function' && define.amd ? define('@pics-core/profile', ['exports', '@angular/core', 'rxjs', '@angular/forms', '@angular/router', 'rxjs/add/operator/map', 'rxjs/operators', 'primeng/api', '@angular/common', 'primeng/tooltip', 'primeng/inputtext', '@ng-bootstrap/ng-bootstrap', 'primeng/accordion', 'primeng/avatar', 'primeng/badge', 'primeng/button', 'primeng/calendar', 'primeng/card', 'primeng/checkbox', 'primeng/confirmdialog', 'primeng/confirmpopup', 'primeng/contextmenu', 'primeng/dialog', 'primeng/dropdown', 'primeng/editor', 'primeng/fieldset', 'primeng/fileupload', 'primeng/inputmask', 'primeng/inputswitch', 'primeng/inputtextarea', 'primeng/knob', 'primeng/message', 'primeng/multiselect', 'primeng/orderlist', 'primeng/password', 'primeng/progressspinner', 'primeng/radiobutton', 'primeng/ripple', 'primeng/sidebar', 'primeng/speeddial', 'primeng/steps', 'primeng/table', 'primeng/tabmenu', 'primeng/tabview', 'primeng/toast', 'primeng/treeselect', '@angular/common/http'], factory) :
+    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory((global["pics-core"] = global["pics-core"] || {}, global["pics-core"].profile = {}), global.ng.core, global.rxjs, global.ng.forms, global.ng.router, global.rxjs["add/operator/map"], global.rxjs.operators, global.i6, global.ng.common, global.i12, global.i13, global.ngBootstrap, global.accordion, global.avatar, global.badge, global.button, global.calendar, global.card, global.checkbox, global.confirmdialog, global.confirmpopup, global.contextmenu, global.dialog, global.dropdown, global.editor, global.fieldset, global.fileupload, global.inputmask, global.inputswitch, global.inputtextarea, global.knob, global.message, global.multiselect, global.orderlist, global.password, global.progressspinner, global.radiobutton, global.ripple, global.sidebar, global.speeddial, global.steps, global.table, global.tabmenu, global.tabview, global.toast, global.treeselect, global.ng.common.http));
+})(this, (function (exports, i0, rxjs, i2, i1, map, operators, i6, i11, i12, i13, ngBootstrap, accordion, avatar, badge, button, calendar, card, checkbox, confirmdialog, confirmpopup, contextmenu, dialog, dropdown, editor, fieldset, fileupload, inputmask, inputswitch, inputtextarea, knob, message, multiselect, orderlist, password, progressspinner, radiobutton, ripple, sidebar, speeddial, steps, table, tabmenu, tabview, toast, treeselect, http) { 'use strict';
 
     function _interopNamespace(e) {
         if (e && e.__esModule) return e;
@@ -1400,19 +1400,17 @@
     var NavigationAlertService = /** @class */ (function () {
         function NavigationAlertService(router) {
             this.router = router;
-            this.navigationSubject = new rxjs.Subject();
-            this.init();
+            this.showAlertSubject = new rxjs.Subject();
         }
-        NavigationAlertService.prototype.init = function () {
-            var _this = this;
-            this.router.events.subscribe(function (event) {
-                if (event instanceof i1.NavigationStart) {
-                    var confirmNavigation = _this.navigationSubject.next(confirm('Are you sure you want to navigate away?'));
-                }
-            });
+        // Method to trigger the alert message based on the flag value
+        NavigationAlertService.prototype.showAlert = function (flag) {
+            if (flag) {
+                this.showAlertSubject.next(true);
+            }
         };
-        NavigationAlertService.prototype.getNavigationSubject = function (key) {
-            return this.navigationSubject;
+        // Method to get the subject for subscribing to the alert event
+        NavigationAlertService.prototype.getShowAlertSubject = function () {
+            return this.showAlertSubject.asObservable();
         };
         return NavigationAlertService;
     }());
@@ -1509,13 +1507,15 @@
         ProfileComponent.prototype.ngOnInit = function () {
             var _this = this;
             this.showAlert = false;
-            this.navigationAlertService.getNavigationSubject(this.showAlert).subscribe(function (confirmNavigation) {
-                if (confirmNavigation) {
-                    // User confirmed navigation, proceed with navigation logic
-                    // For example, navigate to another page
-                }
-                else {
-                    // User canceled navigation, handle accordingly
+            this.router.events.pipe(operators.filter(function (event) { return event instanceof i1.NavigationStart; })).subscribe(function (event) {
+                if (event.url === '/page/profile') { // Replace '/your-page' with the actual path of your page
+                    _this.navigationAlertService.getShowAlertSubject().subscribe(function (showAlert) {
+                        if (showAlert) {
+                            if (!confirm('Are you sure you want to navigate away?')) {
+                                _this.router.navigateByUrl(event.url); // Stay on the current page if user cancels navigation
+                            }
+                        }
+                    });
                 }
             });
             this.orgSubs = this._storeservice.currentStore.subscribe(function (res) {
@@ -1661,6 +1661,7 @@
                 // This is intentional
             });
             this.showAlert = false;
+            this.navigationAlertService.showAlert(this.showAlert);
         };
         ProfileComponent.prototype.getUserTheme = function () {
             var _this = this;
@@ -1674,14 +1675,17 @@
         ProfileComponent.prototype.setTheme = function (event) {
             this.profileService.setTheme(event);
             this.showAlert = true;
+            this.navigationAlertService.showAlert(this.showAlert);
         };
         ProfileComponent.prototype.setFont = function (event) {
             this.profileService.setFont(event);
             this.showAlert = true;
+            this.navigationAlertService.showAlert(this.showAlert);
         };
         ProfileComponent.prototype.setRangeFont = function (modal) {
             this.profileService.setRangeFont(modal);
             this.showAlert = true;
+            this.navigationAlertService.showAlert(this.showAlert);
         };
         ProfileComponent.prototype.changePassword = function () {
             var _this = this;
