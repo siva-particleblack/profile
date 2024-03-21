@@ -1401,16 +1401,17 @@
         function NavigationAlertService(router) {
             this.router = router;
             this.navigationSubject = new rxjs.Subject();
-            this.init();
         }
-        NavigationAlertService.prototype.init = function () {
+        NavigationAlertService.prototype.init = function (key) {
             var _this = this;
-            this.router.events.subscribe(function (event) {
-                if (event instanceof i1.NavigationStart) {
-                    var confirmNavigation = confirm('Are you sure you want to navigate away?');
-                    _this.navigationSubject.next(confirmNavigation);
-                }
-            });
+            if (key) {
+                this.router.events.subscribe(function (event) {
+                    if (event instanceof i1.NavigationStart) {
+                        var confirmNavigation = confirm('Are you sure you want to navigate away?');
+                        _this.navigationSubject.next(confirmNavigation);
+                    }
+                });
+            }
         };
         NavigationAlertService.prototype.getNavigationSubject = function () {
             return this.navigationSubject;
@@ -1661,6 +1662,7 @@
             this.profileService.saveUserPreference(body).subscribe(function () {
                 // This is intentional
                 _this.showAlert = false;
+                _this.navigationAlertService.init(false);
             });
         };
         ProfileComponent.prototype.getUserTheme = function () {
@@ -1675,14 +1677,17 @@
         ProfileComponent.prototype.setTheme = function (event) {
             this.profileService.setTheme(event);
             this.showAlert = true;
+            this.navigationAlertService.init(true);
         };
         ProfileComponent.prototype.setFont = function (event) {
             this.profileService.setFont(event);
             this.showAlert = true;
+            this.navigationAlertService.init(true);
         };
         ProfileComponent.prototype.setRangeFont = function (modal) {
             this.profileService.setRangeFont(modal);
             this.showAlert = true;
+            this.navigationAlertService.init(true);
         };
         ProfileComponent.prototype.changePassword = function () {
             var _this = this;

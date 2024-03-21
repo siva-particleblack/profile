@@ -881,15 +881,16 @@ class NavigationAlertService {
     constructor(router) {
         this.router = router;
         this.navigationSubject = new Subject();
-        this.init();
     }
-    init() {
-        this.router.events.subscribe(event => {
-            if (event instanceof NavigationStart) {
-                const confirmNavigation = confirm('Are you sure you want to navigate away?');
-                this.navigationSubject.next(confirmNavigation);
-            }
-        });
+    init(key) {
+        if (key) {
+            this.router.events.subscribe(event => {
+                if (event instanceof NavigationStart) {
+                    const confirmNavigation = confirm('Are you sure you want to navigate away?');
+                    this.navigationSubject.next(confirmNavigation);
+                }
+            });
+        }
     }
     getNavigationSubject() {
         return this.navigationSubject;
@@ -1128,6 +1129,7 @@ class ProfileComponent$1 {
         this.profileService.saveUserPreference(body).subscribe(() => {
             // This is intentional
             this.showAlert = false;
+            this.navigationAlertService.init(false);
         });
     }
     getUserTheme() {
@@ -1141,14 +1143,17 @@ class ProfileComponent$1 {
     setTheme(event) {
         this.profileService.setTheme(event);
         this.showAlert = true;
+        this.navigationAlertService.init(true);
     }
     setFont(event) {
         this.profileService.setFont(event);
         this.showAlert = true;
+        this.navigationAlertService.init(true);
     }
     setRangeFont(modal) {
         this.profileService.setRangeFont(modal);
         this.showAlert = true;
+        this.navigationAlertService.init(true);
     }
     changePassword() {
         const obj = {
