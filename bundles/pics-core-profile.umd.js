@@ -1510,7 +1510,7 @@
         ProfileComponent.prototype.ngOnInit = function () {
             var _this = this;
             this.router.events.pipe(operators.filter(function (event) { return event instanceof i1.NavigationStart; })).subscribe(function (event) {
-                if (event.url === '/your-page') { // Replace '/your-page' with the actual path of your page
+                if (event.url === '/pages/profile') { // Replace '/your-page' with the actual path of your page
                     if (_this.navigationAlertService.getFlag()) {
                         if (!confirm('Are you sure you want to navigate away?')) {
                             _this.router.navigateByUrl(event.url); // Stay on the current page if user cancels navigation

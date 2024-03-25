@@ -987,7 +987,7 @@ class ProfileComponent$1 {
     }
     ngOnInit() {
         this.router.events.pipe(filter(event => event instanceof NavigationStart)).subscribe((event) => {
-            if (event.url === '/your-page') { // Replace '/your-page' with the actual path of your page
+            if (event.url === '/pages/profile') { // Replace '/your-page' with the actual path of your page
                 if (this.navigationAlertService.getFlag()) {
                     if (!confirm('Are you sure you want to navigate away?')) {
                         this.router.navigateByUrl(event.url); // Stay on the current page if user cancels navigation
