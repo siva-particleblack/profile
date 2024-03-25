@@ -1405,6 +1405,7 @@
         }
         NavigationAlertService.prototype.setFlag = function (flag) {
             this.flag = flag;
+            this.localstorage.setObj('isThemeUpdated', flag);
         };
         NavigationAlertService.prototype.getFlag = function () {
             return this.flag;
@@ -1509,35 +1510,15 @@
         }
         ProfileComponent.prototype.ngOnInit = function () {
             var _this = this;
-            this.showAlert1 = false;
-            this.setFlag(this.showAlert1);
+            this.setFlag(false);
             this.router.events.subscribe(function (event) {
                 if (event instanceof i1.NavigationStart) {
                     if (_this.navigationAlertService.getFlag()) {
                         $('#Deleteuser').modal('show');
                         _this.nextNavigation = event.url;
-                        // if (!confirm('Are you sure you want to navigate away?')) {
-                        //   this.router.navigateByUrl(event.url); // Stay on the current page if user cancels navigation
-                        // } else {
-                        //   this.navigationAlertService.setFlag(false);
-                        // }
                     }
                 }
             });
-            // this.router.events.pipe(
-            //   filter(event => event instanceof NavigationStart)
-            // ).subscribe((event: NavigationStart) => {
-            //   if (event.url === '/pages/profile') { // Replace '/your-page' with the actual path of your page
-            //     if (this.navigationAlertService.getFlag()) {
-            //       if (!confirm('Are you sure you want to navigate away?')) {
-            //         this.router.navigateByUrl(event.url); // Stay on the current page if user cancels navigation
-            //       }
-            //     }
-            //   }
-            // });
-            // this.navigationAlertService.getShowAlertSubject().subscribe(() => {
-            //   this.showAlert();
-            // });
             this.orgSubs = this._storeservice.currentStore.subscribe(function (res) {
                 if (res['RBACORG'] && res['RBACORG'] !== '') {
                     _this.RBACORG = res['RBACORG'];
@@ -1553,23 +1534,20 @@
                 }
             });
         };
-        ProfileComponent.prototype.showAlert = function () {
-            alert('Flag is true. Navigation is blocked!');
-        };
         ProfileComponent.prototype.setFlag = function (flag) {
             this.navigationAlertService.setFlag(flag);
         };
         ProfileComponent.prototype.acceptTheme = function () {
             $('#UpdateTheme').modal('hide');
             this.updateStyling();
-            this.navigationAlertService.setFlag(false);
-            this.router.navigateByUrl(this.nextNavigation);
+            this.setFlag(false);
+            // this.router.navigateByUrl(this.nextNavigation);
         };
         ProfileComponent.prototype.cancleTheme = function () {
             $('#UpdateTheme').modal('hide');
             this.profileService.setUserPreference();
-            this.navigationAlertService.setFlag(false);
-            this.router.navigateByUrl(this.nextNavigation);
+            this.setFlag(false);
+            // this.router.navigateByUrl(this.nextNavigation);
         };
         ProfileComponent.prototype.initializeResetPasswordForm = function () {
             this.resetPasswordForm = this.formBuilder.group({
@@ -1689,7 +1667,6 @@
             });
         };
         ProfileComponent.prototype.updateStyling = function () {
-            var _this = this;
             var body = {
                 type: 'USER_THEME_PREFERENCES',
                 mappedid: this.userid,
@@ -1698,9 +1675,6 @@
             this.alertService.success('Theme changes saved successfully.');
             this.profileService.saveUserPreference(body).subscribe(function () {
                 // This is intentional
-                _this.showAlert1 = false;
-                _this.setFlag(_this.showAlert1);
-                // this.navigationAlertService.init(false);
             });
         };
         ProfileComponent.prototype.getUserTheme = function () {
@@ -1714,24 +1688,15 @@
         };
         ProfileComponent.prototype.setTheme = function (event) {
             this.profileService.setTheme(event);
-            this.showAlert1 = true;
-            this.setFlag(this.showAlert1);
-            // this.showAlertMessage(this.showAlert);
-            // this.navigationAlertService.init(true);
+            this.setFlag(true);
         };
         ProfileComponent.prototype.setFont = function (event) {
             this.profileService.setFont(event);
-            this.showAlert1 = true;
-            this.setFlag(this.showAlert1);
-            // this.showAlertMessage(this.showAlert);
-            // this.navigationAlertService.init(true);
+            this.setFlag(true);
         };
         ProfileComponent.prototype.setRangeFont = function (modal) {
             this.profileService.setRangeFont(modal);
-            this.showAlert1 = true;
-            this.setFlag(this.showAlert1);
-            // this.showAlertMessage(this.showAlert);
-            // this.navigationAlertService.init(true);
+            this.setFlag(true);
         };
         ProfileComponent.prototype.changePassword = function () {
             var _this = this;

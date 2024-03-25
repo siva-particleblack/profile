@@ -49,11 +49,9 @@ export declare class ProfileComponent implements OnInit {
     orgId: any;
     errors: string[];
     httpService: any;
-    showAlert1: boolean;
     nextNavigation: string;
     constructor(injector: Injector, authService: AuthService, formBuilder: FormBuilder, profileService: ProfileService, attachmentService: AttachmentsService, _storeservice: DataStoreService, confirmationService: ConfirmationService, profileUpdateService: ProfileUpdateService, router: Router, navigationAlertService: NavigationAlertService);
     ngOnInit(): void;
-    showAlert(): void;
     setFlag(flag: boolean): void;
     acceptTheme(): void;
     cancleTheme(): void;

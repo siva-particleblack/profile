@@ -885,6 +885,7 @@ class NavigationAlertService {
     }
     setFlag(flag) {
         this.flag = flag;
+        this.localstorage.setObj('isThemeUpdated', flag);
     }
     getFlag() {
         return this.flag;
@@ -985,35 +986,15 @@ class ProfileComponent$1 {
         this.initializeForm();
     }
     ngOnInit() {
-        this.showAlert1 = false;
-        this.setFlag(this.showAlert1);
+        this.setFlag(false);
         this.router.events.subscribe(event => {
             if (event instanceof NavigationStart) {
                 if (this.navigationAlertService.getFlag()) {
                     $('#Deleteuser').modal('show');
                     this.nextNavigation = event.url;
-                    // if (!confirm('Are you sure you want to navigate away?')) {
-                    //   this.router.navigateByUrl(event.url); // Stay on the current page if user cancels navigation
-                    // } else {
-                    //   this.navigationAlertService.setFlag(false);
-                    // }
                 }
             }
         });
-        // this.router.events.pipe(
-        //   filter(event => event instanceof NavigationStart)
-        // ).subscribe((event: NavigationStart) => {
-        //   if (event.url === '/pages/profile') { // Replace '/your-page' with the actual path of your page
-        //     if (this.navigationAlertService.getFlag()) {
-        //       if (!confirm('Are you sure you want to navigate away?')) {
-        //         this.router.navigateByUrl(event.url); // Stay on the current page if user cancels navigation
-        //       }
-        //     }
-        //   }
-        // });
-        // this.navigationAlertService.getShowAlertSubject().subscribe(() => {
-        //   this.showAlert();
-        // });
         this.orgSubs = this._storeservice.currentStore.subscribe((res) => {
             if (res['RBACORG'] && res['RBACORG'] !== '') {
                 this.RBACORG = res['RBACORG'];
@@ -1029,23 +1010,20 @@ class ProfileComponent$1 {
             }
         });
     }
-    showAlert() {
-        alert('Flag is true. Navigation is blocked!');
-    }
     setFlag(flag) {
         this.navigationAlertService.setFlag(flag);
     }
     acceptTheme() {
         $('#UpdateTheme').modal('hide');
         this.updateStyling();
-        this.navigationAlertService.setFlag(false);
-        this.router.navigateByUrl(this.nextNavigation);
+        this.setFlag(false);
+        // this.router.navigateByUrl(this.nextNavigation);
     }
     cancleTheme() {
         $('#UpdateTheme').modal('hide');
         this.profileService.setUserPreference();
-        this.navigationAlertService.setFlag(false);
-        this.router.navigateByUrl(this.nextNavigation);
+        this.setFlag(false);
+        // this.router.navigateByUrl(this.nextNavigation);
     }
     initializeResetPasswordForm() {
         this.resetPasswordForm = this.formBuilder.group({
@@ -1166,9 +1144,6 @@ class ProfileComponent$1 {
         this.alertService.success('Theme changes saved successfully.');
         this.profileService.saveUserPreference(body).subscribe(() => {
             // This is intentional
-            this.showAlert1 = false;
-            this.setFlag(this.showAlert1);
-            // this.navigationAlertService.init(false);
         });
     }
     getUserTheme() {
@@ -1181,24 +1156,15 @@ class ProfileComponent$1 {
     }
     setTheme(event) {
         this.profileService.setTheme(event);
-        this.showAlert1 = true;
-        this.setFlag(this.showAlert1);
-        // this.showAlertMessage(this.showAlert);
-        // this.navigationAlertService.init(true);
+        this.setFlag(true);
     }
     setFont(event) {
         this.profileService.setFont(event);
-        this.showAlert1 = true;
-        this.setFlag(this.showAlert1);
-        // this.showAlertMessage(this.showAlert);
-        // this.navigationAlertService.init(true);
+        this.setFlag(true);
     }
     setRangeFont(modal) {
         this.profileService.setRangeFont(modal);
-        this.showAlert1 = true;
-        this.setFlag(this.showAlert1);
-        // this.showAlertMessage(this.showAlert);
-        // this.navigationAlertService.init(true);
+        this.setFlag(true);
     }
     changePassword() {
         const obj = {
