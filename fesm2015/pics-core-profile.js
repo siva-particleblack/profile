@@ -993,6 +993,9 @@ class ProfileComponent$1 {
                     if (!confirm('Are you sure you want to navigate away?')) {
                         this.router.navigateByUrl(event.url); // Stay on the current page if user cancels navigation
                     }
+                    else {
+                        this.navigationAlertService.setFlag(false);
+                    }
                 }
             }
         });
