@@ -1011,7 +1011,8 @@ class ProfileComponent$1 {
         });
     }
     showAlertMessage() {
-        this.navigationAlertService.showAlert(true);
+        this.navigationAlertService.showAlert(this.showAlert);
+        this.showAlert = false;
     }
     initializeResetPasswordForm() {
         this.resetPasswordForm = this.formBuilder.group({

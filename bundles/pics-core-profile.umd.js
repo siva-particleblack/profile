@@ -1534,7 +1534,8 @@
             });
         };
         ProfileComponent.prototype.showAlertMessage = function () {
-            this.navigationAlertService.showAlert(true);
+            this.navigationAlertService.showAlert(this.showAlert);
+            this.showAlert = false;
         };
         ProfileComponent.prototype.initializeResetPasswordForm = function () {
             this.resetPasswordForm = this.formBuilder.group({
