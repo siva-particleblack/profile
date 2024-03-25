@@ -49,10 +49,11 @@ export declare class ProfileComponent implements OnInit {
     orgId: any;
     errors: string[];
     httpService: any;
-    showAlert: boolean;
+    showAlert1: boolean;
     constructor(injector: Injector, authService: AuthService, formBuilder: FormBuilder, profileService: ProfileService, attachmentService: AttachmentsService, _storeservice: DataStoreService, confirmationService: ConfirmationService, profileUpdateService: ProfileUpdateService, router: Router, navigationAlertService: NavigationAlertService);
     ngOnInit(): void;
-    showAlertMessage(key: boolean): void;
+    showAlert(): void;
+    setFlag(flag: boolean): void;
     initializeResetPasswordForm(): void;
     initializeForm(): void;
     get resetFormcontrols(): {

@@ -882,14 +882,17 @@ class NavigationAlertService {
     constructor(router) {
         this.router = router;
         this.showAlertSubject = new Subject();
+        this.flag = false;
     }
-    // Method to trigger the alert message based on the flag value
-    showAlert(flag) {
-        if (flag) {
-            this.showAlertSubject.next(true);
-        }
+    setFlag(flag) {
+        this.flag = flag;
     }
-    // Method to get the subject for subscribing to the alert event
+    getFlag() {
+        return this.flag;
+    }
+    showAlert() {
+        this.showAlertSubject.next();
+    }
     getShowAlertSubject() {
         return this.showAlertSubject.asObservable();
     }
@@ -983,17 +986,17 @@ class ProfileComponent$1 {
         this.initializeForm();
     }
     ngOnInit() {
-        this.showAlert = false;
         this.router.events.pipe(filter(event => event instanceof NavigationStart)).subscribe((event) => {
-            if (event.url === '/pages/profile') { // Replace '/your-page' with the actual path of your page
-                this.navigationAlertService.getShowAlertSubject().subscribe(showAlert => {
-                    if (showAlert) {
-                        if (!confirm('Are you sure you want to navigate away?')) {
-                            this.router.navigateByUrl(event.url); // Stay on the current page if user cancels navigation
-                        }
+            if (event.url === '/your-page') { // Replace '/your-page' with the actual path of your page
+                if (this.navigationAlertService.getFlag()) {
+                    if (!confirm('Are you sure you want to navigate away?')) {
+                        this.router.navigateByUrl(event.url); // Stay on the current page if user cancels navigation
                     }
-                });
+                }
             }
+        });
+        this.navigationAlertService.getShowAlertSubject().subscribe(() => {
+            this.showAlert();
         });
         this.orgSubs = this._storeservice.currentStore.subscribe((res) => {
             if (res['RBACORG'] && res['RBACORG'] !== '') {
@@ -1010,9 +1013,11 @@ class ProfileComponent$1 {
             }
         });
     }
-    showAlertMessage(key) {
-        this.navigationAlertService.showAlert(key);
-        this.showAlert = false;
+    showAlert() {
+        alert('Flag is true. Navigation is blocked!');
+    }
+    setFlag(flag) {
+        this.navigationAlertService.setFlag(flag);
     }
     initializeResetPasswordForm() {
         this.resetPasswordForm = this.formBuilder.group({
@@ -1133,7 +1138,7 @@ class ProfileComponent$1 {
         this.alertService.success('Theme changes saved successfully.');
         this.profileService.saveUserPreference(body).subscribe(() => {
             // This is intentional
-            this.showAlert = false;
+            this.showAlert1 = false;
             // this.navigationAlertService.init(false);
         });
     }
@@ -1147,20 +1152,20 @@ class ProfileComponent$1 {
     }
     setTheme(event) {
         this.profileService.setTheme(event);
-        this.showAlert = true;
-        this.showAlertMessage(this.showAlert);
+        this.showAlert1 = true;
+        // this.showAlertMessage(this.showAlert);
         // this.navigationAlertService.init(true);
     }
     setFont(event) {
         this.profileService.setFont(event);
-        this.showAlert = true;
-        this.showAlertMessage(this.showAlert);
+        this.showAlert1 = true;
+        // this.showAlertMessage(this.showAlert);
         // this.navigationAlertService.init(true);
     }
     setRangeFont(modal) {
         this.profileService.setRangeFont(modal);
-        this.showAlert = true;
-        this.showAlertMessage(this.showAlert);
+        this.showAlert1 = true;
+        // this.showAlertMessage(this.showAlert);
         // this.navigationAlertService.init(true);
     }
     changePassword() {
@@ -1238,12 +1243,12 @@ class ProfileComponent$1 {
     }
     acceptTheme() {
         $('#UpdateTheme').modal('hide');
-        this.showAlert = false;
+        this.showAlert1 = false;
     }
     cancleTheme() {
         $('#UpdateTheme').modal('hide');
-        this.showAlert = true;
-        this.showAlertMessage(this.showAlert);
+        this.showAlert1 = true;
+        // this.showAlertMessage(this.showAlert);
     }
 }
 ProfileComponent$1.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: ProfileComponent$1, deps: [{ token: i0.Injector }, { token: AuthService }, { token: i2.FormBuilder }, { token: ProfileService }, { token: AttachmentsService }, { token: DataStoreService }, { token: i6.ConfirmationService }, { token: ProfileUpdateService }, { token: i1.Router }, { token: NavigationAlertService }], target: i0.ɵɵFactoryTarget.Component });
