@@ -1533,8 +1533,8 @@
                 }
             });
         };
-        ProfileComponent.prototype.showAlertMessage = function () {
-            this.navigationAlertService.showAlert(this.showAlert);
+        ProfileComponent.prototype.showAlertMessage = function (key) {
+            this.navigationAlertService.showAlert(key);
             this.showAlert = false;
         };
         ProfileComponent.prototype.initializeResetPasswordForm = function () {
@@ -1680,16 +1680,19 @@
         ProfileComponent.prototype.setTheme = function (event) {
             this.profileService.setTheme(event);
             this.showAlert = true;
+            this.showAlertMessage(this.showAlert);
             // this.navigationAlertService.init(true);
         };
         ProfileComponent.prototype.setFont = function (event) {
             this.profileService.setFont(event);
             this.showAlert = true;
+            this.showAlertMessage(this.showAlert);
             // this.navigationAlertService.init(true);
         };
         ProfileComponent.prototype.setRangeFont = function (modal) {
             this.profileService.setRangeFont(modal);
             this.showAlert = true;
+            this.showAlertMessage(this.showAlert);
             // this.navigationAlertService.init(true);
         };
         ProfileComponent.prototype.changePassword = function () {
@@ -1773,6 +1776,7 @@
         ProfileComponent.prototype.cancleTheme = function () {
             $('#UpdateTheme').modal('hide');
             this.showAlert = true;
+            this.showAlertMessage(this.showAlert);
         };
         return ProfileComponent;
     }());

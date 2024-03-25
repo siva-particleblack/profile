@@ -1010,8 +1010,8 @@ class ProfileComponent$1 {
             }
         });
     }
-    showAlertMessage() {
-        this.navigationAlertService.showAlert(this.showAlert);
+    showAlertMessage(key) {
+        this.navigationAlertService.showAlert(key);
         this.showAlert = false;
     }
     initializeResetPasswordForm() {
@@ -1148,16 +1148,19 @@ class ProfileComponent$1 {
     setTheme(event) {
         this.profileService.setTheme(event);
         this.showAlert = true;
+        this.showAlertMessage(this.showAlert);
         // this.navigationAlertService.init(true);
     }
     setFont(event) {
         this.profileService.setFont(event);
         this.showAlert = true;
+        this.showAlertMessage(this.showAlert);
         // this.navigationAlertService.init(true);
     }
     setRangeFont(modal) {
         this.profileService.setRangeFont(modal);
         this.showAlert = true;
+        this.showAlertMessage(this.showAlert);
         // this.navigationAlertService.init(true);
     }
     changePassword() {
@@ -1240,6 +1243,7 @@ class ProfileComponent$1 {
     cancleTheme() {
         $('#UpdateTheme').modal('hide');
         this.showAlert = true;
+        this.showAlertMessage(this.showAlert);
     }
 }
 ProfileComponent$1.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: ProfileComponent$1, deps: [{ token: i0.Injector }, { token: AuthService }, { token: i2.FormBuilder }, { token: ProfileService }, { token: AttachmentsService }, { token: DataStoreService }, { token: i6.ConfirmationService }, { token: ProfileUpdateService }, { token: i1.Router }, { token: NavigationAlertService }], target: i0.ɵɵFactoryTarget.Component });
