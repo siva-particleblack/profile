@@ -985,7 +985,7 @@ class ProfileComponent$1 {
     ngOnInit() {
         this.showAlert = false;
         this.router.events.pipe(filter(event => event instanceof NavigationStart)).subscribe((event) => {
-            if (event.url === '/your-page') { // Replace '/your-page' with the actual path of your page
+            if (event.url === '/pages/profile') { // Replace '/your-page' with the actual path of your page
                 this.navigationAlertService.getShowAlertSubject().subscribe(showAlert => {
                     if (showAlert) {
                         if (!confirm('Are you sure you want to navigate away?')) {

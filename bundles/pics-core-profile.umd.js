@@ -1508,7 +1508,7 @@
             var _this = this;
             this.showAlert = false;
             this.router.events.pipe(operators.filter(function (event) { return event instanceof i1.NavigationStart; })).subscribe(function (event) {
-                if (event.url === '/your-page') { // Replace '/your-page' with the actual path of your page
+                if (event.url === '/pages/profile') { // Replace '/your-page' with the actual path of your page
                     _this.navigationAlertService.getShowAlertSubject().subscribe(function (showAlert) {
                         if (showAlert) {
                             if (!confirm('Are you sure you want to navigate away?')) {
