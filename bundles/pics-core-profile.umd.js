@@ -1397,15 +1397,17 @@
                     }]
             }], ctorParameters: function () { return [{ type: DataStoreService }]; } });
 
+    // import { LocalService } from './local.service';
     var NavigationAlertService = /** @class */ (function () {
         function NavigationAlertService(router) {
             this.router = router;
             this.showAlertSubject = new rxjs.Subject();
+            //   localstorage: LocalService;
             this.flag = false;
         }
         NavigationAlertService.prototype.setFlag = function (flag) {
             this.flag = flag;
-            this.localstorage.setObj('isThemeUpdated', flag);
+            // this.localstorage.setObj('isThemeUpdated', flag);
         };
         NavigationAlertService.prototype.getFlag = function () {
             return this.flag;

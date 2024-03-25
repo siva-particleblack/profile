@@ -877,15 +877,17 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImpo
                 }]
         }], ctorParameters: function () { return [{ type: DataStoreService }]; } });
 
+// import { LocalService } from './local.service';
 class NavigationAlertService {
     constructor(router) {
         this.router = router;
         this.showAlertSubject = new Subject();
+        //   localstorage: LocalService;
         this.flag = false;
     }
     setFlag(flag) {
         this.flag = flag;
-        this.localstorage.setObj('isThemeUpdated', flag);
+        // this.localstorage.setObj('isThemeUpdated', flag);
     }
     getFlag() {
         return this.flag;

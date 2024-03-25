@@ -1,10 +1,8 @@
 import { Router } from '@angular/router';
-import { LocalService } from './local.service';
 import * as i0 from "@angular/core";
 export declare class NavigationAlertService {
     private router;
     private showAlertSubject;
-    localstorage: LocalService;
     private flag;
     constructor(router: Router);
     setFlag(flag: boolean): void;
