@@ -1509,6 +1509,8 @@
         }
         ProfileComponent.prototype.ngOnInit = function () {
             var _this = this;
+            this.showAlert1 = false;
+            this.setFlag(this.showAlert1);
             this.router.events.pipe(operators.filter(function (event) { return event instanceof i1.NavigationStart; })).subscribe(function (event) {
                 if (event.url === '/pages/profile') { // Replace '/your-page' with the actual path of your page
                     if (_this.navigationAlertService.getFlag()) {
@@ -1670,6 +1672,7 @@
             this.profileService.saveUserPreference(body).subscribe(function () {
                 // This is intentional
                 _this.showAlert1 = false;
+                _this.setFlag(_this.showAlert1);
                 // this.navigationAlertService.init(false);
             });
         };
@@ -1685,18 +1688,21 @@
         ProfileComponent.prototype.setTheme = function (event) {
             this.profileService.setTheme(event);
             this.showAlert1 = true;
+            this.setFlag(this.showAlert1);
             // this.showAlertMessage(this.showAlert);
             // this.navigationAlertService.init(true);
         };
         ProfileComponent.prototype.setFont = function (event) {
             this.profileService.setFont(event);
             this.showAlert1 = true;
+            this.setFlag(this.showAlert1);
             // this.showAlertMessage(this.showAlert);
             // this.navigationAlertService.init(true);
         };
         ProfileComponent.prototype.setRangeFont = function (modal) {
             this.profileService.setRangeFont(modal);
             this.showAlert1 = true;
+            this.setFlag(this.showAlert1);
             // this.showAlertMessage(this.showAlert);
             // this.navigationAlertService.init(true);
         };
@@ -1777,10 +1783,12 @@
         ProfileComponent.prototype.acceptTheme = function () {
             $('#UpdateTheme').modal('hide');
             this.showAlert1 = false;
+            this.setFlag(this.showAlert1);
         };
         ProfileComponent.prototype.cancleTheme = function () {
             $('#UpdateTheme').modal('hide');
             this.showAlert1 = true;
+            this.setFlag(this.showAlert1);
             // this.showAlertMessage(this.showAlert);
         };
         return ProfileComponent;

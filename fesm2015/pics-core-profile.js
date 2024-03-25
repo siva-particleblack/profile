@@ -986,6 +986,8 @@ class ProfileComponent$1 {
         this.initializeForm();
     }
     ngOnInit() {
+        this.showAlert1 = false;
+        this.setFlag(this.showAlert1);
         this.router.events.pipe(filter(event => event instanceof NavigationStart)).subscribe((event) => {
             if (event.url === '/pages/profile') { // Replace '/your-page' with the actual path of your page
                 if (this.navigationAlertService.getFlag()) {
@@ -1139,6 +1141,7 @@ class ProfileComponent$1 {
         this.profileService.saveUserPreference(body).subscribe(() => {
             // This is intentional
             this.showAlert1 = false;
+            this.setFlag(this.showAlert1);
             // this.navigationAlertService.init(false);
         });
     }
@@ -1153,18 +1156,21 @@ class ProfileComponent$1 {
     setTheme(event) {
         this.profileService.setTheme(event);
         this.showAlert1 = true;
+        this.setFlag(this.showAlert1);
         // this.showAlertMessage(this.showAlert);
         // this.navigationAlertService.init(true);
     }
     setFont(event) {
         this.profileService.setFont(event);
         this.showAlert1 = true;
+        this.setFlag(this.showAlert1);
         // this.showAlertMessage(this.showAlert);
         // this.navigationAlertService.init(true);
     }
     setRangeFont(modal) {
         this.profileService.setRangeFont(modal);
         this.showAlert1 = true;
+        this.setFlag(this.showAlert1);
         // this.showAlertMessage(this.showAlert);
         // this.navigationAlertService.init(true);
     }
@@ -1244,10 +1250,12 @@ class ProfileComponent$1 {
     acceptTheme() {
         $('#UpdateTheme').modal('hide');
         this.showAlert1 = false;
+        this.setFlag(this.showAlert1);
     }
     cancleTheme() {
         $('#UpdateTheme').modal('hide');
         this.showAlert1 = true;
+        this.setFlag(this.showAlert1);
         // this.showAlertMessage(this.showAlert);
     }
 }
