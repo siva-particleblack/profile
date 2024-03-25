@@ -1515,6 +1515,7 @@
                 if (event instanceof i1.NavigationStart) {
                     if (_this.navigationAlertService.getFlag()) {
                         $('#Deleteuser').modal('show');
+                        _this.nextNavigation = event.url;
                         // if (!confirm('Are you sure you want to navigate away?')) {
                         //   this.router.navigateByUrl(event.url); // Stay on the current page if user cancels navigation
                         // } else {
@@ -1562,11 +1563,13 @@
             $('#UpdateTheme').modal('hide');
             this.updateStyling();
             this.navigationAlertService.setFlag(false);
+            this.router.navigateByUrl(this.nextNavigation);
         };
         ProfileComponent.prototype.cancleTheme = function () {
             $('#UpdateTheme').modal('hide');
             this.profileService.setUserPreference();
             this.navigationAlertService.setFlag(false);
+            this.router.navigateByUrl(this.nextNavigation);
         };
         ProfileComponent.prototype.initializeResetPasswordForm = function () {
             this.resetPasswordForm = this.formBuilder.group({

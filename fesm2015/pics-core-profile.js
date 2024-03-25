@@ -991,6 +991,7 @@ class ProfileComponent$1 {
             if (event instanceof NavigationStart) {
                 if (this.navigationAlertService.getFlag()) {
                     $('#Deleteuser').modal('show');
+                    this.nextNavigation = event.url;
                     // if (!confirm('Are you sure you want to navigate away?')) {
                     //   this.router.navigateByUrl(event.url); // Stay on the current page if user cancels navigation
                     // } else {
@@ -1038,11 +1039,13 @@ class ProfileComponent$1 {
         $('#UpdateTheme').modal('hide');
         this.updateStyling();
         this.navigationAlertService.setFlag(false);
+        this.router.navigateByUrl(this.nextNavigation);
     }
     cancleTheme() {
         $('#UpdateTheme').modal('hide');
         this.profileService.setUserPreference();
         this.navigationAlertService.setFlag(false);
+        this.router.navigateByUrl(this.nextNavigation);
     }
     initializeResetPasswordForm() {
         this.resetPasswordForm = this.formBuilder.group({
