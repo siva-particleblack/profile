@@ -6,7 +6,6 @@ import { Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import * as i1 from '@angular/router';
 import { NavigationStart } from '@angular/router';
 import 'rxjs/add/operator/map';
-import { filter } from 'rxjs/operators';
 import * as i6 from 'primeng/api';
 import { ConfirmationService } from 'primeng/api';
 import * as i11 from '@angular/common';
@@ -988,8 +987,8 @@ class ProfileComponent$1 {
     ngOnInit() {
         this.showAlert1 = false;
         this.setFlag(this.showAlert1);
-        this.router.events.pipe(filter(event => event instanceof NavigationStart)).subscribe((event) => {
-            if (event.url === '/pages/profile') { // Replace '/your-page' with the actual path of your page
+        this.router.events.subscribe(event => {
+            if (event instanceof NavigationStart) {
                 if (this.navigationAlertService.getFlag()) {
                     if (!confirm('Are you sure you want to navigate away?')) {
                         this.router.navigateByUrl(event.url); // Stay on the current page if user cancels navigation
@@ -997,9 +996,20 @@ class ProfileComponent$1 {
                 }
             }
         });
-        this.navigationAlertService.getShowAlertSubject().subscribe(() => {
-            this.showAlert();
-        });
+        // this.router.events.pipe(
+        //   filter(event => event instanceof NavigationStart)
+        // ).subscribe((event: NavigationStart) => {
+        //   if (event.url === '/pages/profile') { // Replace '/your-page' with the actual path of your page
+        //     if (this.navigationAlertService.getFlag()) {
+        //       if (!confirm('Are you sure you want to navigate away?')) {
+        //         this.router.navigateByUrl(event.url); // Stay on the current page if user cancels navigation
+        //       }
+        //     }
+        //   }
+        // });
+        // this.navigationAlertService.getShowAlertSubject().subscribe(() => {
+        //   this.showAlert();
+        // });
         this.orgSubs = this._storeservice.currentStore.subscribe((res) => {
             if (res['RBACORG'] && res['RBACORG'] !== '') {
                 this.RBACORG = res['RBACORG'];
