@@ -54,6 +54,8 @@ export declare class ProfileComponent implements OnInit {
     ngOnInit(): void;
     showAlert(): void;
     setFlag(flag: boolean): void;
+    acceptTheme(): void;
+    cancleTheme(): void;
     initializeResetPasswordForm(): void;
     initializeForm(): void;
     get resetFormcontrols(): {
@@ -75,8 +77,6 @@ export declare class ProfileComponent implements OnInit {
     removeThumbnail(): void;
     ngOnDestroy(): void;
     fontSlider(): void;
-    acceptTheme(): void;
-    cancleTheme(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<ProfileComponent, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<ProfileComponent, "core-profile", never, {}, {}, never, never>;
 }
