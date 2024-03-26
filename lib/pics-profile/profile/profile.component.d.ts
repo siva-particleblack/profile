@@ -53,8 +53,6 @@ export declare class ProfileComponent implements OnInit {
     constructor(injector: Injector, authService: AuthService, formBuilder: FormBuilder, profileService: ProfileService, attachmentService: AttachmentsService, _storeservice: DataStoreService, confirmationService: ConfirmationService, profileUpdateService: ProfileUpdateService, router: Router, navigationAlertService: NavigationAlertService);
     ngOnInit(): void;
     setFlag(flag: boolean): void;
-    acceptTheme(): void;
-    cancleTheme(): void;
     initializeResetPasswordForm(): void;
     initializeForm(): void;
     get resetFormcontrols(): {
