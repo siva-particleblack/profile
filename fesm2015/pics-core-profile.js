@@ -992,8 +992,16 @@ class ProfileComponent$1 {
         this.router.events.subscribe(event => {
             if (event instanceof NavigationStart) {
                 if (this.navigationAlertService.getFlag()) {
-                    $('#Deleteuser').modal('show');
-                    this.nextNavigation = event.url;
+                    if (confirm('Are you sure you want to navigate away?')) {
+                        this.updateStyling();
+                        this.setFlag(false);
+                        this.router.navigateByUrl(event.url);
+                    }
+                    else {
+                        this.profileService.setUserPreference();
+                        this.setFlag(false);
+                        this.router.navigateByUrl(event.url);
+                    }
                 }
             }
         });

@@ -1516,8 +1516,16 @@
             this.router.events.subscribe(function (event) {
                 if (event instanceof i1.NavigationStart) {
                     if (_this.navigationAlertService.getFlag()) {
-                        $('#Deleteuser').modal('show');
-                        _this.nextNavigation = event.url;
+                        if (confirm('Are you sure you want to navigate away?')) {
+                            _this.updateStyling();
+                            _this.setFlag(false);
+                            _this.router.navigateByUrl(event.url);
+                        }
+                        else {
+                            _this.profileService.setUserPreference();
+                            _this.setFlag(false);
+                            _this.router.navigateByUrl(event.url);
+                        }
                     }
                 }
             });
