@@ -981,6 +981,8 @@ class ProfileComponent$1 {
         this.localstorage = injector.get(LocalService);
         this.alertService = injector.get(AlertService);
         this.themeService = injector.get(ThemeService);
+        const tab = this.localstorage.getItem('CURRENT_PROFILE_TAB');
+        this.getTab(tab);
         this.userid = sessionStorage.getItem('id');
         this.selectedTheme = this.localstorage.getItem('SELECTED_THEME') || 'default';
         this.selectedFont = this.localstorage.getItem('SELECTED_FONT') || '13';
@@ -990,21 +992,6 @@ class ProfileComponent$1 {
         this.initializeForm();
     }
     ngOnInit() {
-        const tab = this.localstorage.getItem('CURRENT_PROFILE_TAB');
-        if (tab && tab.trim() && tab != "#v-pills-home") {
-            this.currentTab = tab;
-            this.currentProfileTab = false;
-            this.currentThemeTab = true;
-            this.currentTabId = "v-theme-a";
-            this.currentTabArea = "theme_tab";
-        }
-        else {
-            this.currentTab = "#v-pills-home";
-            this.currentThemeTab = false;
-            this.currentProfileTab = true;
-            this.currentTabId = "v-pills-home-tab";
-            this.currentTabArea = "v-pills-home";
-        }
         this.setFlag(false);
         this.router.events.subscribe(event => {
             if (event instanceof NavigationStart) {
@@ -1033,9 +1020,27 @@ class ProfileComponent$1 {
                     this.getUserInfo();
                     this.fontSlider();
                     this.getUserTheme();
+                    const tab = this.localstorage.getItem('CURRENT_PROFILE_TAB');
+                    this.getTab(tab);
                 }
             }
         });
+    }
+    getTab(tab) {
+        if (tab && tab.trim() && tab != "#v-pills-home") {
+            this.currentTab = tab;
+            this.currentProfileTab = false;
+            this.currentThemeTab = true;
+            this.currentTabId = "v-theme-a";
+            this.currentTabArea = "theme_tab";
+        }
+        else {
+            this.currentTab = "#v-pills-home";
+            this.currentThemeTab = false;
+            this.currentProfileTab = true;
+            this.currentTabId = "v-pills-home-tab";
+            this.currentTabArea = "v-pills-home";
+        }
     }
     setCurrentTab(tab) {
         this.currentTab = tab;
