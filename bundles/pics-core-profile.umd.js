@@ -1685,15 +1685,15 @@
             });
         };
         ProfileComponent.prototype.updateStyling = function () {
-            var _this = this;
             var body = {
                 type: 'USER_THEME_PREFERENCES',
                 mappedid: this.userid,
                 config: JSON.stringify({ theme: this.selectedTheme, font: this.selectedFont })
             };
             this.alertService.success('Theme changes saved successfully.');
+            this.setFlag(false);
             this.profileService.saveUserPreference(body).subscribe(function () {
-                _this.setFlag(false);
+                // this.setFlag(false);
             });
         };
         ProfileComponent.prototype.getUserTheme = function () {

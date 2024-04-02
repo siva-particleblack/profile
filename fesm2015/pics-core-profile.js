@@ -1160,8 +1160,9 @@ class ProfileComponent$1 {
             config: JSON.stringify({ theme: this.selectedTheme, font: this.selectedFont })
         };
         this.alertService.success('Theme changes saved successfully.');
+        this.setFlag(false);
         this.profileService.saveUserPreference(body).subscribe(() => {
-            this.setFlag(false);
+            // this.setFlag(false);
         });
     }
     getUserTheme() {
