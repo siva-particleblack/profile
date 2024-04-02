@@ -50,8 +50,10 @@ export declare class ProfileComponent implements OnInit {
     errors: string[];
     httpService: any;
     nextNavigation: string;
+    currentTab: string;
     constructor(injector: Injector, authService: AuthService, formBuilder: FormBuilder, profileService: ProfileService, attachmentService: AttachmentsService, _storeservice: DataStoreService, confirmationService: ConfirmationService, profileUpdateService: ProfileUpdateService, router: Router, navigationAlertService: NavigationAlertService);
     ngOnInit(): void;
+    setCurrentTab(tab: string): void;
     setFlag(flag: boolean): void;
     initializeResetPasswordForm(): void;
     initializeForm(): void;
