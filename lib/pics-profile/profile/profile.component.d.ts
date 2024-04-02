@@ -56,6 +56,8 @@ export declare class ProfileComponent implements OnInit {
     currentTabId: string;
     currentTabArea: string;
     isVisible: boolean;
+    isThemeActive: boolean;
+    isProfileActive: boolean;
     constructor(injector: Injector, authService: AuthService, formBuilder: FormBuilder, profileService: ProfileService, attachmentService: AttachmentsService, _storeservice: DataStoreService, confirmationService: ConfirmationService, profileUpdateService: ProfileUpdateService, router: Router, navigationAlertService: NavigationAlertService);
     ngOnInit(): void;
     getTab(tab: any): void;
