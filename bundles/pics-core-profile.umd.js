@@ -1496,6 +1496,7 @@
             this.fontSetList = [];
             this.RBACORG = new RBACINFO();
             this.errors = AppConstants.errorList;
+            this.currentTab = "#v-pills-home";
             this.localstorage = injector.get(LocalService);
             this.alertService = injector.get(AlertService);
             this.themeService = injector.get(ThemeService);
@@ -1509,6 +1510,13 @@
         }
         ProfileComponent.prototype.ngOnInit = function () {
             var _this = this;
+            var tab = this.localstorage.getItem('CURRENT_PROFILE_TAB');
+            if (tab && tab.trim()) {
+                this.currentTab = tab;
+            }
+            else {
+                this.currentTab = "#v-pills-home";
+            }
             this.setFlag(false);
             this.router.events.subscribe(function (event) {
                 if (event instanceof i1.NavigationStart) {
@@ -1540,15 +1548,9 @@
                     }
                 }
             });
-            var tab = this.localstorage.getItem('CURRENT_PROFILE_TAB');
-            if (tab && tab.trim()) {
-                this.currentTab = tab;
-            }
-            else {
-                this.currentTab = "#v-pills-home";
-            }
         };
         ProfileComponent.prototype.setCurrentTab = function (tab) {
+            this.currentTab = tab;
             this.localstorage.setItem('CURRENT_PROFILE_TAB', tab);
         };
         ProfileComponent.prototype.setFlag = function (flag) {

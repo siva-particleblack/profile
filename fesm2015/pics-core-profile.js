@@ -973,6 +973,7 @@ class ProfileComponent$1 {
         this.fontSetList = [];
         this.RBACORG = new RBACINFO();
         this.errors = AppConstants.errorList;
+        this.currentTab = "#v-pills-home";
         this.localstorage = injector.get(LocalService);
         this.alertService = injector.get(AlertService);
         this.themeService = injector.get(ThemeService);
@@ -985,6 +986,13 @@ class ProfileComponent$1 {
         this.initializeForm();
     }
     ngOnInit() {
+        const tab = this.localstorage.getItem('CURRENT_PROFILE_TAB');
+        if (tab && tab.trim()) {
+            this.currentTab = tab;
+        }
+        else {
+            this.currentTab = "#v-pills-home";
+        }
         this.setFlag(false);
         this.router.events.subscribe(event => {
             if (event instanceof NavigationStart) {
@@ -1016,15 +1024,9 @@ class ProfileComponent$1 {
                 }
             }
         });
-        const tab = this.localstorage.getItem('CURRENT_PROFILE_TAB');
-        if (tab && tab.trim()) {
-            this.currentTab = tab;
-        }
-        else {
-            this.currentTab = "#v-pills-home";
-        }
     }
     setCurrentTab(tab) {
+        this.currentTab = tab;
         this.localstorage.setItem('CURRENT_PROFILE_TAB', tab);
     }
     setFlag(flag) {
