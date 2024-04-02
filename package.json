@@ -1,6 +1,6 @@
 {
   "name": "@pics-core/profile",
-  "version": "0.0.6-OR.10.15",
+  "version": "0.0.6-OR.10.17",
   "peerDependencies": {
     "@angular/common": "^12.2.0",
     "@angular/core": "^12.2.0",
