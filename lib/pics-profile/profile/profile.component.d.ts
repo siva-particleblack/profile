@@ -53,6 +53,8 @@ export declare class ProfileComponent implements OnInit {
     currentTab: string;
     currentProfileTab: boolean;
     currentThemeTab: boolean;
+    currentTabId: string;
+    currentTabArea: string;
     constructor(injector: Injector, authService: AuthService, formBuilder: FormBuilder, profileService: ProfileService, attachmentService: AttachmentsService, _storeservice: DataStoreService, confirmationService: ConfirmationService, profileUpdateService: ProfileUpdateService, router: Router, navigationAlertService: NavigationAlertService);
     ngOnInit(): void;
     setCurrentTab(tab: string): void;
