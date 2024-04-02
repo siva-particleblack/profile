@@ -51,11 +51,6 @@ export declare class ProfileComponent implements OnInit {
     httpService: any;
     nextNavigation: string;
     currentTab: string;
-    currentProfileTab: boolean;
-    currentThemeTab: boolean;
-    currentTabId: string;
-    currentTabArea: string;
-    isVisible: boolean;
     isThemeActive: boolean;
     isProfileActive: boolean;
     isProfileShown: boolean;
