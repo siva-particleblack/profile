@@ -1546,7 +1546,7 @@
             this.router.navigateByUrl(this.routeTo);
         };
         ProfileComponent.prototype.cancleThemePopup = function () {
-            this.profileService.setUserPreference();
+            this.getUserTheme();
             // this.setFlag(false);
             $('#UpdateUserTheme').modal('hide');
         };

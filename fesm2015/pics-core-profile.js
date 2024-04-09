@@ -1022,7 +1022,7 @@ class ProfileComponent$1 {
         this.router.navigateByUrl(this.routeTo);
     }
     cancleThemePopup() {
-        this.profileService.setUserPreference();
+        this.getUserTheme();
         // this.setFlag(false);
         $('#UpdateUserTheme').modal('hide');
     }
