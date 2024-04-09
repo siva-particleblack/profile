@@ -1516,18 +1516,10 @@
             this.setFlag(false);
             this.router.events.subscribe(function (event) {
                 if (event instanceof i1.NavigationStart) {
-                    if (_this.navigationAlertService.getFlag() && shouldNavigate) {
-                        // Prevent default navigation behavior
-                        shouldNavigate = false;
+                    var shouldPreventNavigation = true;
+                    if (_this.navigationAlertService.getFlag() && shouldPreventNavigation) {
+                        _this.router.navigate([], { skipLocationChange: true });
                         $('#UpdateUserTheme').modal('show');
-                        // Subscribe to modal close event
-                        $('#UpdateUserTheme').on('hidden.bs.modal', function () {
-                            // Unsubscribe from modal close event to prevent memory leaks
-                            $('#UpdateUserTheme').off('hidden.bs.modal');
-                            shouldNavigate = true;
-                            // Perform navigation
-                            _this.router.navigateByUrl(event.url);
-                        });
                     }
                 }
             });

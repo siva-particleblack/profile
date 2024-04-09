@@ -992,18 +992,10 @@ class ProfileComponent$1 {
         this.setFlag(false);
         this.router.events.subscribe(event => {
             if (event instanceof NavigationStart) {
-                if (this.navigationAlertService.getFlag() && shouldNavigate) {
-                    // Prevent default navigation behavior
-                    shouldNavigate = false;
+                const shouldPreventNavigation = true;
+                if (this.navigationAlertService.getFlag() && shouldPreventNavigation) {
+                    this.router.navigate([], { skipLocationChange: true });
                     $('#UpdateUserTheme').modal('show');
-                    // Subscribe to modal close event
-                    $('#UpdateUserTheme').on('hidden.bs.modal', () => {
-                        // Unsubscribe from modal close event to prevent memory leaks
-                        $('#UpdateUserTheme').off('hidden.bs.modal');
-                        shouldNavigate = true;
-                        // Perform navigation
-                        this.router.navigateByUrl(event.url);
-                    });
                 }
             }
         });
