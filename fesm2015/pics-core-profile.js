@@ -988,21 +988,22 @@ class ProfileComponent$1 {
         this.initializeForm();
     }
     ngOnInit() {
+        let shouldNavigate = true;
         this.setFlag(false);
         this.router.events.subscribe(event => {
             if (event instanceof NavigationStart) {
-                if (this.navigationAlertService.getFlag()) {
+                if (this.navigationAlertService.getFlag() && shouldNavigate) {
+                    // Prevent default navigation behavior
+                    shouldNavigate = false;
                     $('#UpdateUserTheme').modal('show');
-                    if (confirm('Are you sure to save and continue with the recent changes?')) {
-                        this.updateStyling();
-                        this.setFlag(false);
+                    // Subscribe to modal close event
+                    $('#UpdateUserTheme').on('hidden.bs.modal', () => {
+                        // Unsubscribe from modal close event to prevent memory leaks
+                        $('#UpdateUserTheme').off('hidden.bs.modal');
+                        shouldNavigate = true;
+                        // Perform navigation
                         this.router.navigateByUrl(event.url);
-                    }
-                    else {
-                        this.profileService.setUserPreference();
-                        this.setFlag(false);
-                        this.router.navigateByUrl(event.url);
-                    }
+                    });
                 }
             }
         });

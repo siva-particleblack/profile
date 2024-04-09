@@ -1512,21 +1512,22 @@
         }
         ProfileComponent.prototype.ngOnInit = function () {
             var _this = this;
+            var shouldNavigate = true;
             this.setFlag(false);
             this.router.events.subscribe(function (event) {
                 if (event instanceof i1.NavigationStart) {
-                    if (_this.navigationAlertService.getFlag()) {
+                    if (_this.navigationAlertService.getFlag() && shouldNavigate) {
+                        // Prevent default navigation behavior
+                        shouldNavigate = false;
                         $('#UpdateUserTheme').modal('show');
-                        if (confirm('Are you sure to save and continue with the recent changes?')) {
-                            _this.updateStyling();
-                            _this.setFlag(false);
+                        // Subscribe to modal close event
+                        $('#UpdateUserTheme').on('hidden.bs.modal', function () {
+                            // Unsubscribe from modal close event to prevent memory leaks
+                            $('#UpdateUserTheme').off('hidden.bs.modal');
+                            shouldNavigate = true;
+                            // Perform navigation
                             _this.router.navigateByUrl(event.url);
-                        }
-                        else {
-                            _this.profileService.setUserPreference();
-                            _this.setFlag(false);
-                            _this.router.navigateByUrl(event.url);
-                        }
+                        });
                     }
                 }
             });
