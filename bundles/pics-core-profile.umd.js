@@ -1547,8 +1547,7 @@
         };
         ProfileComponent.prototype.cancleThemePopup = function () {
             this.profileService.setUserPreference();
-            this.selectedTheme = this.localstorage.getItem('SELECTED_THEME') || 'default';
-            this.selectedFont = this.localstorage.getItem('SELECTED_FONT') || '13';
+            this.getUserTheme();
             // this.setFlag(false);
             $('#UpdateUserTheme').modal('hide');
         };
