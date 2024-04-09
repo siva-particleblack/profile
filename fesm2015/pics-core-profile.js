@@ -993,15 +993,16 @@ class ProfileComponent$1 {
             if (event instanceof NavigationStart) {
                 if (this.navigationAlertService.getFlag()) {
                     $('#UpdateUserTheme').modal('show');
-                    // if (confirm('Are you sure to save and continue with the recent changes?')) {
-                    //   this.updateStyling();
-                    //   this.setFlag(false);
-                    //   this.router.navigateByUrl(event.url);
-                    // } else {
-                    //   this.profileService.setUserPreference();
-                    //   this.setFlag(false);
-                    //   this.router.navigateByUrl(event.url);
-                    // }
+                    if (confirm('Are you sure to save and continue with the recent changes?')) {
+                        this.updateStyling();
+                        this.setFlag(false);
+                        this.router.navigateByUrl(event.url);
+                    }
+                    else {
+                        this.profileService.setUserPreference();
+                        this.setFlag(false);
+                        this.router.navigateByUrl(event.url);
+                    }
                 }
             }
         });
