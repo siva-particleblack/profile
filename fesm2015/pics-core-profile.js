@@ -992,6 +992,7 @@ class ProfileComponent$1 {
         this.setFlag(false);
         this.router.events.subscribe(event => {
             if (event instanceof NavigationStart) {
+                this.routeTo = event === null || event === void 0 ? void 0 : event.url;
                 const shouldPreventNavigation = true;
                 if (this.navigationAlertService.getFlag() && shouldPreventNavigation) {
                     this.router.navigate([], { skipLocationChange: true });
@@ -1018,7 +1019,7 @@ class ProfileComponent$1 {
         this.updateStyling();
         // this.setFlag(false);
         $('#UpdateUserTheme').modal('hide');
-        // this.router.navigateByUrl(event.url);
+        this.router.navigateByUrl(this.routeTo);
     }
     cancleThemePopup() {
         this.profileService.setUserPreference();

@@ -1516,6 +1516,7 @@
             this.setFlag(false);
             this.router.events.subscribe(function (event) {
                 if (event instanceof i1.NavigationStart) {
+                    _this.routeTo = event === null || event === void 0 ? void 0 : event.url;
                     var shouldPreventNavigation = true;
                     if (_this.navigationAlertService.getFlag() && shouldPreventNavigation) {
                         _this.router.navigate([], { skipLocationChange: true });
@@ -1542,7 +1543,7 @@
             this.updateStyling();
             // this.setFlag(false);
             $('#UpdateUserTheme').modal('hide');
-            // this.router.navigateByUrl(event.url);
+            this.router.navigateByUrl(this.routeTo);
         };
         ProfileComponent.prototype.cancleThemePopup = function () {
             this.profileService.setUserPreference();
