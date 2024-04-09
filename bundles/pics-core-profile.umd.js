@@ -1709,6 +1709,8 @@
                 var config = JSON.parse(data === null || data === void 0 ? void 0 : data.config);
                 _this.selectedTheme = (config === null || config === void 0 ? void 0 : config.theme) || 'default';
                 _this.selectedFont = (config === null || config === void 0 ? void 0 : config.font) || '13';
+                _this.localstorage.setItem('SELECTED_FONT', _this.selectedFont);
+                _this.localstorage.setItem('SELECTED_THEME', _this.selectedTheme);
             });
         };
         ProfileComponent.prototype.setTheme = function (event) {
