@@ -1548,13 +1548,13 @@
         };
         ProfileComponent.prototype.updateThemePopup = function () {
             this.updateStyling();
-            this.setFlag(false);
+            // this.setFlag(false);
             $('#UpdateUserTheme').modal('hide');
             // this.router.navigateByUrl(event.url);
         };
         ProfileComponent.prototype.cancleThemePopup = function () {
             this.profileService.setUserPreference();
-            this.setFlag(false);
+            // this.setFlag(false);
             $('#UpdateUserTheme').modal('hide');
         };
         ProfileComponent.prototype.getTab = function (tab) {

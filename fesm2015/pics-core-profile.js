@@ -1024,13 +1024,13 @@ class ProfileComponent$1 {
     }
     updateThemePopup() {
         this.updateStyling();
-        this.setFlag(false);
+        // this.setFlag(false);
         $('#UpdateUserTheme').modal('hide');
         // this.router.navigateByUrl(event.url);
     }
     cancleThemePopup() {
         this.profileService.setUserPreference();
-        this.setFlag(false);
+        // this.setFlag(false);
         $('#UpdateUserTheme').modal('hide');
     }
     getTab(tab) {
