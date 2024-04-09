@@ -1022,7 +1022,7 @@ class ProfileComponent$1 {
         this.router.navigateByUrl(this.routeTo);
     }
     cancleThemePopup() {
-        this.getUserTheme();
+        this.profileService.setUserPreference();
         // this.setFlag(false);
         $('#UpdateUserTheme').modal('hide');
     }
@@ -1177,8 +1177,6 @@ class ProfileComponent$1 {
             const config = JSON.parse(data === null || data === void 0 ? void 0 : data.config);
             this.selectedTheme = (config === null || config === void 0 ? void 0 : config.theme) || 'default';
             this.selectedFont = (config === null || config === void 0 ? void 0 : config.font) || '13';
-            this.localstorage.setItem('SELECTED_FONT', this.selectedFont);
-            this.localstorage.setItem('SELECTED_THEME', this.selectedTheme);
         });
     }
     setTheme(event) {
