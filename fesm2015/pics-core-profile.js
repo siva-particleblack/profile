@@ -1023,6 +1023,8 @@ class ProfileComponent$1 {
     }
     cancleThemePopup() {
         this.profileService.setUserPreference();
+        this.selectedTheme = this.localstorage.getItem('SELECTED_THEME') || 'default';
+        this.selectedFont = this.localstorage.getItem('SELECTED_FONT') || '13';
         // this.setFlag(false);
         $('#UpdateUserTheme').modal('hide');
     }
