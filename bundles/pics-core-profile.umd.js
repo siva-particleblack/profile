@@ -1544,13 +1544,10 @@
             this.router.navigateByUrl(this.routeTo);
         };
         ProfileComponent.prototype.cancleThemePopup = function () {
-            var _this = this;
             this.profileService.setUserPreference();
-            this.getUserTheme();
+            this.getUserThemeAndRoute(this.routeTo);
             $('#UpdateUserTheme').modal('hide');
-            setTimeout(function () {
-                _this.router.navigateByUrl(_this.routeTo);
-            }, 5000);
+            // this.router.navigateByUrl(this.routeTo);
         };
         ProfileComponent.prototype.getTab = function (tab) {
             if (tab && tab.trim() && tab != "#v-pills-home") {
@@ -1711,6 +1708,17 @@
                 var config = JSON.parse(data === null || data === void 0 ? void 0 : data.config);
                 _this.selectedTheme = (config === null || config === void 0 ? void 0 : config.theme) || 'default';
                 _this.selectedFont = (config === null || config === void 0 ? void 0 : config.font) || '13';
+            });
+        };
+        // for routing
+        ProfileComponent.prototype.getUserThemeAndRoute = function (routeTo) {
+            var _this = this;
+            this.profileService.getUserPreference(this.userid).subscribe(function (res) {
+                var data = res.data;
+                var config = JSON.parse(data === null || data === void 0 ? void 0 : data.config);
+                _this.selectedTheme = (config === null || config === void 0 ? void 0 : config.theme) || 'default';
+                _this.selectedFont = (config === null || config === void 0 ? void 0 : config.font) || '13';
+                _this.router.navigateByUrl(routeTo);
             });
         };
         ProfileComponent.prototype.setTheme = function (event) {

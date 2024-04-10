@@ -1021,11 +1021,9 @@ class ProfileComponent$1 {
     }
     cancleThemePopup() {
         this.profileService.setUserPreference();
-        this.getUserTheme();
+        this.getUserThemeAndRoute(this.routeTo);
         $('#UpdateUserTheme').modal('hide');
-        setTimeout(() => {
-            this.router.navigateByUrl(this.routeTo);
-        }, 5000);
+        // this.router.navigateByUrl(this.routeTo);
     }
     getTab(tab) {
         if (tab && tab.trim() && tab != "#v-pills-home") {
@@ -1178,6 +1176,16 @@ class ProfileComponent$1 {
             const config = JSON.parse(data === null || data === void 0 ? void 0 : data.config);
             this.selectedTheme = (config === null || config === void 0 ? void 0 : config.theme) || 'default';
             this.selectedFont = (config === null || config === void 0 ? void 0 : config.font) || '13';
+        });
+    }
+    // for routing
+    getUserThemeAndRoute(routeTo) {
+        this.profileService.getUserPreference(this.userid).subscribe((res) => {
+            const data = res.data;
+            const config = JSON.parse(data === null || data === void 0 ? void 0 : data.config);
+            this.selectedTheme = (config === null || config === void 0 ? void 0 : config.theme) || 'default';
+            this.selectedFont = (config === null || config === void 0 ? void 0 : config.font) || '13';
+            this.router.navigateByUrl(routeTo);
         });
     }
     setTheme(event) {
