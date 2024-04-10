@@ -1547,7 +1547,8 @@
             this.profileService.setUserPreference();
             this.getUserThemeAndRoute(this.routeTo);
             $('#UpdateUserTheme').modal('hide');
-            // this.router.navigateByUrl(this.routeTo);
+            this.setFlag(false);
+            this.router.navigateByUrl(this.routeTo);
         };
         ProfileComponent.prototype.getTab = function (tab) {
             if (tab && tab.trim() && tab != "#v-pills-home") {
@@ -1718,7 +1719,7 @@
                 var config = JSON.parse(data === null || data === void 0 ? void 0 : data.config);
                 _this.selectedTheme = (config === null || config === void 0 ? void 0 : config.theme) || 'default';
                 _this.selectedFont = (config === null || config === void 0 ? void 0 : config.font) || '13';
-                _this.router.navigateByUrl(routeTo);
+                // this.router.navigateByUrl(routeTo);
             });
         };
         ProfileComponent.prototype.setTheme = function (event) {
