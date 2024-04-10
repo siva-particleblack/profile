@@ -73,7 +73,6 @@ export declare class ProfileComponent implements OnInit {
     updateprofile(): void;
     updateStyling(): void;
     getUserTheme(): void;
-    getUserThemeAndRoute(routeTo: any): void;
     setTheme(event: any): void;
     setFont(event: any): void;
     setRangeFont(modal: any): void;

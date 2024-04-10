@@ -1545,7 +1545,7 @@
         };
         ProfileComponent.prototype.cancleThemePopup = function () {
             this.profileService.setUserPreference();
-            this.getUserThemeAndRoute(this.routeTo);
+            this.getUserTheme();
             $('#UpdateUserTheme').modal('hide');
             this.setFlag(false);
             this.router.navigateByUrl(this.routeTo);
@@ -1709,17 +1709,6 @@
                 var config = JSON.parse(data === null || data === void 0 ? void 0 : data.config);
                 _this.selectedTheme = (config === null || config === void 0 ? void 0 : config.theme) || 'default';
                 _this.selectedFont = (config === null || config === void 0 ? void 0 : config.font) || '13';
-            });
-        };
-        // for routing
-        ProfileComponent.prototype.getUserThemeAndRoute = function (routeTo) {
-            var _this = this;
-            this.profileService.getUserPreference(this.userid).subscribe(function (res) {
-                var data = res.data;
-                var config = JSON.parse(data === null || data === void 0 ? void 0 : data.config);
-                _this.selectedTheme = (config === null || config === void 0 ? void 0 : config.theme) || 'default';
-                _this.selectedFont = (config === null || config === void 0 ? void 0 : config.font) || '13';
-                // this.router.navigateByUrl(routeTo);
             });
         };
         ProfileComponent.prototype.setTheme = function (event) {
