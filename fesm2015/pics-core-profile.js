@@ -1023,7 +1023,9 @@ class ProfileComponent$1 {
         this.profileService.setUserPreference();
         this.getUserTheme();
         $('#UpdateUserTheme').modal('hide');
-        this.router.navigateByUrl(this.routeTo);
+        setTimeout(() => {
+            this.router.navigateByUrl(this.routeTo);
+        }, 5000);
     }
     getTab(tab) {
         if (tab && tab.trim() && tab != "#v-pills-home") {

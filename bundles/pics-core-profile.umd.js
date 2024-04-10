@@ -1544,10 +1544,13 @@
             this.router.navigateByUrl(this.routeTo);
         };
         ProfileComponent.prototype.cancleThemePopup = function () {
+            var _this = this;
             this.profileService.setUserPreference();
             this.getUserTheme();
             $('#UpdateUserTheme').modal('hide');
-            this.router.navigateByUrl(this.routeTo);
+            setTimeout(function () {
+                _this.router.navigateByUrl(_this.routeTo);
+            }, 5000);
         };
         ProfileComponent.prototype.getTab = function (tab) {
             if (tab && tab.trim() && tab != "#v-pills-home") {
